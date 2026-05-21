@@ -1,0 +1,16 @@
+#version: '3.8'
+#
+#services:
+#  backend:
+#    image: ghcr.io/${GITHUB_REPO_OWNER}/qolum-backend:${IMAGE_TAG}
+#    container_name: qolum-backend-prod
+#    ports:
+#      - "8080:8080"  # Expose port 8080 of backend to port 8080 of the host
+#    environment:
+#      - SPRING_PROFILES_ACTIVE=prod  # Set profile to prod
+#    networks:
+#      - qolum-prod-network
+#
+#networks:
+#  qolum-prod-network:
+#    driver: bridge

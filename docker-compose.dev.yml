@@ -1,0 +1,9 @@
+version: '3.9'
+
+services:
+  delphix-global:
+    image: ghcr.io/${GITHUB_REPO_OWNER}/delphix-global-front:${TAG}
+    container_name: delphix-global-front-dev
+    ports:
+      - "4001:80"  # Expose port 8080 of backend to port 8081 of the host
+    restart: unless-stopped
