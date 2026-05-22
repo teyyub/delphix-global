@@ -1,38 +1,48 @@
-# delphix-global
+Sakai is an application template for Vue based on the [create-vue](https://github.com/vuejs/create-vue), the recommended way to start a Vite-powered Vue projects.
 
-This template should help get you started developing with Vue 3 in Vite.
+Visit the [documentation](https://sakai.primevue.org/documentation) to get started.
 
-## Recommended IDE Setup
+https://teyyub.github.io/mercap-aze/
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+http://delphixglobal.com/
 
-## Recommended Browser Setup
+sudo vi  /etc/nginx/sites-available/delphixglobal.conf
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## Customize configuration
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+server {
+listen 80;
+server_name delphixglobal.com;
 
-## Project Setup
+    location / {
+        proxy_pass http://127.0.0.1:4001;  # Docker container portu
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
 
-```sh
-npm install
-```
 
-### Compile and Hot-Reload for Development
+sudo ln -s /etc/nginx/sites-available/delphixglobal.conf /etc/nginx/sites-enabled/
+sudo nginx -t
+sudo systemctl reload nginx
 
-```sh
-npm run dev
-```
+sudo tail -f /var/log/nginx/error.log
 
-### Compile and Minify for Production
+sudo tail -f /var/log/nginx/access.log
 
-```sh
-npm run build
-```
+
+sudo mv /etc/nginx/sites-enabled/default /etc/nginx/sites-enabled/default1
+sudo systemctl reload nginx
+
+
+/etc/nginx/nginx.conf
+
+
+ls -l /etc/nginx/sites-enabled/
+
+sudo unlink /etc/nginx/sites-enabled/default
+
+👉
+“SEO 0 → 100 checklist (Google-da rank almaq üçün)”

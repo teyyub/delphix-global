@@ -2,6 +2,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Landing from "@/components/Landing.vue";
+import Home from "@/views/Home.vue";
 </script>
 
 <template>

@@ -1,7 +1,19 @@
 <script setup>
-import { ref } from 'vue'
+import {computed, ref} from 'vue'
+import {useI18n} from "@/composables/useI18n.js";
+import {useNavigation} from "@/composables/useNavigation.js";
+const { navLinks, setActive } = useNavigation();
 
 const currentYear = ref(new Date().getFullYear())
+
+const { t, currentLang, setLanguage } = useI18n()
+
+const languages = [
+  { code: 'en', label: 'EN' },
+  { code: 'az', label: 'AZ' },
+  { code: 'ru', label: 'RU' },
+  { code: 'ar', label: 'AR' }
+]
 
 const contactInfo = ref({
   email: 'info@delphixglobal.com',
@@ -10,16 +22,17 @@ const contactInfo = ref({
   address: 'Jumeirah Lakes Towers, Dubai, UAE'
 })
 
-const navLinks = ref([
-  { text: 'HOME', isActive: true },
-  { text: 'ABOUT US', isActive: false },
-  { text: 'PRODUCTS ▾', isActive: false },
-  { text: 'OEM & PRIVATE LABEL', isActive: false },
-  { text: 'MANUFACTURING', isActive: false },
-  { text: 'NEWS', isActive: false },
-  { text: 'CONTACT US', isActive: false }
-])
+// const navLinks = ref([
+//   { text: 'HOME', isActive: true },
+//   { text: 'ABOUT US', isActive: false },
+//   { text: 'PRODUCTS ▾', isActive: false },
+//   { text: 'OEM & PRIVATE LABEL', isActive: false },
+//   { text: 'MANUFACTURING', isActive: false },
+//   { text: 'NEWS', isActive: false },
+//   { text: 'CONTACT US', isActive: false }
+// ])
 
+// const navLinks = computed(() => t.value.nav)
 const categories = ref([
   { title: 'Batteries', icon: '🔋' },
   { title: 'Lubricants', icon: '🛢️' },
@@ -64,16 +77,29 @@ const viewCategory = (categoryTitle) => { alert(`Viewing products for: ${categor
     <nav class="navbar">
       <div class="logo"><span>D</span> DELPHIX GLOBAL</div>
       <ul class="nav-links">
-        <li v-for="link in navLinks" :key="link.text">
+        <li v-for="link in navLinks" :key="link.key">
           <a
               href="#"
               :class="{ active: link.isActive }"
               @click.prevent="setActiveLink(link)"
           >
-            {{ link.text }}
+            {{ t.nav[link.key] }}
           </a>
         </li>
       </ul>
+      <!-- LANGUAGE SELECT -->
+      <select
+          class="lang-select"
+          v-model="currentLang"
+      >
+        <option
+            v-for="l in languages"
+            :key="l.code"
+            :value="l.code"
+        >
+          {{ l.label }}
+        </option>
+      </select>
       <button class="btn-quote" @click="handleQuote">GET A QUOTE</button>
     </nav>
 
@@ -161,6 +187,7 @@ const viewCategory = (categoryTitle) => { alert(`Viewing products for: ${categor
 
 
 <style scoped>
+
 /* Komponentə özəl stillər */
 .delphix-site {
   background-color: #f9f9f9;
@@ -259,4 +286,20 @@ a { text-decoration: none; color: inherit; }
 .footer-contact-details { font-size: 11px; line-height: 1.8; }
 .footer-bottom { border-top: 1px solid #1a2e4c; padding-top: 20px; display: flex; justify-content: space-between; max-width: 1200px; margin: 0 auto; font-size: 11px; }
 .footer-policy-link { margin-right: 15px; }
+
+.lang-select {
+  margin-right: 15px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  cursor: pointer;
+  background: white;
+  color: #333;
+}
+
+.lang-select:focus {
+  outline: none;
+  border-color: #e53e3e;
+}
 </style>
