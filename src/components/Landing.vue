@@ -2,6 +2,9 @@
 import {computed, ref} from 'vue'
 import {useI18n} from "@/composables/useI18n.js";
 import {useNavigation} from "@/composables/useNavigation.js";
+import TopBar from "@/components/layout/TopBar.vue";
+import Navbar from "@/components/layout/Navbar.vue";
+import Footer from "@/components/layout/Footer.vue";
 const { navLinks, setActive } = useNavigation();
 
 const currentYear = ref(new Date().getFullYear())
@@ -22,15 +25,6 @@ const contactInfo = ref({
   address: 'Jumeirah Lakes Towers, Dubai, UAE'
 })
 
-// const navLinks = ref([
-//   { text: 'HOME', isActive: true },
-//   { text: 'ABOUT US', isActive: false },
-//   { text: 'PRODUCTS ▾', isActive: false },
-//   { text: 'OEM & PRIVATE LABEL', isActive: false },
-//   { text: 'MANUFACTURING', isActive: false },
-//   { text: 'NEWS', isActive: false },
-//   { text: 'CONTACT US', isActive: false }
-// ])
 
 // const navLinks = computed(() => t.value.nav)
 const categories = ref([
@@ -64,44 +58,45 @@ const viewCategory = (categoryTitle) => { alert(`Viewing products for: ${categor
 <template>
   <div class="delphix-site">
     <!-- Üst İnfo Bar -->
-    <div class="top-bar">
-      <div>Global Supplier of Premium Automotive Products</div>
-      <div class="top-bar-right">
-        <a :href="`mailto:${contactInfo.email}`">📧 {{ contactInfo.email }}</a>
-        <a :href="`tel:${contactInfo.phoneRaw}`">📞 {{ contactInfo.phone }}</a>
-        <span class="lang-selector">🌐 EN ▾</span>
-      </div>
-    </div>
-
+<!--    <div class="top-bar">-->
+<!--      <div>Global Supplier of Premium Automotive Products</div>-->
+<!--      <div class="top-bar-right">-->
+<!--        <a :href="`mailto:${contactInfo.email}`">📧 {{ contactInfo.email }}</a>-->
+<!--        <a :href="`tel:${contactInfo.phoneRaw}`">📞 {{ contactInfo.phone }}</a>-->
+<!--        <span class="lang-selector">🌐 EN ▾</span>-->
+<!--      </div>-->
+<!--    </div>-->
+    <TopBar />
+    <Navbar />
     <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo"><span>D</span> DELPHIX GLOBAL</div>
-      <ul class="nav-links">
-        <li v-for="link in navLinks" :key="link.key">
-          <a
-              href="#"
-              :class="{ active: link.isActive }"
-              @click.prevent="setActiveLink(link)"
-          >
-            {{ t.nav[link.key] }}
-          </a>
-        </li>
-      </ul>
-      <!-- LANGUAGE SELECT -->
-      <select
-          class="lang-select"
-          v-model="currentLang"
-      >
-        <option
-            v-for="l in languages"
-            :key="l.code"
-            :value="l.code"
-        >
-          {{ l.label }}
-        </option>
-      </select>
-      <button class="btn-quote" @click="handleQuote">GET A QUOTE</button>
-    </nav>
+<!--    <nav class="navbar">-->
+<!--      <div class="logo"><span>D</span> DELPHIX GLOBAL</div>-->
+<!--      <ul class="nav-links">-->
+<!--        <li v-for="link in navLinks" :key="link.key">-->
+<!--          <a-->
+<!--              href="#"-->
+<!--              :class="{ active: link.isActive }"-->
+<!--              @click.prevent="setActiveLink(link)"-->
+<!--          >-->
+<!--            {{ t.nav[link.key] }}-->
+<!--          </a>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--      &lt;!&ndash; LANGUAGE SELECT &ndash;&gt;-->
+<!--      <select-->
+<!--          class="lang-select"-->
+<!--          v-model="currentLang"-->
+<!--      >-->
+<!--        <option-->
+<!--            v-for="l in languages"-->
+<!--            :key="l.code"-->
+<!--            :value="l.code"-->
+<!--        >-->
+<!--          {{ l.label }}-->
+<!--        </option>-->
+<!--      </select>-->
+<!--      <button class="btn-quote" @click="handleQuote">GET A QUOTE</button>-->
+<!--    </nav>-->
 
     <!-- Hero Section -->
     <section class="hero">
@@ -142,46 +137,47 @@ const viewCategory = (categoryTitle) => { alert(`Viewing products for: ${categor
       </div>
     </section>
 
+    <Footer/>
     <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4 class="footer-brand">DELPHIX GLOBAL</h4>
-          <p class="footer-desc">
-            Delphix Global is a leading international supplier of premium automotive products including batteries, lubricants, filters, tires and auto parts.
-          </p>
-        </div>
-        <div class="footer-col">
-          <h4>Quick Links</h4>
-          <ul>
-            <li v-for="link in quickLinks" :key="link"><a href="#">{{ link }}</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Products</h4>
-          <ul>
-            <li v-for="category in categories" :key="category.title">
-              <a href="#" @click.prevent="viewCategory(category.title)">{{ category.title }}</a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Contact Us</h4>
-          <p class="footer-contact-details">
-            📍 {{ contactInfo.address }}<br>
-            📞 {{ contactInfo.phone }}<br>
-            📧 {{ contactInfo.email }}
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>© {{ currentYear }} Delphix Global. All Rights Reserved.</div>
-        <div>
-          <a href="#" class="footer-policy-link">Privacy Policy</a>
-          <a href="#">Terms & Conditions</a>
-        </div>
-      </div>
-    </footer>
+<!--    <footer class="footer">-->
+<!--      <div class="footer-grid">-->
+<!--        <div class="footer-col">-->
+<!--          <h4 class="footer-brand">DELPHIX GLOBAL</h4>-->
+<!--          <p class="footer-desc">-->
+<!--            Delphix Global is a leading international supplier of premium automotive products including batteries, lubricants, filters, tires and auto parts.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--        <div class="footer-col">-->
+<!--          <h4>Quick Links</h4>-->
+<!--          <ul>-->
+<!--            <li v-for="link in quickLinks" :key="link"><a href="#">{{ link }}</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class="footer-col">-->
+<!--          <h4>Products</h4>-->
+<!--          <ul>-->
+<!--            <li v-for="category in categories" :key="category.title">-->
+<!--              <a href="#" @click.prevent="viewCategory(category.title)">{{ category.title }}</a>-->
+<!--            </li>-->
+<!--          </ul>-->
+<!--        </div>-->
+<!--        <div class="footer-col">-->
+<!--          <h4>Contact Us</h4>-->
+<!--          <p class="footer-contact-details">-->
+<!--            📍 {{ contactInfo.address }}<br>-->
+<!--            📞 {{ contactInfo.phone }}<br>-->
+<!--            📧 {{ contactInfo.email }}-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="footer-bottom">-->
+<!--        <div>© {{ currentYear }} Delphix Global. All Rights Reserved.</div>-->
+<!--        <div>-->
+<!--          <a href="#" class="footer-policy-link">Privacy Policy</a>-->
+<!--          <a href="#">Terms & Conditions</a>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </footer>-->
   </div>
 </template>
 

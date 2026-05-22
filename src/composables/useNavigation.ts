@@ -6,6 +6,7 @@ export const useNavigation = () => {
         { key: 'home', isActive: true },
         { key: 'about', isActive: false },
         { key: 'products', isActive: false },
+        { key: 'brands', isActive: false },
         { key: 'oem', isActive: false },
         { key: 'manufacturing', isActive: false },
         { key: 'news', isActive: false },
