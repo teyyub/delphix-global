@@ -3,7 +3,15 @@ export const delphixTranslations = {
         nav: {
             home: 'HOME',
             about: 'ABOUT US',
-            products: 'PRODUCTS ▾',
+            products: {
+                label: 'PRODUCTS',
+                items: {
+                    cosmetics: 'Cosmetics',
+                    hairCare: 'Hair Care',
+                    skinCare: 'Skin Care',
+                    supplements: 'Supplements'
+                }
+            },
             brands: 'BRANDS',
             oem: 'OEM & PRIVATE LABEL',
             manufacturing: 'MANUFACTURING',
@@ -16,7 +24,10 @@ export const delphixTranslations = {
         nav: {
             home: 'ANA SƏHİFƏ',
             about: 'HAQQIMIZDA',
-            products: 'MƏHSULLAR ▾',
+            products: {
+                label: 'MƏHSULLAR',
+                items: ['Kosmetika', 'Saç baxımı', 'Dəri baxımı', 'Qida əlavələri']
+            },
             brands: 'MARKALAR',
             oem: 'OEM & ÖZƏL ETİKET',
             manufacturing: 'İSTEHSAL',
@@ -28,7 +39,10 @@ export const delphixTranslations = {
         nav: {
             home: 'ГЛАВНАЯ',
             about: 'О НАС',
-            products: 'ПРОДУКТЫ ▾',
+            products: {
+                label: 'ПРОДУКТЫ',
+                items: ['Косметика', 'Уход за волосами', 'Уход за кожей', 'Добавки']
+            },
             brands: 'БРЕНДЫ',
             oem: 'OEM И PRIVATE LABEL',
             manufacturing: 'ПРОИЗВОДСТВО',
@@ -41,7 +55,10 @@ export const delphixTranslations = {
         nav: {
             home: 'الرئيسية',
             about: 'من نحن',
-            products: 'المنتجات ▾',
+            products: {
+                label: 'المنتجات',
+                items: ['مستحضرات التجميل', 'العناية بالشعر', 'العناية بالبشرة', 'المكملات']
+            },
             brands: 'العلامات التجارية',
             oem: 'تصنيع خاص',
             manufacturing: 'التصنيع',

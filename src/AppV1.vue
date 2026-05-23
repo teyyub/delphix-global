@@ -1,14 +1,20 @@
 <script setup>
-import Footer from "@/components/layout/Footer.vue";
-import Header from "@/components/layout/Header.vue";
+import Landing from "@/components/Landing.vue";
+import Home from "@/views/Home.vue";
 </script>
 
 <template>
-    <Header/>
-    <main>
-      <router-view/>
-    </main>
-    <Footer/>
+<!--  <header>-->
+<!--    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />-->
+
+<!--    <div class="wrapper">-->
+<!--      <HelloWorld msg="You did it!" />-->
+<!--    </div>-->
+<!--  </header>-->
+
+<!--  <main>-->
+    <Landing />
+<!--  </main>-->
 </template>
 
 <!--<style scoped>-->

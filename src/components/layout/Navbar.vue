@@ -1,8 +1,14 @@
 <script setup>
 import { useI18n } from "@/composables/useI18n"
+import {navStructure} from "@/composables/navStructure.js";
+import {ref} from "vue";
 
 const { t, currentLang, setLanguage } = useI18n()
+const openDropdown = ref(null)
 
+const toggleDropdown = (key) => {
+  openDropdown.value = openDropdown.value === key ? null : key
+}
 const languages = [
   { code: 'en', label: 'EN' },
   { code: 'az', label: 'AZ' },
@@ -37,15 +43,46 @@ const handleQuote = () => {
       <span>D</span> DELPHIX GLOBAL
     </div>
 
+<!--    <ul class="nav-links">-->
+<!--      <li v-for="link in navLinks" :key="link.key">-->
+<!--        <a-->
+<!--            href="#"-->
+<!--            :class="{ active: link.isActive }"-->
+<!--            @click.prevent="setActiveLink(link)"-->
+<!--        >-->
+<!--          {{ t.nav[link.key] }}-->
+<!--        </a>-->
+<!--      </li>-->
+<!--    </ul>-->
+
     <ul class="nav-links">
-      <li v-for="link in navLinks" :key="link.key">
-        <a
-            href="#"
-            :class="{ active: link.isActive }"
-            @click.prevent="setActiveLink(link)"
-        >
-          {{ t.nav[link.key] }}
-        </a>
+      <li v-for="item in navStructure" :key="item.key">
+
+        <!-- SIMPLE LINK -->
+        <template v-if="item.type === 'link'">
+          <a href="#">
+            {{ t.nav[item.key] }}
+          </a>
+        </template>
+
+        <!-- DROPDOWN -->
+        <template v-else-if="item.type === 'dropdown'">
+          <div class="dropdown">
+            <a href="#" @click.prevent="toggleDropdown(item.key)">
+              {{ t.nav[item.key].label }} ▾
+            </a>
+
+            <ul
+                v-show="openDropdown === item.key"
+                class="dropdown-menu"
+            >
+              <li v-for="child in item.children" :key="child.key">
+                {{ t.nav[item.key].items[child.key] }}
+              </li>
+            </ul>
+          </div>
+        </template>
+
       </li>
     </ul>
 
@@ -122,5 +159,20 @@ const handleQuote = () => {
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  list-style: none;
+  padding: 10px;
+  min-width: 180px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 </style>
