@@ -6,13 +6,23 @@ export const delphixTranslations = {
             products: {
                 label: 'PRODUCTS',
                 items: {
-                    cosmetics: 'Cosmetics',
-                    hairCare: 'Hair Care',
-                    skinCare: 'Skin Care',
-                    supplements: 'Supplements'
+                    batteries:'Batteries',
+                    lubricants:'Lubricants',
+                    filters:'Filters',
+                    tires:'Tires'
                 }
             },
-            brands: 'BRANDS',
+            brands: {
+                label: 'BRANDS',
+                items: {
+                    panosonic: 'Panosonic',
+                    phillips: 'Phillips',
+                    delphix: 'Delphix',
+                    denzo: 'Denzo',
+                    platin: 'Platin',
+                    westol: 'Westol',
+                }
+            },
             oem: 'OEM & PRIVATE LABEL',
             manufacturing: 'MANUFACTURING',
             news: 'NEWS',

@@ -6,14 +6,25 @@ export const navStructure = [
         key: 'products',
         type: 'dropdown',
         children: [
-            { key: 'cosmetics' },
-            { key: 'hairCare' },
-            { key: 'skinCare' },
-            { key: 'supplements' }
+            { key: 'batteries' },
+            { key: 'lubricants' },
+            { key: 'filters' },
+            { key: 'tires' }
         ]
     },
 
-    { key: 'brands', type: 'link' },
+    {
+        key: 'brands',
+        type: 'dropdown',
+        children: [
+            { key: 'panosonic' },
+            { key: 'phillips' } ,
+            { key: 'delphix' },
+            { key: 'denzo' },
+            { key: 'platin' },
+            { key: 'westol' }
+        ]
+    },
     { key: 'oem', type: 'link' },
     { key: 'manufacturing', type: 'link' },
     { key: 'news', type: 'link' },
