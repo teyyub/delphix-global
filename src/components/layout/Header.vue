@@ -59,10 +59,15 @@ const handleQuote = () => {
     <nav class="navbar">
 
       <!-- LOGO -->
-      <div class="logo">
-        <span>D</span> DELPHIX GLOBAL
-      </div>
-
+<!--      <div class="logo">-->
+<!--        <span>D</span> DELPHIX GLOBAL-->
+<!--      </div>-->
+<!--      <router-link to="/" class="logo">-->
+<!--        <span>D</span> DELPHIX GLOBAL-->
+<!--      </router-link>-->
+      <router-link to="/" class="logo">
+        <img src="/delphix-global-logo.png" alt="Delphix Global Logo" class="navbar-logo" />
+      </router-link>
       <!-- LINKS -->
       <ul class="nav-links">
 
@@ -133,7 +138,11 @@ const handleQuote = () => {
   z-index: 100;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
-
+.navbar-logo {
+  height: 50px; /* Sizin navbarın hündürlüyünə uyğun olaraq 40px - 60px arası dəyişə bilərsiniz */
+  width: auto;  /* Eni proporsional olaraq özü tənzimlənəcək */
+  display: block;
+}
 .logo {
   font-size: 22px;
   font-weight: 900;
@@ -142,6 +151,16 @@ const handleQuote = () => {
 
 .logo span {
   color: #e53e3e;
+}
+.logo {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logo:hover {
+  opacity: 0.7;
 }
 
 /* NAV */
@@ -155,6 +174,26 @@ const handleQuote = () => {
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
+  transition: 0.2s ease;
+  position: relative;
+  text-decoration: none;
+  color: #0b1c33;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #e53e3e;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover {
+  color: #e53e3e;
+}
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 /* DROPDOWN */

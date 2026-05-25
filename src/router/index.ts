@@ -11,29 +11,16 @@ const routes = [
         name: "about",
         component: () => import("@/views/About.vue")
     },
-
-    // // PRODUCTS
-    // {
-    //     path: "/products/cosmetics",
-    //     name: "cosmetics",
-    //     component: () => import("@/views/products/Cosmetics.vue")
-    // },
-    // {
-    //     path: "/products/hair-care",
-    //     name: "hairCare",
-    //     component: () => import("@/views/products/HairCare.vue")
-    // },
-    // {
-    //     path: "/products/skin-care",
-    //     name: "skinCare",
-    //     component: () => import("@/views/products/SkinCare.vue")
-    // },
-    // {
-    //     path: "/products/supplements",
-    //     name: "supplements",
-    //     component: () => import("@/views/products/Supplements.vue")
-    // },
-    //
+    {
+        path: "/products",
+        name: "products",
+        component: () => import("@/views/Brands.vue")
+    },
+    {
+        path: "/categories/:slug",
+        name: "category",
+        component: () => import("@/views/CategoryPage.vue")
+    },
     {
         path: "/brands",
         name: "brands",

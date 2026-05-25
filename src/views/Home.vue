@@ -1,11 +1,13 @@
 <script setup>
 import { ref } from "vue";
+import { useRouter } from "vue-router";
+const router = useRouter();
 
 const categories = ref([
-  { title: "Batteries", icon: "🔋" },
-  { title: "Lubricants", icon: "🛢️" },
-  { title: "Filters", icon: "🌪️" },
-  { title: "Tires", icon: "🛞" }
+  { title: "Batteries", slug: 'batteries', icon: "🔋" },
+  { title: "Lubricants", slug: 'lubricants', icon: "🛢️" },
+  { title: "Filters", slug: 'filters', icon: "🌪️" },
+  { title: "Tires", slug: 'tires',icon: "🛞" }
 ]);
 
 const features = ref([
@@ -18,7 +20,9 @@ const features = ref([
 
 const exploreProducts = () => {};
 const handleQuote = () => {};
-const viewCategory = (title) => console.log(title);
+const viewCategory = (slug) => {
+  router.push(`/categories/${slug}`);
+};
 </script>
 
 <template>
@@ -58,7 +62,7 @@ const viewCategory = (title) => console.log(title);
         >
           <div class="category-icon">{{ category.icon }}</div>
           <h3>{{ category.title }}</h3>
-          <a href="#" @click.prevent="viewCategory(category.title)">
+          <a href="#" @click.prevent="viewCategory(category.slug)">
             View Products →
           </a>
         </div>

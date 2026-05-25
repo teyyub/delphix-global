@@ -1,6 +1,7 @@
 <script setup>
 import Footer from "@/components/layout/Footer.vue";
 import Header from "@/components/layout/Header.vue";
+import Landing from "@/components/Landing.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Header from "@/components/layout/Header.vue";
       <router-view/>
     </main>
     <Footer/>
+<!--  <landing />-->
 </template>
 
 <!--<style scoped>-->
