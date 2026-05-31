@@ -154,12 +154,24 @@
           products: [
             {
               title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
+              image: "/images/filters/aid.jpeg"
             },
             {
-              title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
-            }
+              title: "680A Battery",
+              image: "/images/filters/cabin.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/filters/engine.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/filters/fuel.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/filters/transmission.jpeg"
+            },
           ]
         },
       ]
@@ -187,11 +199,14 @@
   }
 
   const category = categories[route.params.slug]
-  const products = computed(() => {
-    if (!activeSeries.value) return []
-    return category.series.find(s => s.id === activeSeries.value)?.products || []
-  })
+  // const products = computed(() => {
+  //   if (!activeSeries.value) return []
+  //   return category.series.find(s => s.id === activeSeries.value)?.products || []
+  // })
 
+  const products = computed(() => {
+    return category?.series?.flatMap(series => series.products) || []
+  })
 
   const goToProduct = (product) => {
     router.push(`/product/${product.id}`)
@@ -206,49 +221,78 @@
 
       <p>{{ category?.description }}</p>
       </div>
-      <div class="series-grid" v-if="!activeSeries">
+<!--      <div class="series-grid" v-if="!activeSeries">-->
 
+<!--        <div-->
+<!--            v-for="series in category?.series"-->
+<!--            :key="series.id"-->
+<!--            class="series-card"-->
+<!--            @click="activeSeries = series.id"-->
+<!--        >-->
+<!--          <h2>{{ series.title }}</h2>-->
+<!--          <p>{{ series.products.length }} products</p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--        <div v-else>-->
+<!--          <button class="back-btn" @click="activeSeries = null">-->
+<!--            ← Back-->
+<!--          </button>-->
+<!--          <div class="products-grid">-->
+
+<!--            <div-->
+<!--                v-for="(product, index) in products"-->
+<!--                :key="index"-->
+<!--                class="product-card"-->
+<!--            >-->
+<!--              <div class="image-wrapper">-->
+<!--                <img :src="product.image" :alt="product.title" />-->
+<!--              </div>-->
+<!--              <div class="content">-->
+<!--                <h3>{{ product.title }}</h3>-->
+<!--                <p class="desc">-->
+<!--                  {{ product.description || "High performance automotive battery designed for durability and reliability." }}-->
+<!--                </p>-->
+<!--                <div class="bottom">-->
+<!--                  <span class="badge">In Stock</span>-->
+<!--                  <button @click="goToProduct(product)">-->
+<!--                    View-->
+<!--                  </button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+
+<!--          </div>-->
+<!--        </div>-->
+      <div class="products-grid">
         <div
-            v-for="series in category?.series"
-            :key="series.id"
-            class="series-card"
-            @click="activeSeries = series.id"
+            v-for="(product, index) in products"
+            :key="index"
+            class="product-card"
         >
-          <h2>{{ series.title }}</h2>
-          <p>{{ series.products.length }} products</p>
-        </div>
-      </div>
-        <div v-else>
-          <button class="back-btn" @click="activeSeries = null">
-            ← Back
-          </button>
-          <div class="products-grid">
+          <div class="image-wrapper">
+            <img :src="product.image" :alt="product.title" />
+          </div>
 
-            <div
-                v-for="(product, index) in products"
-                :key="index"
-                class="product-card"
-            >
-              <div class="image-wrapper">
-                <img :src="product.image" :alt="product.title" />
-              </div>
-              <div class="content">
-                <h3>{{ product.title }}</h3>
-                <p class="desc">
-                  {{ product.description || "High performance automotive battery designed for durability and reliability." }}
-                </p>
-                <div class="bottom">
-                  <span class="badge">In Stock</span>
-                  <button @click="goToProduct(product)">
-                    View
-                  </button>
-                </div>
-              </div>
+          <div class="content">
+            <h3>{{ product.title }}</h3>
+
+            <p class="desc">
+              {{
+                product.description ||
+                "High performance automotive product designed for durability and reliability."
+              }}
+            </p>
+
+            <div class="bottom">
+              <span class="badge">In Stock</span>
+
+              <button @click="goToProduct(product)">
+                View
+              </button>
             </div>
-
           </div>
         </div>
-
+      </div>
     </div>
   </template>
 
