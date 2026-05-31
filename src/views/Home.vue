@@ -23,6 +23,8 @@ const handleQuote = () => {};
 const viewCategory = (slug) => {
   router.push(`/categories/${slug}`);
 };
+
+
 </script>
 
 <template>

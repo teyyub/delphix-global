@@ -97,15 +97,92 @@
     },
     lubricants: {
       title: "Lubricants",
-      description: "High quality engine oils"
+      description: "High quality engine oils",
+      series:[
+        {
+          id: 'delphix',
+          title: "DELPHIX LUBRICANTS",
+          products: [
+            {
+              title: "5W30 SN/Cf",
+              image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/5W-30Premium.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/5W-30SPC3.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/10W-40-4L.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/10W-40LA.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/10W-40SNCF.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/ATF.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/ATF-4-L.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/lubricants/premium.jpeg"
+            },
+
+          ]
+        },
+      ]
     },
     filters: {
       title: "Filters",
-      description: "Air, oil and fuel filters"
+      description: "Air, oil and fuel filters",
+      series:[
+        {
+          id: 'delphix',
+          title: "DELPHIX BATTERIES WIX BOXES",
+          products: [
+            {
+              title: "680A Battery",
+              image: "/images/batteries/wix_680.jpeg"
+            },
+            {
+              title: "750A Battery",
+              image: "/images/batteries/wix_750.jpeg"
+            }
+          ]
+        },
+      ]
     },
     tires: {
       title: "Tires",
-      description: "Durable performance tires"
+      description: "Durable performance tires",
+      series:[
+        {
+          id: 'delphix',
+          title: "DELPHIX Tires",
+          products: [
+            {
+              title: "680A Battery",
+              image: "/images/batteries/wix_680.jpeg"
+            },
+            {
+              title: "750A Battery",
+              image: "/images/batteries/wix_750.jpeg"
+            }
+          ]
+        },
+      ]
     }
   }
 
