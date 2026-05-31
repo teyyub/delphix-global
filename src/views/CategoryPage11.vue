@@ -51,35 +51,7 @@
           ]
         },
         {
-          id: 'delphix',
-          title: "DELPHIX BATTERIES WIX BOXES",
-          products: [
-            {
-              title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
-            },
-            {
-              title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
-            }
-          ]
-        },
-        {
-          id: 'panasonic',
-          title: "DELPHIX BATTERIES WIX BOXES",
-          products: [
-            {
-              title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
-            },
-            {
-              title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
-            }
-          ]
-        },
-        {
-          id: 'philips',
+          id: 'delphix_wix',
           title: "DELPHIX BATTERIES WIX BOXES",
           products: [
             {
@@ -92,7 +64,6 @@
             }
           ]
         }
-
       ]
     },
     lubricants: {
