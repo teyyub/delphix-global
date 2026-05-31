@@ -16,7 +16,7 @@
           products: [
             {
               id: "500A",
-              title: "500A Battery",
+              title: "12V 45Ah 500A Battery",
               image: "/images/batteries/delphix_500.jpeg",
               specs: {
                 capacity: "500A",
@@ -26,26 +26,27 @@
               }
             },
             {
-              title: "550A Battery",
+              title: "12V 50Ah 550A Battery",
               image: "/images/batteries/delphix_550.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "12V 60Ah 680A Battery",
               image: "/images/batteries/delphix_680.jpeg"
             },
             {
-              title: "750A Battery",
+              title: "12V 70Ah 750A Battery",
               image: "/images/batteries/delphix_750.jpeg"
-            },{
-              title: "850A Battery",
+            },
+            {
+              title: "12V 85Ah 850A Battery",
               image: "/images/batteries/delphix_850.jpeg"
             },
             {
-              title: "950A Battery",
+              title: "95Ah 12V 950A Battery",
               image: "/images/batteries/delphix_950.jpeg"
             },
             {
-              title: "1050A Battery",
+              title: "105Ah 12V 1050A Battery",
               image: "/images/batteries/delphix_1050.jpeg"
             }
           ]
@@ -55,27 +56,27 @@
           title: "DELPHIX BATTERIES WIX BOXES",
           products: [
             {
-              title: "680A Battery",
+              title: "12V 45Ah 680A Battery",
               image: "/images/batteries/wix_500A.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "12V 50Ah 550A Battery",
               image: "/images/batteries/wix_550A.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "12V 60Ah 680A Battery",
               image: "/images/batteries/wix_680A.jpeg"
             },
             {
-              title: "750A Battery",
+              title: "12V 70Ah 750A Battery",
               image: "/images/batteries/wix_750A.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "12V 80Ah 850A Battery",
               image: "/images/batteries/wix_850A.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "12V 105Ah 1050A Battery",
               image: "/images/batteries/wix_1050A.jpeg"
             }
           ]
@@ -85,33 +86,49 @@
           title: "DELPHIX BATTERIES WIX BOXES",
           products: [
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_420.jpeg"
+              title: "12V 40Ah 420A Battery",
+              image: "/images/batteries/panosonic_420A.jpeg"
             },
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_550.jpeg"
+              title: "12V 45Ah 500A Battery",
+              image: "/images/batteries/panosonic_500A.jpeg"
             },
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_680.jpeg"
+              title: "12V 50Ah 550A Battery",
+              image: "/images/batteries/panosonic_550A.jpeg"
             },
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_750.jpeg"
+              title: "12V 60Ah 680A Battery",
+              image: "/images/batteries/panosonic_680A.jpeg"
             },
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_850.jpeg"
+              title: "12V 70Ah 720A Battery",
+              image: "/images/batteries/panosonic_720A.jpeg"
             },
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_950.jpeg"
+              title: "12V 70Ah 750A Battery",
+              image: "/images/batteries/panosonic_750A.jpeg"
             },
             {
-              title: "680A Battery",
-              image: "/images/batteries/panosonic_1050.jpeg"
+              title: "12V 85Ah 850A Battery",
+              image: "/images/batteries/panosonic_850A.jpeg"
             },
+            {
+              title: "12V 95Ah 900A Battery",
+              image: "/images/batteries/panosonic_900A.jpeg"
+            },
+            {
+              title: "12V 95Ah 950A Battery",
+              image: "/images/batteries/panosonic_950A.jpeg"
+            },
+            {
+              title: "12V 105Ah 1050A Battery",
+              image: "/images/batteries/panosonic_1050A.jpeg"
+            },
+            {
+              title: "12V 255Ah 1500A Battery",
+              image: "/images/batteries/panosonic_1500A.jpeg"
+            }
           ]
         },
         {
