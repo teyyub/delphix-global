@@ -56,11 +56,27 @@
           products: [
             {
               title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
+              image: "/images/batteries/wix_500A.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/wix_550A.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/wix_680A.jpeg"
             },
             {
               title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
+              image: "/images/batteries/wix_750A.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/wix_850A.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/wix_1050A.jpeg"
             }
           ]
         },
@@ -70,12 +86,32 @@
           products: [
             {
               title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
+              image: "/images/batteries/panosonic_420.jpeg"
             },
             {
-              title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
-            }
+              title: "680A Battery",
+              image: "/images/batteries/panosonic_550.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/panosonic_680.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/panosonic_750.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/panosonic_850.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/panosonic_950.jpeg"
+            },
+            {
+              title: "680A Battery",
+              image: "/images/batteries/panosonic_1050.jpeg"
+            },
           ]
         },
         {
