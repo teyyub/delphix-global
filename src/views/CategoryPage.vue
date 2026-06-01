@@ -128,7 +128,6 @@
 
 .header h1 {
   font-size: 36px;
-  font-""Weight (kg)"  (kg)" : 900;
   color: #0f172a;
 }
 
@@ -202,7 +201,7 @@
 
 .content h3 {
   font-size: 18px;
-  font-""Weight (kg)"  (kg)" : 800;
+  font-weight: 800;
   color: #0f172a;
 }
 
@@ -227,7 +226,7 @@
   color: #16a34a;
   padding: 4px 10px;
   border-radius: 20px;
-  font-""Weight (kg)"  (kg)" : 600;
+  font-weight : 600;
 }
 
 button {
@@ -342,7 +341,7 @@ button:hover {
 ========================= */
 .series-card h2 {
   font-size: 18px;
-  font-""Weight (kg)"  (kg)" : 800;
+  font-weight : 800;
   color: #0f172a;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
@@ -363,7 +362,7 @@ button:hover {
 ========================= */
 .view {
   font-size: 12px;
-  font-""Weight (kg)"  (kg)" : 600;
+  font-weight : 600;
   color: #2563eb;
   opacity: 0.9;
   transition: 0.3s;
