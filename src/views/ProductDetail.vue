@@ -1,3 +1,58 @@
+<script setup>
+import {computed, reactive} from 'vue'
+import {useRoute} from "vue-router";
+const route = useRoute()
+// Məhsulun əsas datası
+// const product = reactive({
+//   voltage: '12V',
+//   capacity: '45Ah',
+//   cca: '500A'
+// })
+
+const product = computed(() => {
+  return JSON.parse(
+      decodeURIComponent(route.query.product)
+  )
+})
+// Sol tərəfdəki ikonlu üstünlüklər
+const features = reactive([
+  { title: 'High Starting Power', description: 'Strong engine starts even in cold weather', icon: 'fa-solid fa-car-battery' },
+  { title: 'Long Service Life', description: 'Enhanced cycle life for extended durability', icon: 'fa-solid fa-shield-halved' },
+  { title: 'Vibration Resistant', description: 'Built to perform in demanding driving conditions', icon: 'fa-solid fa-waveform-path' },
+  { title: 'Maintenance Free', description: 'No need to add water. Ready to use', icon: 'fa-solid fa-faucet-drip' },
+  { title: 'Fast Recharge', description: 'Optimized for quick and efficient charging', icon: 'fa-solid fa-bolt' },
+  { title: 'Start-Stop Ready', description: 'Ideal for vehicles with Start-Stop systems', icon: 'fa-solid fa-circle-a' }
+])
+
+// Texniki göstəricilər cədvəli
+const specifications = reactive([
+  { label: 'Voltage', value: '12V', icon: 'fa-solid fa-bolt' },
+  { label: 'Capacity', value: '45Ah', icon: 'fa-solid fa-plus-minus' },
+  { label: 'Cold Cranking Amps (CCA)', value: '500A (EN)', icon: 'fa-solid fa-snowflake' },
+  { label: 'Technology', value: 'AGM (Absorbent Glass Mat)', icon: 'fa-solid fa-layer-group' },
+  { label: 'Battery Type', value: 'Maintenance-Free', icon: 'fa-solid fa-wrench' },
+  { label: 'Polarity', value: 'Right Positive (R+)', icon: 'fa-solid fa-arrows-left-right' },
+  { label: 'Dimensions (mm)', value: '207 (L) x 175 (W) x 190 (H)', icon: 'fa-solid fa-maximize' },
+  { label: 'Weight (kg)', value: 'Approx. 12.5 kg', icon: 'fa-solid fa-weight-hanging' }
+])
+
+// Kimlər üçündür
+const idealFor = reactive([
+  { text: 'Passenger Cars', icon: 'fa-solid fa-car' },
+  { text: 'Compact SUVs', icon: 'fa-solid fa-car-side' },
+  { text: 'Start-Stop Vehicles', icon: 'fa-solid fa-circle-a' },
+  { text: 'Vehicles with High Electrical Demand', icon: 'fa-solid fa-bolt' }
+])
+
+// Üstünlüklər listi
+const advantages = reactive([
+  'High starting power in all weather conditions',
+  'Reliable performance under heavy load',
+  'Excellent safety with leak-proof design',
+  'Longer life compared to conventional batteries',
+  'Stable power for modern automotive electronics'
+])
+</script>
 <template>
   <div class="product-container">
     <header class="battery-header">
@@ -33,14 +88,17 @@
       </section>
 
       <section class="right-column">
+        <div class="product-image">
+          <img :src="product.image" :alt="product.title">
+        </div>
         <h3 class="specs-title">Product Specifications</h3>
         <table class="spec-table">
           <tbody>
-          <tr v-for="(spec, key) in specifications" :key="key">
+          <tr v-for="(spec, key) in product.specs" :key="key">
             <td class="spec-label">
-              <i :class="spec.icon"></i> {{ spec.label }}
+              <i :class="spec.icon"></i> {{ key }}
             </td>
-            <td class="spec-value">{{ spec.value }}</td>
+            <td class="spec-value">{{ spec }}</td>
           </tr>
           </tbody>
         </table>
@@ -84,55 +142,7 @@
   </div>
 </template>
 
-<script setup>
-import { reactive } from 'vue'
 
-// Məhsulun əsas datası
-const product = reactive({
-  voltage: '12V',
-  capacity: '45Ah',
-  cca: '500A'
-})
-
-// Sol tərəfdəki ikonlu üstünlüklər
-const features = reactive([
-  { title: 'High Starting Power', description: 'Strong engine starts even in cold weather', icon: 'fa-solid fa-car-battery' },
-  { title: 'Long Service Life', description: 'Enhanced cycle life for extended durability', icon: 'fa-solid fa-shield-halved' },
-  { title: 'Vibration Resistant', description: 'Built to perform in demanding driving conditions', icon: 'fa-solid fa-waveform-path' },
-  { title: 'Maintenance Free', description: 'No need to add water. Ready to use', icon: 'fa-solid fa-faucet-drip' },
-  { title: 'Fast Recharge', description: 'Optimized for quick and efficient charging', icon: 'fa-solid fa-bolt' },
-  { title: 'Start-Stop Ready', description: 'Ideal for vehicles with Start-Stop systems', icon: 'fa-solid fa-circle-a' }
-])
-
-// Texniki göstəricilər cədvəli
-const specifications = reactive([
-  { label: 'Voltage', value: '12V', icon: 'fa-solid fa-bolt' },
-  { label: 'Capacity', value: '45Ah', icon: 'fa-solid fa-plus-minus' },
-  { label: 'Cold Cranking Amps (CCA)', value: '500A (EN)', icon: 'fa-solid fa-snowflake' },
-  { label: 'Technology', value: 'AGM (Absorbent Glass Mat)', icon: 'fa-solid fa-layer-group' },
-  { label: 'Battery Type', value: 'Maintenance-Free', icon: 'fa-solid fa-wrench' },
-  { label: 'Polarity', value: 'Right Positive (R+)', icon: 'fa-solid fa-arrows-left-right' },
-  { label: 'Dimensions (mm)', value: '207 (L) x 175 (W) x 190 (H)', icon: 'fa-solid fa-maximize' },
-  { label: 'Weight (kg)', value: 'Approx. 12.5 kg', icon: 'fa-solid fa-weight-hanging' }
-])
-
-// Kimlər üçündür
-const idealFor = reactive([
-  { text: 'Passenger Cars', icon: 'fa-solid fa-car' },
-  { text: 'Compact SUVs', icon: 'fa-solid fa-car-side' },
-  { text: 'Start-Stop Vehicles', icon: 'fa-solid fa-circle-a' },
-  { text: 'Vehicles with High Electrical Demand', icon: 'fa-solid fa-bolt' }
-])
-
-// Üstünlüklər listi
-const advantages = reactive([
-  'High starting power in all weather conditions',
-  'Reliable performance under heavy load',
-  'Excellent safety with leak-proof design',
-  'Longer life compared to conventional batteries',
-  'Stable power for modern automotive electronics'
-])
-</script>
 
 <style scoped>
 /* Rəng və Stil Dəyişənləri */
@@ -366,5 +376,75 @@ const advantages = reactive([
   padding: 15px;
   font-weight: bold;
   letter-spacing: 1px;
+}
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-image {
+  width: 100%;
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.product-image img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  display: block;
+}
+
+.specs-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.spec-table td {
+  padding: 14px 18px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.spec-label {
+  font-weight: 600;
+  color: #334155;
+  width: 45%;
+}
+
+.spec-value {
+  color: #0f172a;
+  font-weight: 500;
+}
+
+.origin-badge {
+  text-align: center;
+  padding: 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.usa-tech {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.euro-eng {
+  opacity: 0.8;
 }
 </style>

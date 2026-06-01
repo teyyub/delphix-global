@@ -1,3 +1,36 @@
+<script setup>
+import { useRouter } from "vue-router"
+
+const router = useRouter()
+
+// dummy data (sonra API ilə əvəz edərsən)
+const categories = [
+  { title: "Lubricants", icon: "🛢️" },
+  { title: "Batteries", icon: "🔋" },
+  { title: "Filters", icon: "🧰" },
+  { title: "Tires", icon: "🛞" }
+]
+
+const features = [
+  { title: "Global Shipping", icon: "🌍", description: "Fast worldwide delivery" },
+  { title: "Premium Quality", icon: "⭐", description: "Top-tier certified products" },
+  { title: "24/7 Support", icon: "📞", description: "Always here to help" }
+]
+
+// methods
+const exploreProducts = () => {
+  router.push("/products")
+}
+
+const handleQuote = () => {
+  router.push("/quote")
+}
+
+const viewCategory = (category) => {
+  router.push(`/products?category=${category}`)
+}
+</script>
+
 <template>
   <div>
     <!-- HERO -->
@@ -67,38 +100,7 @@
   </div>
 </template>
 
-<script setup>
-import { useRouter } from "vue-router"
 
-const router = useRouter()
-
-// dummy data (sonra API ilə əvəz edərsən)
-const categories = [
-  { title: "Lubricants", icon: "🛢️" },
-  { title: "Batteries", icon: "🔋" },
-  { title: "Filters", icon: "🧰" },
-  { title: "Tires", icon: "🛞" }
-]
-
-const features = [
-  { title: "Global Shipping", icon: "🌍", description: "Fast worldwide delivery" },
-  { title: "Premium Quality", icon: "⭐", description: "Top-tier certified products" },
-  { title: "24/7 Support", icon: "📞", description: "Always here to help" }
-]
-
-// methods
-const exploreProducts = () => {
-  router.push("/products")
-}
-
-const handleQuote = () => {
-  router.push("/quote")
-}
-
-const viewCategory = (category) => {
-  router.push(`/products?category=${category}`)
-}
-</script>
 
 <style scoped>
 .hero {

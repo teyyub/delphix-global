@@ -19,35 +19,106 @@
               title: "12V 45Ah 500A Battery",
               image: "/images/batteries/delphix_500.jpeg",
               specs: {
-                capacity: "500A",
                 voltage: "12V",
+                capacity: "45Ah",
+                cca: "500A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
                 warranty: "24 months",
-                type: "Maintenance Free"
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "207 (L)x175(W)x 190(H)",
+                weight: "Approx. 12.5 kg"
               }
             },
             {
               title: "12V 50Ah 550A Battery",
-              image: "/images/batteries/delphix_550.jpeg"
+              image: "/images/batteries/delphix_550.jpeg",
+              specs: {
+                voltage: "12V",
+                capacity: "50Ah",
+                cca: "500A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
+                warranty: "24 months",
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "207 (L)x175(W)x 190(H)",
+                weight: "Approx. 13.5 kg"
+              }
             },
             {
               title: "12V 60Ah 680A Battery",
-              image: "/images/batteries/delphix_680.jpeg"
+              image: "/images/batteries/delphix_680.jpeg",
+              specs: {
+                voltage: "12V",
+                capacity: "60Ah",
+                cca: "680A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
+                warranty: "24 months",
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "242 (L)x175(W)x 190(H)",
+                weight: "Approx. 16 kg"
+              }
             },
             {
               title: "12V 70Ah 750A Battery",
-              image: "/images/batteries/delphix_750.jpeg"
+              image: "/images/batteries/delphix_750.jpeg",
+              specs: {
+                voltage: "12V",
+                capacity: "70Ah",
+                cca: "750A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
+                warranty: "24 months",
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "278 (L)x175(W)x 190(H)",
+                weight: "Approx. 17.5 kg"
+              }
             },
             {
               title: "12V 85Ah 850A Battery",
-              image: "/images/batteries/delphix_850.jpeg"
+              image: "/images/batteries/delphix_850.jpeg",
+              specs: {
+                voltage: "12V",
+                capacity: "85Ah",
+                cca: "850A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
+                warranty: "24 months",
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "207 (L)x175(W)x 190(H)",
+                weight: "Approx. 17 kg"
+              }
             },
             {
               title: "95Ah 12V 950A Battery",
-              image: "/images/batteries/delphix_950.jpeg"
+              image: "/images/batteries/delphix_950.jpeg",
+              specs: {
+                voltage: "12V",
+                capacity: "95Ah",
+                cca: "950A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
+                warranty: "24 months",
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "353 (L)x175(W)x 190(H)",
+                weight: "Approx. 24 kg"
+              }
             },
             {
               title: "105Ah 12V 1050A Battery",
-              image: "/images/batteries/delphix_1050.jpeg"
+              image: "/images/batteries/delphix_1050.jpeg",
+              specs: {
+                voltage: "12V",
+                capacity: "105Ah",
+                cca: "1050A (EN)",
+                technology: "AGM (Absorbent Glass Mat)",
+                warranty: "24 months",
+                type: "Maintenance Free",
+                polarity: "Right positive (R+)",
+                dimension: "353 (L)x175(W)x 190(H)",
+                weight: "Approx. 27.0 kg"
+              }
             }
           ]
         },
@@ -157,39 +228,39 @@
           title: "DELPHIX LUBRICANTS",
           products: [
             {
-              title: "5W30 SN/Cf",
+              title: "5W30 SN/Cf C2/C3 A4/B4",
               image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "5W-30 SP C3",
               image: "/images/lubricants/5W-30Premium.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "5W-30 SP C3",
               image: "/images/lubricants/5W-30SPC3.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "10W-40 SN/CF",
               image: "/images/lubricants/10W-40-4L.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "10W-40 LA",
               image: "/images/lubricants/10W-40LA.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "10W-40 SN/CF",
               image: "/images/lubricants/10W-40SNCF.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "ATF",
               image: "/images/lubricants/ATF.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "ATF 4",
               image: "/images/lubricants/ATF-4-L.jpeg"
             },
             {
-              title: "680A Battery",
+              title: "Premium",
               image: "/images/lubricants/premium.jpeg"
             },
 
@@ -262,7 +333,14 @@
   })
 
   const goToProduct = (product) => {
-    router.push(`/product/${product.id}`)
+    console.log('product:' ,product);
+    // router.push(`/product/${product.id}`)
+    router.push({
+      path: `/product/${product.id}`,
+      query: {
+        product: encodeURIComponent(JSON.stringify(product))
+      }
+    })
   }
 
   </script>

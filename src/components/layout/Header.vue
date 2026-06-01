@@ -1,14 +1,21 @@
 <script setup>
-import { ref } from "vue"
-import { useRouter } from "vue-router"
+import {onBeforeUnmount, onMounted, ref} from "vue"
+import { useRoute, useRouter } from "vue-router"
 import { useI18n } from "@/composables/useI18n"
 import { navStructure } from "@/composables/navStructure"
 
 const { t, currentLang, setLanguage } = useI18n()
-const router = useRouter()
-
+const router = useRouter();
+const route = useRoute();
 const openDropdown = ref(null)
+const dropdownRefs = ref(new Map())
 
+const navigate = (item) => {
+  if (!item?.route) return
+
+  router.push(item.route)
+  openDropdown.value = null
+}
 const languages = [
   { code: 'en', label: 'EN' },
   { code: 'az', label: 'AZ' },
@@ -16,20 +23,76 @@ const languages = [
   { code: 'ar', label: 'AR' }
 ]
 
+const handleOutsideClick = (e) => {
+  const isInside = Array.from(dropdownRefs.value.values())
+      .some(el => el && el.contains?.(e.target))
+
+  if (!isInside) {
+    openDropdown.value = null
+  }
+}
+
+
+// const handleOutsideClick = (e) => {
+//   if (!dropdownRef.value) return
+//
+//   if (!dropdownRef.value.contains(e.target)) {
+//     openDropdown.value = null
+//   }
+// }
+
+onMounted(() => {
+  document.addEventListener("click", handleOutsideClick)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleOutsideClick)
+})
+
 const contact = {
   email: 'info@delphixglobal.com',
   phone: '+971 50 123 4567'
 }
 
 // NAV
-const goTo = (key) => {
-  router.push({ name: key })
+// const goTo = (key) => {
+//   router.push({ name: key })
+// }
+
+const goTo = (item) => {
+  router.push(item.route)
+}
+
+const goToCategory = (child) => {
+  openDropdown.value = null
+  router.push(child.route)
 }
 
 const toggle = (key) => {
   openDropdown.value = openDropdown.value === key ? null : key
 }
 
+
+
+const closeDropdown = () => {
+  openDropdown.value = null
+}
+
+const isActive = (item) => {
+  return item.route === route.path
+}
+const isActiveRoute = (path) => {
+  return route.path === path
+}
+
+const isActiveChild = (child) => {
+  return route.path.startsWith(child.route)
+}
+
+const isActiveParent = (item) => {
+  if (!item.children) return false
+  return item.children.some(c => route.path.startsWith(c.route))
+}
 // CTA
 const handleQuote = () => {
   alert("Quote request")
@@ -59,12 +122,7 @@ const handleQuote = () => {
     <nav class="navbar">
 
       <!-- LOGO -->
-<!--      <div class="logo">-->
-<!--        <span>D</span> DELPHIX GLOBAL-->
-<!--      </div>-->
-<!--      <router-link to="/" class="logo">-->
-<!--        <span>D</span> DELPHIX GLOBAL-->
-<!--      </router-link>-->
+
       <router-link to="/" class="logo">
         <img src="/delphix-global-logo.png" alt="Delphix Global Logo" class="navbar-logo" />
       </router-link>
@@ -75,22 +133,30 @@ const handleQuote = () => {
 
           <!-- SIMPLE LINK -->
           <template v-if="item.type === 'link'">
-            <a @click.prevent="goTo(item.key)">
+            <a :class="{ active: isActiveRoute(item.route) }"
+                @click.prevent="goTo(item)">
               {{ t.nav[item.key] }}
             </a>
           </template>
 
           <!-- DROPDOWN -->
           <template v-else>
-            <div class="dropdown">
-
+<!--            <div class="dropdown" ref="dropdownRef">-->
+            <div class="dropdown"
+                 :ref="el => el && dropdownRefs.set(item.key, el)"
+                 @click.stop>
               <a @click="toggle(item.key)">
                 {{ t.nav[item.key].label }} ▾
               </a>
 
-              <ul v-show="openDropdown === item.key" class="dropdown-menu">
-                <li v-for="child in item.children" :key="child.key">
-                  {{ t.nav[item.key].items[child.key] }}
+              <ul v-show="openDropdown === item.key" class="dropdown-menu"
+              >
+                <li v-for="child in item.children"
+                    :key="child.key"
+                    :class="{ active: isActiveChild(child) }"
+                    @click.stop="navigate(child)"
+                >
+                    {{ t.nav[item.key].items[child.key] }}
                 </li>
               </ul>
 
@@ -201,15 +267,7 @@ const handleQuote = () => {
   position: relative;
 }
 
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  list-style: none;
-  padding: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
+
 
 /* BUTTON */
 .btn-quote {
@@ -218,5 +276,35 @@ const handleQuote = () => {
   padding: 10px 15px;
   border: none;
   cursor: pointer;
+}
+
+.nav-links a.active {
+  color: #e53e3e;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.dropdown-menu li:hover {
+  background: #f5f7fa;
+  color: #e53e3e;
 }
 </style>

@@ -1,15 +1,36 @@
 export const navStructure = [
-    { key: 'home', type: 'link' },
-    { key: 'about', type: 'link' },
+    {
+        key: 'home',
+        type: 'link',
+        route: '/'
+    },
+    {
+        key: 'about',
+        type: 'link',
+        route: '/about'
+    },
 
     {
         key: 'products',
         type: 'dropdown',
         children: [
-            { key: 'batteries' },
-            { key: 'lubricants' },
-            { key: 'filters' },
-            { key: 'tires' }
+            {
+                key: 'batteries',
+                route: '/categories/batteries',
+            },
+            {
+                key: 'lubricants',
+                route: '/categories/lubricants',
+            },
+            {
+                key: 'filters',
+                route: '/categories/filters',
+            },
+            {
+                key: 'tires',
+                route: '/categories/tires',
+
+            }
         ]
     },
 
@@ -17,16 +38,43 @@ export const navStructure = [
         key: 'brands',
         type: 'dropdown',
         children: [
-            { key: 'panosonic' },
-            { key: 'phillips' } ,
-            { key: 'delphix' },
-            { key: 'denzo' },
-            { key: 'platin' },
-            { key: 'westol' }
+            {
+                key:  'panasonic',
+                route: '/brands/panasonic',
+            },
+            {
+                key: 'philips',
+                route: '/brands/philips',
+
+            } ,
+            {
+                key: 'delphix',
+                route: '/brands/delphix',
+            },
+            {
+                key: 'denso',
+                route: '/brands/denso',
+            },
+            {
+                key: 'platin',
+                route: '/brands/platin',
+            },
+            {
+                key: 'westell',
+                route: '/brands/westell',
+            }
         ]
     },
-    { key: 'oem', type: 'link' },
-    { key: 'manufacturing', type: 'link' },
-    { key: 'news', type: 'link' },
-    { key: 'contact', type: 'link' }
+    {
+        key: 'oem',
+        type: 'link',
+        route: '/oem'
+    },
+    { key: 'manufacturing', type: 'link', route: '/manufacturing'  },
+    { key: 'news', type: 'link' , route: '/news'  },
+    {
+        key: 'contact',
+        type: 'link' ,
+        route: '/contact'
+    }
 ]
