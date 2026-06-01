@@ -21,6 +21,7 @@ const features = ref([
 const exploreProducts = () => {};
 const handleQuote = () => {};
 const viewCategory = (slug) => {
+
   router.push(`/categories/${slug}`);
 };
 

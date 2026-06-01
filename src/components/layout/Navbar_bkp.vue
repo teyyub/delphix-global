@@ -43,6 +43,17 @@ const handleQuote = () => {
       <span>D</span> DELPHIX GLOBAL
     </div>
 
+<!--    <ul class="nav-links">-->
+<!--      <li v-for="link in navLinks" :key="link.key">-->
+<!--        <a-->
+<!--            href="#"-->
+<!--            :class="{ active: link.isActive }"-->
+<!--            @click.prevent="setActiveLink(link)"-->
+<!--        >-->
+<!--          {{ t.nav[link.key] }}-->
+<!--        </a>-->
+<!--      </li>-->
+<!--    </ul>-->
 
     <ul class="nav-links">
       <li v-for="item in navStructure" :key="item.key">

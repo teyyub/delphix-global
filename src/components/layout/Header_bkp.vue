@@ -1,5 +1,5 @@
 <script setup>
-import {onBeforeUnmount, onMounted, ref, watch} from "vue"
+import {onBeforeUnmount, onMounted, ref} from "vue"
 import { useRoute, useRouter } from "vue-router"
 import { useI18n } from "@/composables/useI18n"
 import { navStructure } from "@/composables/navStructure"
@@ -10,11 +10,10 @@ const route = useRoute();
 const openDropdown = ref(null)
 const dropdownRefs = ref(new Map())
 
-const navigate = async (item) => {
-  console.log('item:',item);
-  if (!item) return
+const navigate = (item) => {
+  if (!item?.route) return
 
-  await router.push(item )
+  router.push(item.route)
   openDropdown.value = null
 }
 const languages = [
@@ -24,14 +23,14 @@ const languages = [
   { code: 'ar', label: 'AR' }
 ]
 
-// const handleOutsideClick = (e) => {
-//   const isInside = Array.from(dropdownRefs.value.values())
-//       .some(el => el && el.contains?.(e.target))
-//
-//   if (!isInside) {
-//     openDropdown.value = null
-//   }
-// }
+const handleOutsideClick = (e) => {
+  const isInside = Array.from(dropdownRefs.value.values())
+      .some(el => el && el.contains?.(e.target))
+
+  if (!isInside) {
+    openDropdown.value = null
+  }
+}
 
 
 // const handleOutsideClick = (e) => {
@@ -42,13 +41,13 @@ const languages = [
 //   }
 // }
 
-// onMounted(() => {
-//   document.addEventListener("click", handleOutsideClick)
-// })
-//
-// onBeforeUnmount(() => {
-//   document.removeEventListener("click", handleOutsideClick)
-// })
+onMounted(() => {
+  document.addEventListener("click", handleOutsideClick)
+})
+
+onBeforeUnmount(() => {
+  document.removeEventListener("click", handleOutsideClick)
+})
 
 const contact = {
   email: 'info@delphixglobal.com',
@@ -75,10 +74,9 @@ const toggle = (key) => {
 
 
 
-watch(route, () => {
+const closeDropdown = () => {
   openDropdown.value = null
-})
-
+}
 
 const isActive = (item) => {
   return item.route === route.path
@@ -140,49 +138,30 @@ const handleQuote = () => {
               {{ t.nav[item.key] }}
             </a>
           </template>
+
           <!-- DROPDOWN -->
           <template v-else>
-            <div class="dropdown">
-
-              <a @click.stop.prevent ="toggle(item.key)">
+<!--            <div class="dropdown" ref="dropdownRef">-->
+            <div class="dropdown"
+                 :ref="el => el && dropdownRefs.set(item.key, el)"
+                 @click.stop>
+              <a @click="toggle(item.key)">
                 {{ t.nav[item.key].label }} ▾
               </a>
 
-              <ul v-show="openDropdown === item.key" class="dropdown-menu">
-                <li v-for="child in item.children" :key="child.key">
-
-                  <a @click.stop.prevent="navigate(child.route)">
+              <ul v-show="openDropdown === item.key" class="dropdown-menu"
+              >
+                <li v-for="child in item.children"
+                    :key="child.key"
+                    :class="{ active: isActiveChild(child) }"
+                    @click.stop="navigate(child)"
+                >
                     {{ t.nav[item.key].items[child.key] }}
-                  </a>
-
                 </li>
               </ul>
 
             </div>
           </template>
-          <!-- DROPDOWN -->
-<!--          <template v-else>-->
-<!--&lt;!&ndash;            <div class="dropdown" ref="dropdownRef">&ndash;&gt;-->
-<!--            <div class="dropdown"-->
-<!--                 :ref="el => el && dropdownRefs.set(item.key, el)"-->
-<!--                 @click.stop>-->
-<!--              <a @click="toggle(item.key)">-->
-<!--                {{ t.nav[item.key].label }} ▾-->
-<!--              </a>-->
-
-<!--              <ul v-show="openDropdown === item.key" class="dropdown-menu"-->
-<!--              >-->
-<!--                <li v-for="child in item.children"-->
-<!--                    :key="child.key"-->
-<!--                    :class="{ active: isActiveChild(child) }"-->
-<!--                    @click.stop="navigate(child)"-->
-<!--                >-->
-<!--                    {{ t.nav[item.key].items[child.key] }}-->
-<!--                </li>-->
-<!--              </ul>-->
-
-<!--            </div>-->
-<!--          </template>-->
 
         </li>
 

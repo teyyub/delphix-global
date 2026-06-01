@@ -2,345 +2,32 @@
   import { useRoute } from "vue-router"
   import {computed, ref} from "vue";
   import { useRouter } from "vue-router"
+  import { categories } from "@/data/categories.js";
+
   const router = useRouter()
   const route = useRoute()
   const activeSeries = ref(null)
-  const categories = {
-    batteries: {
-      title: "Batteries",
-      description: "Premium automotive batteries",
-      series: [
-        {
-          id: 'delphix',
-          title: "DELPHIX BATTERIES",
-          products: [
-            {
-              id: "500A",
-              title: "12V 45Ah 500A Battery",
-              image: "/images/batteries/delphix_500.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "45Ah",
-                cca: "500A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "207 (L)x175(W)x 190(H)",
-                weight: "Approx. 12.5 kg"
-              }
-            },
-            {
-              title: "12V 50Ah 550A Battery",
-              image: "/images/batteries/delphix_550.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "50Ah",
-                cca: "500A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "207 (L)x175(W)x 190(H)",
-                weight: "Approx. 13.5 kg"
-              }
-            },
-            {
-              title: "12V 60Ah 680A Battery",
-              image: "/images/batteries/delphix_680.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "60Ah",
-                cca: "680A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "242 (L)x175(W)x 190(H)",
-                weight: "Approx. 16 kg"
-              }
-            },
-            {
-              title: "12V 70Ah 750A Battery",
-              image: "/images/batteries/delphix_750.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "70Ah",
-                cca: "750A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "278 (L)x175(W)x 190(H)",
-                weight: "Approx. 17.5 kg"
-              }
-            },
-            {
-              title: "12V 85Ah 850A Battery",
-              image: "/images/batteries/delphix_850.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "85Ah",
-                cca: "850A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "207 (L)x175(W)x 190(H)",
-                weight: "Approx. 17 kg"
-              }
-            },
-            {
-              title: "95Ah 12V 950A Battery",
-              image: "/images/batteries/delphix_950.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "95Ah",
-                cca: "950A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "353 (L)x175(W)x 190(H)",
-                weight: "Approx. 24 kg"
-              }
-            },
-            {
-              title: "105Ah 12V 1050A Battery",
-              image: "/images/batteries/delphix_1050.jpeg",
-              specs: {
-                voltage: "12V",
-                capacity: "105Ah",
-                cca: "1050A (EN)",
-                technology: "AGM (Absorbent Glass Mat)",
-                warranty: "24 months",
-                type: "Maintenance Free",
-                polarity: "Right positive (R+)",
-                dimension: "353 (L)x175(W)x 190(H)",
-                weight: "Approx. 27.0 kg"
-              }
-            }
-          ]
-        },
-        {
-          id: 'delphix',
-          title: "DELPHIX BATTERIES WIX BOXES",
-          products: [
-            {
-              title: "12V 45Ah 680A Battery",
-              image: "/images/batteries/wix_500A.jpeg"
-            },
-            {
-              title: "12V 50Ah 550A Battery",
-              image: "/images/batteries/wix_550A.jpeg"
-            },
-            {
-              title: "12V 60Ah 680A Battery",
-              image: "/images/batteries/wix_680A.jpeg"
-            },
-            {
-              title: "12V 70Ah 750A Battery",
-              image: "/images/batteries/wix_750A.jpeg"
-            },
-            {
-              title: "12V 80Ah 850A Battery",
-              image: "/images/batteries/wix_850A.jpeg"
-            },
-            {
-              title: "12V 105Ah 1050A Battery",
-              image: "/images/batteries/wix_1050A.jpeg"
-            }
-          ]
-        },
-        {
-          id: 'panasonic',
-          title: "DELPHIX BATTERIES WIX BOXES",
-          products: [
-            {
-              title: "12V 40Ah 420A Battery",
-              image: "/images/batteries/panosonic_420A.jpeg"
-            },
-            {
-              title: "12V 45Ah 500A Battery",
-              image: "/images/batteries/panosonic_500A.jpeg"
-            },
-            {
-              title: "12V 50Ah 550A Battery",
-              image: "/images/batteries/panosonic_550A.jpeg"
-            },
-            {
-              title: "12V 60Ah 680A Battery",
-              image: "/images/batteries/panosonic_680A.jpeg"
-            },
-            {
-              title: "12V 70Ah 720A Battery",
-              image: "/images/batteries/panosonic_720A.jpeg"
-            },
-            {
-              title: "12V 70Ah 750A Battery",
-              image: "/images/batteries/panosonic_750A.jpeg"
-            },
-            {
-              title: "12V 85Ah 850A Battery",
-              image: "/images/batteries/panosonic_850A.jpeg"
-            },
-            {
-              title: "12V 95Ah 900A Battery",
-              image: "/images/batteries/panosonic_900A.jpeg"
-            },
-            {
-              title: "12V 95Ah 950A Battery",
-              image: "/images/batteries/panosonic_950A.jpeg"
-            },
-            {
-              title: "12V 105Ah 1050A Battery",
-              image: "/images/batteries/panosonic_1050A.jpeg"
-            },
-            {
-              title: "12V 255Ah 1500A Battery",
-              image: "/images/batteries/panosonic_1500A.jpeg"
-            }
-          ]
-        },
-        {
-          id: 'philips',
-          title: "DELPHIX BATTERIES WIX BOXES",
-          products: [
-            {
-              title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
-            },
-            {
-              title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
-            }
-          ]
-        }
 
-      ]
-    },
-    lubricants: {
-      title: "Lubricants",
-      description: "High quality engine oils",
-      series:[
-        {
-          id: 'delphix',
-          title: "DELPHIX LUBRICANTS",
-          products: [
-            {
-              title: "5W30 SN/Cf C2/C3 A4/B4",
-              image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
-            },
-            {
-              title: "5W-30 SP C3",
-              image: "/images/lubricants/5W-30Premium.jpeg"
-            },
-            {
-              title: "5W-30 SP C3",
-              image: "/images/lubricants/5W-30SPC3.jpeg"
-            },
-            {
-              title: "10W-40 SN/CF",
-              image: "/images/lubricants/10W-40-4L.jpeg"
-            },
-            {
-              title: "10W-40 LA",
-              image: "/images/lubricants/10W-40LA.jpeg"
-            },
-            {
-              title: "10W-40 SN/CF",
-              image: "/images/lubricants/10W-40SNCF.jpeg"
-            },
-            {
-              title: "ATF",
-              image: "/images/lubricants/ATF.jpeg"
-            },
-            {
-              title: "ATF 4",
-              image: "/images/lubricants/ATF-4-L.jpeg"
-            },
-            {
-              title: "Premium",
-              image: "/images/lubricants/premium.jpeg"
-            },
+  // const category = categories[route.params.slug]
 
-          ]
-        },
-      ]
-    },
-    filters: {
-      title: "Filters",
-      description: "Air, oil and fuel filters",
-      series:[
-        {
-          id: 'delphix',
-          title: "DELPHIX BATTERIES WIX BOXES",
-          products: [
-            {
-              title: "680A Battery",
-              image: "/images/filters/aid.jpeg"
-            },
-            {
-              title: "680A Battery",
-              image: "/images/filters/cabin.jpeg"
-            },
-            {
-              title: "680A Battery",
-              image: "/images/filters/engine.jpeg"
-            },
-            {
-              title: "680A Battery",
-              image: "/images/filters/fuel.jpeg"
-            },
-            {
-              title: "680A Battery",
-              image: "/images/filters/transmission.jpeg"
-            },
-          ]
-        },
-      ]
-    },
-    tires: {
-      title: "Tires",
-      description: "Durable performance tires",
-      series:[
-        {
-          id: 'delphix',
-          title: "DELPHIX Tires",
-          products: [
-            {
-              title: "680A Battery",
-              image: "/images/batteries/wix_680.jpeg"
-            },
-            {
-              title: "750A Battery",
-              image: "/images/batteries/wix_750.jpeg"
-            }
-          ]
-        },
-      ]
-    }
-  }
+  const category = computed(() => {
+    return categories[route.params.slug]
+  })
 
-  const category = categories[route.params.slug]
-  // const products = computed(() => {
-  //   if (!activeSeries.value) return []
-  //   return category.series.find(s => s.id === activeSeries.value)?.products || []
-  // })
 
   const products = computed(() => {
-    return category?.series?.flatMap(series => series.products) || []
+    return category.value?.series?.flatMap(series => series.products) || []
   })
 
   const goToProduct = (product) => {
     console.log('product:' ,product);
-    // router.push(`/product/${product.id}`)
-    router.push({
-      path: `/product/${product.id}`,
-      query: {
-        product: encodeURIComponent(JSON.stringify(product))
-      }
-    })
+    router.push(`/product/${product.id}`)
+    // router.push({
+    //   path: `/product/${product.id}`,
+    //   query: {
+    //     product: encodeURIComponent(JSON.stringify(product))
+    //   }
+    // })
   }
 
   </script>
@@ -441,7 +128,7 @@
 
 .header h1 {
   font-size: 36px;
-  font-weight: 900;
+  font-""Weight (kg)"  (kg)" : 900;
   color: #0f172a;
 }
 
@@ -515,7 +202,7 @@
 
 .content h3 {
   font-size: 18px;
-  font-weight: 800;
+  font-""Weight (kg)"  (kg)" : 800;
   color: #0f172a;
 }
 
@@ -540,7 +227,7 @@
   color: #16a34a;
   padding: 4px 10px;
   border-radius: 20px;
-  font-weight: 600;
+  font-""Weight (kg)"  (kg)" : 600;
 }
 
 button {
@@ -655,7 +342,7 @@ button:hover {
 ========================= */
 .series-card h2 {
   font-size: 18px;
-  font-weight: 800;
+  font-""Weight (kg)"  (kg)" : 800;
   color: #0f172a;
   margin-bottom: 10px;
   letter-spacing: 0.5px;
@@ -676,7 +363,7 @@ button:hover {
 ========================= */
 .view {
   font-size: 12px;
-  font-weight: 600;
+  font-""Weight (kg)"  (kg)" : 600;
   color: #2563eb;
   opacity: 0.9;
   transition: 0.3s;

@@ -1,6 +1,8 @@
 <script setup>
 import {computed, reactive} from 'vue'
 import {useRoute} from "vue-router";
+import {categories} from "@/data/categories.js";
+import {highlights} from "@/data/highlights.js";
 const route = useRoute()
 // Məhsulun əsas datası
 // const product = reactive({
@@ -9,11 +11,53 @@ const route = useRoute()
 //   cca: '500A'
 // })
 
+// const product = computed(() => {
+//   return JSON.parse(
+//       decodeURIComponent(route.query.product)
+//   )
+// })
+
+
+// const product = computed(() => {
+//   const id = route.params.id
+//
+//   return Object.values(categories)
+//       .flatMap(c => c.series)
+//       .flatMap(s => s.products)
+//       .find(p => p.id === id)
+// })
+
 const product = computed(() => {
-  return JSON.parse(
-      decodeURIComponent(route.query.product)
-  )
+  const id = route.params.id
+  console.log("ROUTE ID:", id)
+  for (const [categoryKey, category] of Object.entries(categories)) {
+    for (const series of category.series) {
+      const found = series.products.find(p => p.id === id)
+
+      if (found) {
+        console.log("FOUND PRODUCT:", found)
+        return {
+          ...found,
+          categoryKey,
+          seriesId: series.id
+        }
+      }
+    }
+  }
+
+  return null
 })
+
+const currentHighlights = computed(() => {
+  if (!product.value) return null
+
+  return highlights[
+      product.value.categoryKey
+      ]?.[
+      product.value.seriesId
+      ]
+})
+
 // Sol tərəfdəki ikonlu üstünlüklər
 const features = reactive([
   { title: 'High Starting Power', description: 'Strong engine starts even in cold weather', icon: 'fa-solid fa-car-battery' },
@@ -25,16 +69,16 @@ const features = reactive([
 ])
 
 // Texniki göstəricilər cədvəli
-const specifications = reactive([
-  { label: 'Voltage', value: '12V', icon: 'fa-solid fa-bolt' },
-  { label: 'Capacity', value: '45Ah', icon: 'fa-solid fa-plus-minus' },
-  { label: 'Cold Cranking Amps (CCA)', value: '500A (EN)', icon: 'fa-solid fa-snowflake' },
-  { label: 'Technology', value: 'AGM (Absorbent Glass Mat)', icon: 'fa-solid fa-layer-group' },
-  { label: 'Battery Type', value: 'Maintenance-Free', icon: 'fa-solid fa-wrench' },
-  { label: 'Polarity', value: 'Right Positive (R+)', icon: 'fa-solid fa-arrows-left-right' },
-  { label: 'Dimensions (mm)', value: '207 (L) x 175 (W) x 190 (H)', icon: 'fa-solid fa-maximize' },
-  { label: 'Weight (kg)', value: 'Approx. 12.5 kg', icon: 'fa-solid fa-weight-hanging' }
-])
+// const specifications = reactive([
+//   { label: 'Voltage', value: '12V', icon: 'fa-solid fa-bolt' },
+//   { label: 'Capacity', value: '45Ah', icon: 'fa-solid fa-plus-minus' },
+//   { label: 'Cold Cranking Amps (CCA)', value: '500A (EN)', icon: 'fa-solid fa-snowflake' },
+//   { label: 'Technology', value: 'AGM (Absorbent Glass Mat)', icon: 'fa-solid fa-layer-group' },
+//   { label: 'Battery Type', value: 'Maintenance-Free', icon: 'fa-solid fa-wrench' },
+//   { label: 'Polarity', value: 'Right Positive (R+)', icon: 'fa-solid fa-arrows-left-right' },
+//   { label: 'Dimensions (mm)', value: '207 (L) x 175 (W) x 190 (H)', icon: 'fa-solid fa-maximize' },
+//   { label: 'Weight (kg)', value: 'Approx. 12.5 kg', icon: 'fa-solid fa-weight-hanging' }
+// ])
 
 // Kimlər üçündür
 const idealFor = reactive([
@@ -65,24 +109,37 @@ const advantages = reactive([
       <section class="left-column">
         <div class="hero-text">
           <h1>
-            {{ product.voltage }} {{ product.capacity }}
-            <span>{{ product.cca }} <small class="en-tag">(EN)</small></span>
+            {{ product.specs.voltage }} {{ product.specs.capacity }}
+            <span>{{ product.specs.cca }} <small class="en-tag">(EN)</small></span>
           </h1>
           <p class="tagline">PREMIUM POWER. MAXIMUM RELIABILITY.</p>
           <p class="tech-desc">Advanced AGM Technology for Modern Vehicles</p>
         </div>
 
+<!--        <div-->
+<!--            v-for="(feature, index) in features"-->
+<!--            :key="index"-->
+<!--            class="feature-item"-->
+<!--        >-->
+<!--          <div class="feature-icon">-->
+<!--            <i :class="feature.icon"></i>-->
+<!--          </div>-->
+<!--          <div class="feature-details">-->
+<!--            <h4>{{ feature.title }}</h4>-->
+<!--            <p>{{ feature.description }}</p>-->
+<!--          </div>-->
+<!--        </div>-->
         <div
-            v-for="(feature, index) in features"
+            v-for="(highlight, index) in currentHighlights?.features"
             :key="index"
             class="feature-item"
         >
           <div class="feature-icon">
-            <i :class="feature.icon"></i>
+            <i :class="highlight.icon"></i>
           </div>
           <div class="feature-details">
-            <h4>{{ feature.title }}</h4>
-            <p>{{ feature.description }}</p>
+            <h4>{{ highlight.title }}</h4>
+            <p>{{ highlight.description }}</p>
           </div>
         </div>
       </section>
@@ -145,6 +202,7 @@ const advantages = reactive([
 
 
 <style scoped>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 /* Rəng və Stil Dəyişənləri */
 .product-container {
   --primary-blue: #002B66;
@@ -296,13 +354,7 @@ const advantages = reactive([
   width: 20px;
   text-align: center;
 }
-.origin-badge {
-  margin-top: 30px;
-  text-align: center;
-  border: 2px dashed var(--primary-blue);
-  padding: 15px;
-  border-radius: 5px;
-}
+
 .usa-tech {
   font-weight: bold;
   color: var(--primary-blue);
@@ -430,13 +482,7 @@ const advantages = reactive([
   font-weight: 500;
 }
 
-.origin-badge {
-  text-align: center;
-  padding: 18px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-}
+
 
 .usa-tech {
   font-size: 15px;
@@ -447,4 +493,98 @@ const advantages = reactive([
 .euro-eng {
   opacity: 0.8;
 }
+
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.product-image {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.specs-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-top: 8px;
+  letter-spacing: 0.3px;
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.spec-table tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: 0.2s;
+}
+
+.spec-table tr:hover {
+  background: #f8fafc;
+}
+
+.spec-label {
+  padding: 12px 14px;
+  font-weight: 600;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.spec-value {
+  padding: 12px 14px;
+  font-weight: 500;
+  color: #0f172a;
+  text-align: right;
+}
+.origin-badge {
+  text-align: center;
+  padding: 16px 18px;
+  border-radius: 14px;
+
+  background: #ffffff; /* ⭐ WHITE */
+  border: 1px solid #e2e8f0;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.origin-badge .usa-tech {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #0f172a; /* dark text */
+}
+.origin-badge .euro-eng {
+  font-size: 11px;
+  font-weight: 500;
+
+  color: #475569; /* soft gray */
+}
+
 </style>

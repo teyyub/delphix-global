@@ -27,6 +27,7 @@ const handleQuote = () => {
 }
 
 const viewCategory = (category) => {
+  console.log('category: ',category)
   router.push(`/products?category=${category}`)
 }
 </script>
