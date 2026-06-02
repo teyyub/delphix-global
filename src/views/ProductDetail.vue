@@ -31,15 +31,15 @@ const product = computed(() => {
   const id = route.params.id
   console.log("ROUTE ID:", id)
   for (const [categoryKey, category] of Object.entries(categories)) {
-    for (const series of category.series) {
-      const found = series.products.find(p => p.id === id)
+    for (const brands of category.brands) {
+      const found = brands.products.find(p => p.id === id)
 
       if (found) {
         console.log("FOUND PRODUCT:", found)
         return {
           ...found,
           categoryKey,
-          seriesId: series.id
+          brandId: brands.id
         }
       }
     }
@@ -54,7 +54,7 @@ const currentHighlights = computed(() => {
   return highlights[
       product.value.categoryKey
       ]?.[
-      product.value.seriesId
+      product.value.brandId
       ]
 })
 

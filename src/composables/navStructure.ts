@@ -52,7 +52,7 @@ export const navStructure = [
                 route: '/brands/delphix',
             },
             {
-                key: 'denso',
+                key: 'denzo',
                 route: '/brands/denso',
             },
             {
@@ -60,7 +60,7 @@ export const navStructure = [
                 route: '/brands/platin',
             },
             {
-                key: 'westell',
+                key: 'westol',
                 route: '/brands/westell',
             }
         ]

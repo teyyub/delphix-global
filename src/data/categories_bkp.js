@@ -1,10 +1,8 @@
 export const categories = {
     batteries: {
-        id:"batteries",
         title: "Batteries",
-        icon: "🔋",
         description: "Premium automotive batteries",
-        brands: [
+        series: [
             {
                 id: 'delphix',
                 title: "DELPHIX BATTERIES",
@@ -394,7 +392,7 @@ export const categories = {
             },
             {
                 id: 'philips',
-                title: "PHILIPS BATTERIES",
+                title: "PHILIPS BATTERIES WIX BOXES",
                 products: [
                     {
                         id: "680A",
@@ -421,11 +419,9 @@ export const categories = {
         ]
     },
     lubricants: {
-        id: "lubricants",
         title: "Lubricants",
-        icon: "🛢️",
         description: "High quality engine oils",
-        brands:[
+        series:[
             {
                 id: 'delphix',
                 title: "DELPHIX LUBRICANTS",
@@ -472,11 +468,9 @@ export const categories = {
         ]
     },
     filters: {
-        id: "filters",
         title: "Filters",
-        icon: "🧰",
         description: "Air, oil and fuel filters",
-        brands:[
+        series:[
             {
                 id: 'delphix',
                 title: "DELPHIX BATTERIES WIX BOXES",
@@ -506,11 +500,9 @@ export const categories = {
         ]
     },
     tires: {
-        id: "tires",
         title: "Tires",
-        icon: "🛞",
         description: "Durable performance tires",
-        brands:[
+        series:[
             {
                 id: 'delphix',
                 title: "DELPHIX Tires",

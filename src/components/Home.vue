@@ -1,15 +1,36 @@
 <script setup>
 import { useRouter } from "vue-router"
+import {categories} from "@/data/categories.js";
+import {computed} from "vue";
 
 const router = useRouter()
 
+
 // dummy data (sonra API ilə əvəz edərsən)
-const categories = [
-  { title: "Lubricants", icon: "🛢️" },
-  { title: "Batteries", icon: "🔋" },
-  { title: "Filters", icon: "🧰" },
-  { title: "Tires", icon: "🛞" }
-]
+// const categories = [
+//   { title: "Lubricants", icon: "🛢️" },
+//   { title: "Batteries", icon: "🔋" },
+//   { title: "Filters", icon: "🧰" },
+//   { title: "Tires", icon: "🛞" }
+// ]
+
+const allBrands = computed(() => {
+  const brands = []
+
+  Object.values(categories).forEach(category => {
+    category.brands.forEach(brand => {
+      brands.push({
+        id: brand.id,
+        title: brand.title,
+        category: category.title,
+        categoryId: category.id,
+        productsCount: brand.products?.length || 0
+      })
+    })
+  })
+  console.log('brands',brands);
+  return brands
+})
 
 const features = [
   { title: "Global Shipping", icon: "🌍", description: "Fast worldwide delivery" },
@@ -61,6 +82,8 @@ const viewCategory = (category) => {
 
       <div class="hero-emojis">🚛🛢️🔋</div>
     </section>
+
+
 
     <!-- CATEGORIES -->
     <section class="categories-section">

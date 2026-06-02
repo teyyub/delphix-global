@@ -7,7 +7,7 @@
   const router = useRouter()
   const route = useRoute()
   const activeSeries = ref(null)
-
+  const selectedBrand = ref(null)
   // const category = categories[route.params.slug]
 
   const category = computed(() => {
@@ -15,9 +15,36 @@
   })
 
 
+
+
+  // const products = computed(() => {
+  //   return category.value?.brands?.flatMap(brands => brands.products) || []
+  // })
+
+
   const products = computed(() => {
-    return category.value?.series?.flatMap(series => series.products) || []
+    const cat = category.value
+    if (!cat) return []
+
+    if (!selectedBrand.value) {
+      return cat.brands.flatMap(b => b.products)
+    }
+
+    const brand = cat.brands.find(b => b.id === selectedBrand.value)
+    return brand?.products || []
   })
+
+  const brands = computed(() => {
+    return category.value?.brands || []
+  })
+
+  const filterByBrand = (brandId) => {
+    selectedBrand.value = brandId
+  }
+
+  const clearFilter = () => {
+    selectedBrand.value = null
+  }
 
   const goToProduct = (product) => {
     console.log('product:' ,product);
@@ -39,48 +66,27 @@
 
       <p>{{ category?.description }}</p>
       </div>
-<!--      <div class="series-grid" v-if="!activeSeries">-->
+      <!-- 🔥 TOP BRANDS SECTION -->
+      <div class="brands-section">
+        <h2 class="section-title">Top Brands</h2>
 
-<!--        <div-->
-<!--            v-for="series in category?.series"-->
-<!--            :key="series.id"-->
-<!--            class="series-card"-->
-<!--            @click="activeSeries = series.id"-->
-<!--        >-->
-<!--          <h2>{{ series.title }}</h2>-->
-<!--          <p>{{ series.products.length }} products</p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--        <div v-else>-->
-<!--          <button class="back-btn" @click="activeSeries = null">-->
-<!--            ← Back-->
-<!--          </button>-->
-<!--          <div class="products-grid">-->
+        <button @click="clearFilter" class="all-btn">
+          All Products
+        </button>
 
-<!--            <div-->
-<!--                v-for="(product, index) in products"-->
-<!--                :key="index"-->
-<!--                class="product-card"-->
-<!--            >-->
-<!--              <div class="image-wrapper">-->
-<!--                <img :src="product.image" :alt="product.title" />-->
-<!--              </div>-->
-<!--              <div class="content">-->
-<!--                <h3>{{ product.title }}</h3>-->
-<!--                <p class="desc">-->
-<!--                  {{ product.description || "High performance automotive battery designed for durability and reliability." }}-->
-<!--                </p>-->
-<!--                <div class="bottom">-->
-<!--                  <span class="badge">In Stock</span>-->
-<!--                  <button @click="goToProduct(product)">-->
-<!--                    View-->
-<!--                  </button>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </div>-->
-
-<!--          </div>-->
-<!--        </div>-->
+        <div class="brands-grid">
+          <div
+              v-for="brand in brands"
+              :key="brand.id"
+              class="brand-card"
+              :class="{ active: selectedBrand === brand.id }"
+              @click="filterByBrand(brand.id)"
+          >
+            <h3>{{ brand.title }}</h3>
+            <span>{{ brand.products.length }} products</span>
+          </div>
+        </div>
+      </div>
       <div class="products-grid">
         <div
             v-for="(product, index) in products"
@@ -385,5 +391,30 @@ button:hover {
   .series-card {
     padding: 35px 25px;
   }
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.brand-card {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.brand-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.brand-card.active {
+  border: 2px solid #0f172a;
+  background: #f8fafc;
 }
 </style>
