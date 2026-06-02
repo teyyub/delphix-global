@@ -5,8 +5,58 @@
     <section class="about-hero">
       <h1>About Delphix Global</h1>
       <p>
-        We are a global supplier of premium lubricants, batteries, filters,
-        and tires, committed to performance, reliability, and innovation.
+        Delphix Global is an international automotive products company focused on
+        developing, manufacturing, and distributing high-quality mobility solutions
+        for global markets.
+      </p>
+    </section>
+
+    <!-- DESCRIPTION -->
+    <section class="about-section">
+      <p>
+        With a strong commitment to innovation, reliability, and long-term partnerships,
+        Delphix Global collaborates with leading manufacturing facilities across Asia,
+        Europe, and the Middle East to deliver products that meet international quality
+        standards and the evolving needs of the automotive industry.
+      </p>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="about-values">
+      <h2>Our Product Portfolio</h2>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3>Automotive Batteries</h3>
+          <p>DELPHIX, PANOSONIC PLUS, PHILLIPS XPRO, DENZO</p>
+        </div>
+
+        <div class="card">
+          <h3>Lubricants & Fluids</h3>
+          <p>DELPHIX, PLATIN, WESTOL</p>
+        </div>
+
+        <div class="card">
+          <h3>Automotive Filters</h3>
+          <p>DELPHIX, DENZO</p>
+        </div>
+
+        <div class="card">
+          <h3>Tires</h3>
+          <p>DENZO</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- GLOBAL NETWORK -->
+    <section class="about-section">
+      <h2>Global Manufacturing Network</h2>
+      <p>
+        Our manufacturing network spans key global production hubs, including China,
+        Thailand, Germany, the United Arab Emirates, and Azerbaijan, enabling us to
+        combine advanced technology, efficient supply chains, and competitive market solutions.
       </p>
     </section>
 
@@ -14,40 +64,15 @@
     <section class="about-section">
       <h2>Our Mission</h2>
       <p>
-        Our mission is to deliver high-quality automotive and industrial products
-        that power businesses and individuals around the world with trust and efficiency.
+        To become a trusted global supplier of automotive batteries, lubricants, filters,
+        and tires, delivering products that power mobility and support the future of transportation.
       </p>
     </section>
 
-    <!-- VISION -->
-    <section class="about-section">
-      <h2>Our Vision</h2>
-      <p>
-        To become a globally recognized brand known for excellence in energy,
-        mobility, and industrial solutions.
-      </p>
-    </section>
-
-    <!-- VALUES -->
-    <section class="about-values">
-      <h2>Our Core Values</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Quality</h3>
-          <p>We never compromise on product standards.</p>
-        </div>
-
-        <div class="card">
-          <h3>Trust</h3>
-          <p>Long-term relationships built on reliability.</p>
-        </div>
-
-        <div class="card">
-          <h3>Innovation</h3>
-          <p>Continuous improvement and modern solutions.</p>
-        </div>
-      </div>
+    <!-- SLOGAN -->
+    <section class="about-footer">
+      <h2>Delphix Global</h2>
+      <p>Driving Performance. Powering Mobility. Connecting Markets.</p>
     </section>
 
   </div>
@@ -109,7 +134,19 @@
   margin-bottom: 20px;
   color: #0b1c33;
 }
+.about-footer {
+  text-align: center;
+  margin-top: 60px;
+  padding: 40px;
+  background: #0b1c33;
+  color: white;
+  border-radius: 10px;
+}
 
+.about-footer p {
+  margin-top: 10px;
+  color: #cbd5e0;
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
