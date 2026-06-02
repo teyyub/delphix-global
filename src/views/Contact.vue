@@ -26,6 +26,14 @@ const offices = ref([
     address: "Nurly Tau Business Center 81 Al-Farabi Avenue Almaty AZ050040 Kazakhstan",
     phone: "+994705138450",
     email: "cis@delphixglobal.com delphixglobal.com"
+  },
+  {
+    title: "Delphix Global Caucasus Regional Office",
+    address: "25E 8 November Avenue White City Business District Baku AZ1025, Azerbaijan" ,
+    phone: "+994 12 6157565 WhatsApp: +994 552409340",
+    email: "caucasus@delphixglobal.com"
+
+
   }
 ]);
 
