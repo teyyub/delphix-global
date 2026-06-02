@@ -220,108 +220,6 @@ export const categories = {
                     }
                 ]
             },
-            // {
-            //     id: 'delphix-wix',
-            //     title: "DELPHIX BATTERIES WIX BOXES",
-            //     products: [
-            //         {
-            //             id: "W500A",
-            //             title: "12V 45Ah 500A Battery",
-            //             image: "/images/batteries/wix_500A.jpeg",
-            //             specs: {
-            //                 Voltage: "12V",
-            //                 Capacity: "45Ah",
-            //                 "Cold Cranking Amps(CCA)": "500A (EN)",
-            //                 Technology: "AGM (Absorbent Glass Mat)",
-            //                 Warranty: "24 months",
-            //                 "Battery Type": "Maintenance Free",
-            //                 Polarity: "Right positive (R+)",
-            //                 "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
-            //                 "Weight (kg)" : "Approx. 12.5 kg"
-            //             },
-            //         },
-            //         {
-            //             id: "W550A",
-            //             title: "12V 50Ah 550A Battery",
-            //             image: "/images/batteries/wix_550A.jpeg",
-            //             specs: {
-            //                 Voltage: "12V",
-            //                 Capacity: "50Ah",
-            //                 "Cold Cranking Amps(CCA)": "550A (EN)",
-            //                 Technology: "AGM (Absorbent Glass Mat)",
-            //                 Warranty: "24 months",
-            //                 "Battery Type": "Maintenance Free",
-            //                 Polarity: "Right positive (R+)",
-            //                 "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
-            //                 "Weight (kg)" : "Approx. 12.5 kg"
-            //             },
-            //         },
-            //         {
-            //             id: "W680A",
-            //             title: "12V 60Ah 680A Battery",
-            //             image: "/images/batteries/wix_680A.jpeg",
-            //             specs: {
-            //                 Voltage: "12V",
-            //                 Capacity: "60Ah",
-            //                 "Cold Cranking Amps(CCA)": "680A (EN)",
-            //                 Technology: "AGM (Absorbent Glass Mat)",
-            //                 Warranty: "24 months",
-            //                 "Battery Type": "Maintenance Free",
-            //                 Polarity: "Right positive (R+)",
-            //                 "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
-            //                 "Weight (kg)" : "Approx. 12.5 kg"
-            //             },
-            //         },
-            //         {
-            //             id: "W750A",
-            //             title: "12V 70Ah 750A Battery",
-            //             image: "/images/batteries/wix_750A.jpeg",
-            //             specs: {
-            //                 Voltage: "12V",
-            //                 Capacity: "70Ah",
-            //                 "Cold Cranking Amps(CCA)": "750A (EN)",
-            //                 Technology: "AGM (Absorbent Glass Mat)",
-            //                 Warranty: "24 months",
-            //                 "Battery Type": "Maintenance Free",
-            //                 Polarity: "Right positive (R+)",
-            //                 "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
-            //                 "Weight (kg)" : "Approx. 12.5 kg"
-            //             },
-            //         },
-            //         {
-            //             id: "W850A",
-            //             title: "12V 80Ah 850A Battery",
-            //             image: "/images/batteries/wix_850A.jpeg",
-            //             specs: {
-            //                 Voltage: "12V",
-            //                 Capacity: "80Ah",
-            //                 "Cold Cranking Amps(CCA)": "850A (EN)",
-            //                 Technology: "AGM (Absorbent Glass Mat)",
-            //                 Warranty: "24 months",
-            //                 "Battery Type": "Maintenance Free",
-            //                 Polarity: "Right positive (R+)",
-            //                 "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
-            //                 "Weight (kg)" : "Approx. 12.5 kg"
-            //             },
-            //         },
-            //         {
-            //             id: "W1050A",
-            //             title: "12V 105Ah 1050A Battery",
-            //             image: "/images/batteries/wix_1050A.jpeg",
-            //             specs: {
-            //                 Voltage: "12V",
-            //                 Capacity: "105Ah",
-            //                 "Cold Cranking Amps(CCA)": "1050A (EN)",
-            //                 Technology: "AGM (Absorbent Glass Mat)",
-            //                 Warranty: "24 months",
-            //                 "Battery Type": "Maintenance Free",
-            //                 Polarity: "Right positive (R+)",
-            //                 "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
-            //                 "Weight (kg)" : "Approx. 12.5 kg"
-            //             },
-            //         }
-            //     ]
-            // },
             {
                 id: 'panasonic',
                 title: "PANASONIC PLUS BATTERIES",
@@ -493,14 +391,34 @@ export const categories = {
                 title: "PHILLIPS XPRO BATTERIES",
                 products: [
                     {
+                        id: "500A",
+                        title: "500A Battery",
+                        image: "/images/batteries/phillips_500A.jpeg"
+                    },
+                    {
                         id: "680A",
                         title: "680A Battery",
-                        image: "/images/batteries/wix_680.jpeg"
+                        image: "/images/batteries/phillips_680A.jpeg"
                     },
                     {
                         id: "750A",
                         title: "750A Battery",
-                        image: "/images/batteries/wix_750.jpeg"
+                        image: "/images/batteries/phillips_750A.jpeg"
+                    },
+                    {
+                        id: "850A",
+                        title: "850A Battery",
+                        image: "/images/batteries/phillips_850A.jpeg"
+                    },
+                    {
+                        id: "950A",
+                        title: "950A Battery",
+                        image: "/images/batteries/phillips_950A.jpeg"
+                    },
+                    {
+                        id: "1050A",
+                        title: "1050A Battery",
+                        image: "/images/batteries/phillips_1050A.jpeg"
                     }
                 ]
             },

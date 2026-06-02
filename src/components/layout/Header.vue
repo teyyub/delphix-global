@@ -126,7 +126,7 @@ const handleQuote = () => {
       <!-- LOGO -->
 
       <router-link to="/" class="logo">
-        <img src="/delphix-global-logo.png" alt="Delphix Global Logo" class="navbar-logo" />
+        <img src="/new_logo.jpeg" alt="Delphix Global Logo" class="navbar-logo" />
       </router-link>
       <!-- LINKS -->
       <ul class="nav-links">

@@ -4,10 +4,22 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const categories = ref([
-  { title: "Batteries", slug: 'batteries', icon: "🔋" },
-  { title: "Lubricants", slug: 'lubricants', icon: "🛢️" },
-  { title: "Filters", slug: 'filters', icon: "🌪️" },
-  { title: "Tires", slug: 'tires',icon: "🛞" }
+  { title: "Batteries",
+    slug: 'batteries',
+    icon: '/icons/battery_icon.jpeg'
+  },
+  { title: "Lubricants",
+    slug: 'lubricants',
+    icon: '/icons/lubricant_icon.jpeg'
+  },
+  { title: "Filters",
+    slug: 'filters',
+    icon: '/icons/filter_icon.jpeg'
+  },
+  { title: "Tires",
+    slug: 'tires',
+    icon: '/icons/tires_icon.jpeg'
+  }
 ]);
 
 const features = ref([
@@ -63,7 +75,9 @@ const viewCategory = (slug) => {
             :key="category.title"
             class="category-card"
         >
-          <div class="category-icon">{{ category.icon }}</div>
+          <div class="category-icon">
+            <img :src="category.icon" :alt="category.title" />
+          </div>
           <h3>{{ category.title }}</h3>
           <a href="#" @click.prevent="viewCategory(category.slug)">
             View Products →
@@ -195,19 +209,81 @@ const viewCategory = (slug) => {
 }
 
 .category-icon {
-  font-size: 45px;
-  margin-bottom: 20px;
+  width: 140px;
+  height: 140px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(145deg, #ffffff, #eef2f7);
+
+  box-shadow:
+      0 25px 50px rgba(0,0,0,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+
+  position: relative;
+
+  transform: translateY(-14px);
 }
 
+.category-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 12px; /* ⭐ boşluq verir, “logo kimi” yox real image kimi göstərir */
+  transform: scale(1.05);
+}
+
+.category-card:hover .category-icon {
+  transform: translateY(-4px);
+  box-shadow:
+      0 18px 40px rgba(0,0,0,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.7);
+}
+
+.category-card:hover .category-icon img {
+  transform: scale(1.1);
+}
+.category-icon::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(229,62,62,0.15), transparent 60%);
+  filter: blur(15px);
+  z-index: 0;
+}
+.category-icon::after {
+  content: "";
+  position: absolute;
+}
 .category-card h3 {
   font-size: 15px;
   font-weight: 700;
   margin-bottom: 10px;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 10px;
+  color: #0f172a;
 }
 
 .category-card a {
+  display: inline-block;
+  margin-top: 6px;
+
   font-size: 12px;
-  color: #718096;
+  color: #64748b;
+
+  transition: 0.2s;
+}
+
+.category-card a:hover {
+  color: #0b1c33;
+  transform: translateX(3px);
 }
 
 /* FEATURES */

@@ -145,7 +145,8 @@ const advantages = reactive([
       </section>
 
       <section class="right-column">
-        <div class="product-image">
+        <div class="product-image-card">
+          <div class="image-glow"></div>
           <img :src="product.image" :alt="product.title">
         </div>
         <h3 class="specs-title">Product Specifications</h3>
@@ -212,14 +213,20 @@ const advantages = reactive([
   --text-light: #666666;
   --bg-light: #F8F9FA;
 
-  max-width: 900px;
-  margin: 20px auto;
-  background-color: #ffffff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  border-radius: 8px;
+  max-width: 1100px;
+  margin: 40px auto;
+  background: #ffffff;
+  border-radius: 16px;
   overflow: hidden;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  box-shadow:
+      0 10px 30px rgba(0, 0, 0, 0.08),
+      0 1px 3px rgba(0, 0, 0, 0.05);
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--text-dark);
+
+  transition: all 0.3s ease;
 }
 
 /* Header */
@@ -260,17 +267,21 @@ const advantages = reactive([
   }
 }
 
-/* Sol Sütun */
+.hero-text {
+  margin-bottom: 10px;
+}
+
 .hero-text h1 {
-  font-size: 2.5rem;
-  color: var(--primary-blue);
-  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+  line-height: 1.2;
 }
+
 .hero-text h1 span {
-  color: #FFB300;
+  font-size: 2.2rem;
   display: block;
-  font-size: 3rem;
 }
+
 .en-tag {
   font-size: 1.5rem;
 }
@@ -435,6 +446,78 @@ const advantages = reactive([
   gap: 24px;
 }
 
+.product-image-card {
+  position: relative;
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  max-height: 320px;
+
+  padding: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 24px;
+
+  background: radial-gradient(circle at top, #ffffff 0%, #f1f5f9 100%);
+
+  box-shadow:
+      0 20px 40px rgba(0, 0, 0, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  overflow: hidden;
+
+  transition: all 0.4s ease;
+}
+.image-glow {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+
+  background: radial-gradient(circle, rgba(0,43,102,0.25), transparent 70%);
+  filter: blur(20px);
+
+  z-index: 0;
+}
+
+
+.product-image-card img {
+  max-width: 65%;
+  max-height: 70%;
+
+  object-fit: contain;
+
+  transform: scale(0.9);
+  transition: all 0.4s ease;
+}
+.product-image-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+      0 30px 60px rgba(0, 0, 0, 0.12),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.product-image-card:hover img {
+  transform: translateY(-4px) scale(1);
+}
+.product-image-card .badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  background: #002B66;
+  color: white;
+
+  font-size: 11px;
+  padding: 6px 10px;
+  border-radius: 999px;
+
+  z-index: 3;
+  letter-spacing: 1px;
+}
 .product-image {
   width: 100%;
   background: #fff;
