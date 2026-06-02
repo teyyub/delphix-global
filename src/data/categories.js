@@ -469,6 +469,135 @@ export const categories = {
 
                 ]
             },
+            {
+                id: 'platin',
+                title: "PLATIN LUBRICANTS",
+                products: [
+                    {
+                        title: "5W30 SN/Cf C2/C3 A4/B4",
+                        image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
+                    },
+                    {
+                        title: "5W-30 SP C3",
+                        image: "/images/lubricants/5W-30Premium.jpeg"
+                    },
+                    {
+                        title: "5W-30 SP C3",
+                        image: "/images/lubricants/5W-30SPC3.jpeg"
+                    },
+                    {
+                        title: "10W-40 SN/CF",
+                        image: "/images/lubricants/10W-40-4L.jpeg"
+                    },
+                    {
+                        title: "10W-40 LA",
+                        image: "/images/lubricants/10W-40LA.jpeg"
+                    },
+                    {
+                        title: "10W-40 SN/CF",
+                        image: "/images/lubricants/10W-40SNCF.jpeg"
+                    },
+                    {
+                        title: "ATF",
+                        image: "/images/lubricants/ATF.jpeg"
+                    },
+                    {
+                        title: "ATF 4",
+                        image: "/images/lubricants/ATF-4-L.jpeg"
+                    },
+                    {
+                        title: "Premium",
+                        image: "/images/lubricants/premium.jpeg"
+                    },
+
+                ]
+            },
+            {
+                id: 'westol',
+                title: "WESTOL LUBRICANTS",
+                products: [
+                    {
+                        title: "5W30 SN/Cf C2/C3 A4/B4",
+                        image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
+                    },
+                    {
+                        title: "5W-30 SP C3",
+                        image: "/images/lubricants/5W-30Premium.jpeg"
+                    },
+                    {
+                        title: "5W-30 SP C3",
+                        image: "/images/lubricants/5W-30SPC3.jpeg"
+                    },
+                    {
+                        title: "10W-40 SN/CF",
+                        image: "/images/lubricants/10W-40-4L.jpeg"
+                    },
+                    {
+                        title: "10W-40 LA",
+                        image: "/images/lubricants/10W-40LA.jpeg"
+                    },
+                    {
+                        title: "10W-40 SN/CF",
+                        image: "/images/lubricants/10W-40SNCF.jpeg"
+                    },
+                    {
+                        title: "ATF",
+                        image: "/images/lubricants/ATF.jpeg"
+                    },
+                    {
+                        title: "ATF 4",
+                        image: "/images/lubricants/ATF-4-L.jpeg"
+                    },
+                    {
+                        title: "Premium",
+                        image: "/images/lubricants/premium.jpeg"
+                    },
+
+                ]
+            },
+            {
+                id: 'denzo',
+                title: "DENZO LUBRICANTS",
+                products: [
+                    {
+                        title: "5W30 SN/Cf C2/C3 A4/B4",
+                        image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
+                    },
+                    {
+                        title: "5W-30 SP C3",
+                        image: "/images/lubricants/5W-30Premium.jpeg"
+                    },
+                    {
+                        title: "5W-30 SP C3",
+                        image: "/images/lubricants/5W-30SPC3.jpeg"
+                    },
+                    {
+                        title: "10W-40 SN/CF",
+                        image: "/images/lubricants/10W-40-4L.jpeg"
+                    },
+                    {
+                        title: "10W-40 LA",
+                        image: "/images/lubricants/10W-40LA.jpeg"
+                    },
+                    {
+                        title: "10W-40 SN/CF",
+                        image: "/images/lubricants/10W-40SNCF.jpeg"
+                    },
+                    {
+                        title: "ATF",
+                        image: "/images/lubricants/ATF.jpeg"
+                    },
+                    {
+                        title: "ATF 4",
+                        image: "/images/lubricants/ATF-4-L.jpeg"
+                    },
+                    {
+                        title: "Premium",
+                        image: "/images/lubricants/premium.jpeg"
+                    },
+
+                ]
+            },
         ]
     },
     filters: {
@@ -479,7 +608,33 @@ export const categories = {
         brands:[
             {
                 id: 'delphix',
-                title: "DELPHIX BATTERIES WIX BOXES",
+                title: "DELPHIX FILTERS",
+                products: [
+                    {
+                        title: "680A Battery",
+                        image: "/images/filters/aid.jpeg"
+                    },
+                    {
+                        title: "680A Battery",
+                        image: "/images/filters/cabin.jpeg"
+                    },
+                    {
+                        title: "680A Battery",
+                        image: "/images/filters/engine.jpeg"
+                    },
+                    {
+                        title: "680A Battery",
+                        image: "/images/filters/fuel.jpeg"
+                    },
+                    {
+                        title: "680A Battery",
+                        image: "/images/filters/transmission.jpeg"
+                    },
+                ]
+            },
+            {
+                id: 'denzo',
+                title: "DENZO FILTERS",
                 products: [
                     {
                         title: "680A Battery",
@@ -512,8 +667,8 @@ export const categories = {
         description: "Durable performance tires",
         brands:[
             {
-                id: 'delphix',
-                title: "DELPHIX Tires",
+                id: 'Denzo',
+                title: "DENZO Tires",
                 products: [
                     {
                         title: "680A Battery",
