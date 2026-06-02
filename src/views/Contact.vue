@@ -20,6 +20,12 @@ const offices = ref([
     address: "Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE",
     phone: "+994 55 240 93 40",
     email: "motec.group@gmail.com"
+  },
+  {
+    title: "Delphix Global CIS Regional Office ",
+    address: "Nurly Tau Business Center 81 Al-Farabi Avenue Almaty AZ050040 Kazakhstan",
+    phone: "+994705138450",
+    email: "cis@delphixglobal.com delphixglobal.com"
   }
 ]);
 
