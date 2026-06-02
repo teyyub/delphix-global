@@ -324,7 +324,7 @@ export const categories = {
             // },
             {
                 id: 'panasonic',
-                title: "PANASONIC BATTERIES",
+                title: "PANASONIC PLUS BATTERIES",
                 products: [
                     {
                         id: "420A",
