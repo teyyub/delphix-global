@@ -8,11 +8,21 @@ const form = ref({
   message: ""
 });
 
-const contactInfo = ref({
-  email: "info@delphixglobal.com",
-  phone: "+971 50 123 4567",
-  address: "Jumeirah Lakes Towers, Dubai, UAE"
-});
+const offices = ref([
+  {
+    title: "Delphix Global Ltd. (UK Headquarters)",
+    address: "One Canada Square, Canary Wharf, London E14, United Kingdom",
+    phone: "+994 77 177 95 77",
+    email: "info@delphixglobal.com"
+  },
+  {
+    title: "Delphix Global FZE (Middle East & Africa Office)",
+    address: "Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE",
+    phone: "+994 55 240 93 40",
+    email: "motec.group@gmail.com"
+  }
+]);
+
 
 const submitForm = () => {
   console.log("Form:", form.value);
@@ -34,18 +44,22 @@ const submitForm = () => {
 
       <!-- LEFT INFO -->
       <div class="contact-info">
-        <h2>Get in Touch</h2>
+        <h2>Contact</h2>
 
-        <div class="info-item">
-          📧 <span>{{ contactInfo.email }}</span>
-        </div>
+        <div v-for="(office, index) in offices" :key="index" class="office-card">
+          <h3>{{ office.title }}</h3>
 
-        <div class="info-item">
-          📞 <span>{{ contactInfo.phone }}</span>
-        </div>
+          <div class="info-item">
+            📍 <span>{{ office.address }}</span>
+          </div>
 
-        <div class="info-item">
-          📍 <span>{{ contactInfo.address }}</span>
+          <div class="info-item">
+            📞 <span>{{ office.phone }}</span>
+          </div>
+
+          <div class="info-item">
+            📧 <span>{{ office.email }}</span>
+          </div>
         </div>
       </div>
 
@@ -152,5 +166,18 @@ const submitForm = () => {
   .contact-content {
     flex-direction: column;
   }
+}
+.office-card {
+  margin-bottom: 25px;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.office-card h3 {
+  font-size: 15px;
+  margin-bottom: 10px;
+  color: #0a192f;
 }
 </style>
