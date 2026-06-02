@@ -395,10 +395,69 @@ button:hover {
 
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 15px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+
+  margin-bottom: 30px;
 }
+
+/* CARD */
+.brand-card {
+  width: 100%;
+  max-width: 180px;
+  justify-self: center;
+
+  padding: 12px 14px;
+  border-radius: 12px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+/* HOVER */
+.brand-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+  border-color: #d1d5db;
+}
+
+/* ACTIVE */
+.brand-card.active {
+  background: #0f172a;
+  color: #fff;
+  border-color: #0f172a;
+  transform: scale(1.03);
+}
+
+/* TITLE */
+.brand-card h3 {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+
+  white-space: normal;
+  overflow: hidden;
+  word-break: break-word;
+  text-overflow: ellipsis;
+}
+
+/* COUNT */
+.brand-card span {
+  font-size: 11px;
+  opacity: 0.7;
+}
+
+/* ACTIVE TEXT FIX */
 
 .brand-card {
   padding: 20px;
@@ -414,7 +473,6 @@ button:hover {
 }
 
 .brand-card.active {
-  border: 2px solid #0f172a;
-  background: #f8fafc;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 </style>
