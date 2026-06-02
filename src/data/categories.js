@@ -426,7 +426,38 @@ export const categories = {
             {
                 id: 'denzo',
                 title: "DENZO BATTERIES",
-                products: []
+                products: [
+                    {
+                        id: "500A",
+                        title: "12V 50Ah 500A Battery",
+                        image: "/images/batteries/denzo_500A.jpeg"
+                    },
+                    {
+                        id: "680A",
+                        title: "12V 60Ah 680A Battery",
+                        image: "/images/batteries/denzo_680A.jpeg"
+                    },
+                    {
+                        id: "750A",
+                        title: "12V 70Ah 750A Battery",
+                        image: "/images/batteries/denzo_750A.jpeg"
+                    },
+                    {
+                        id: "850A",
+                        title: "12V 85Ah 850A Battery",
+                        image: "/images/batteries/denzo_850A.jpeg"
+                    },
+                    {
+                        id: "1050A",
+                        title: "12V 95Ah 1050A Battery",
+                        image: "/images/batteries/denzo_1050A.jpeg"
+                    },
+                    {
+                        id: "1050105A",
+                        title: "12V 105Ah 1050A Battery",
+                        image: "/images/batteries/denzo_1050_105A.jpeg"
+                    },
+                ]
             },
         ]
     },
