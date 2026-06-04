@@ -61,7 +61,7 @@ const viewCategory = (slug) => {
         </div>
       </div>
 
-      <div class="hero-emojis">🚛🛢️🔋</div>
+
     </section>
 
     <!-- Categories -->
@@ -116,56 +116,106 @@ const viewCategory = (slug) => {
 
 /* HERO */
 .hero {
-  background: linear-gradient(90deg, #0a192f 40%, #132a4e 100%);
-  color: #fff;
-  padding: 80px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 450px;
-}
+  position: relative;
 
-.hero-text { max-width: 550px; }
+  background-image: url('/images/home.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  min-height: 520px;
+
+  padding: 100px 60px;
+
+  display: flex;
+  align-items: center;
+
+  color: #fff;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+      90deg,
+      rgba(10, 25, 47, 0.90) 35%,
+      rgba(10, 25, 47, 0.55) 100%
+  );
+
+  z-index: 1;
+}
+.hero-text {
+  position: relative;
+  z-index: 2;
+
+  max-width: 600px;
+}
 
 .hero-tag {
   color: #e53e3e;
-  text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .hero h1 {
-  font-size: 42px;
+  font-size: 48px;
   font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 15px;
+  line-height: 1.1;
+  margin-bottom: 18px;
 }
 
 .hero p {
-  color: #cbd5e0;
   font-size: 16px;
+  color: #cbd5e0;
   margin-bottom: 30px;
+  max-width: 500px;
 }
 
-.hero-btns .btn-explore {
+.hero-btns {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-explore {
   background: #e53e3e;
   color: #fff;
-  padding: 12px 25px;
+
+  padding: 12px 24px;
+  border-radius: 8px;
+
   border: none;
   font-weight: 700;
-  margin-right: 15px;
+
   cursor: pointer;
+  transition: .3s;
 }
 
-.hero-btns .btn-outline {
+.btn-explore:hover {
+  background: #ff4d4d;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
   background: transparent;
   color: #fff;
-  border: 1px solid #fff;
-  padding: 12px 25px;
+
+  padding: 12px 24px;
+  border-radius: 8px;
+
+  border: 1px solid rgba(255,255,255,0.6);
+
   font-weight: 700;
+
   cursor: pointer;
+  transition: .3s;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,0.1);
 }
 
 .hero-emojis {
