@@ -43,10 +43,6 @@ import Landing from "@/components/Landing.vue";
 <!--</style>-->
 
 <style>
-/*
-  Qlobal sıfırlama (Reset).
-  Brauzerlərin standart kənar boşluqlarını silir ki, sayt tam otursun.
-*/
 * {
   margin: 0;
   padding: 0;
@@ -54,7 +50,60 @@ import Landing from "@/components/Landing.vue";
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  color: #0b1c33;
+}
+
+/* desktop container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* text bir az kiçilsin */
+  body {
+    font-size: 14px;
+  }
+
+  /* navbar */
+  .navbar {
+    padding: 10px 16px !important;
+  }
+
+  /* menu gizlət (sonra hamburger edərik) */
+  .nav-links {
+    display: none !important;
+  }
+
+  /* hero mobile layout */
+  .hero {
+    flex-direction: column !important;
+    text-align: center;
+    padding: 40px 16px !important;
+  }
+
+  /* grid-lər 1 column olsun */
+  .grid-categories,
+  .grid-features {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* logo kiçilsin */
+  .navbar-logo {
+    height: 40px;
+  }
 }
 </style>
