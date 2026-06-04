@@ -106,18 +106,18 @@ const handleQuote = () => {
 
     <!-- TOP BAR -->
     <div class="top-bar">
-      <div class="top-bar-left">
-        <span>{{ contact.email }}</span>
-        <span>{{ contact.phone }}</span>
-      </div>
+<!--      <div class="top-bar-left">-->
+<!--        <span>{{ contact.email }}</span>-->
+<!--        <span>{{ contact.phone }}</span>-->
+<!--      </div>-->
 
-      <div class="top-bar-right">
-        <select v-model="currentLang" @change="setLanguage(currentLang)">
-          <option v-for="l in languages" :key="l.code" :value="l.code">
-            {{ l.label }}
-          </option>
-        </select>
-      </div>
+<!--      <div class="top-bar-right">-->
+<!--        <select v-model="currentLang" @change="setLanguage(currentLang)">-->
+<!--          <option v-for="l in languages" :key="l.code" :value="l.code">-->
+<!--            {{ l.label }}-->
+<!--          </option>-->
+<!--        </select>-->
+<!--      </div>-->
     </div>
 
     <!-- NAVBAR -->

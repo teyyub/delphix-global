@@ -104,6 +104,71 @@ const viewCategory = (slug) => {
         </div>
       </div>
     </section>
+    <section class="global-network-section">
+      <div class="network-wrapper">
+        <img
+            src="/images/network.webp"
+            alt="Global Manufacturing Network and Statistics"
+            class="global-network-image"
+        />
+
+        <div class="network-overlay-top">
+          <div class="network-info-left">
+            <span class="net-tag">GLOBAL MANUFACTURING NETWORK</span>
+            <h2>BUILT IN STRATEGIC<br>LOCATIONS</h2>
+            <p>
+              Our state-of-the-art manufacturing facilities in China, Dubai, and Kazakhstan
+              enable us to deliver premium quality products to global markets with efficiency and reliability.
+            </p>
+            <a href="#" class="net-btn-dark" @click.prevent="">LEARN MORE →</a>
+          </div>
+
+          <div class="card-china">
+            <span class="card-title">CHINA</span>
+            <span class="card-sub">Manufacturing<br>Excellence</span>
+          </div>
+
+          <div class="card-dubai">
+            <span class="card-title">DUBAI</span>
+            <span class="card-sub">Logistics<br>Hub</span>
+          </div>
+
+          <div class="card-kazakhstan">
+            <span class="card-title">KAZAKHSTAN</span>
+            <span class="card-sub">Production<br>Facility</span>
+          </div>
+        </div>
+
+        <div class="network-overlay-bottom">
+          <div class="export-info-left">
+            <span class="net-tag">GLOBAL EXPORT</span>
+            <h2>DELIVERING TO MORE<br>THAN 80 COUNTRIES</h2>
+            <p>Our products are trusted by customers in over 80 countries across 6 continents.</p>
+            <a href="#" class="net-btn-light" @click.prevent="">VIEW EXPORT MAP →</a>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-box">
+              <span class="stat-number">80+</span>
+              <span class="stat-label">COUNTRIES</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">1000+</span>
+              <span class="stat-label">PRODUCTS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">500+</span>
+              <span class="stat-label">PARTNERS</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-number">20+</span>
+              <span class="stat-label">YEARS EXPERIENCE</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
   </div>
 </template>
@@ -363,5 +428,220 @@ const viewCategory = (slug) => {
   font-size: 15px;
   line-height: 1.6;
   color: #cbd5e1;
+}
+/* GLOBAL NETWORK SECTION */
+.global-network-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+}
+
+.network-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1440px; /* Şəklin orijinal maksimum eni */
+  margin: 0 auto;
+}
+
+.global-network-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Ortaq Stil Teqləri */
+.net-tag {
+  color: #e53e3e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* ÜST BÖLMƏ - POZİSİYALAR */
+.network-overlay-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 62.5%; /* Şəklin üst yarısının nisbəti */
+}
+
+.network-info-left {
+  position: absolute;
+  top: 12%;
+  left: 5%;
+  width: 22%;
+}
+
+.network-info-left h2 {
+  font-size: clamp(16px, 2.2vw, 28px);
+  font-weight: 900;
+  color: #0b1c33;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.network-info-left p {
+  font-size: clamp(11px, 1.1vw, 14px);
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.net-btn-dark {
+  display: inline-block;
+  background: #0b1c33;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: clamp(10px, 1vw, 13px);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.net-btn-dark:hover {
+  background: #1a365d;
+}
+
+/* Ölkə Kartlarının Mətnləri (Şəkildəki bəyaz boşluqlara tam oturdulub) */
+.card-china, .card-dubai, .card-kazakhstan {
+  position: absolute;
+  text-align: center;
+  width: 11%;
+}
+
+.card-china { top: 51%; left: 45.4%; }
+.card-dubai { top: 56%; left: 64.9%; }
+.card-kazakhstan { top: 51%; left: 79.9%; }
+
+.card-title {
+  display: block;
+  font-weight: 900;
+  font-size: clamp(12px, 1.2vw, 15px);
+  color: #000;
+  letter-spacing: 0.5px;
+}
+
+.card-sub {
+  display: block;
+  font-size: clamp(10px, 0.9vw, 12px);
+  color: #4a5568;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+/* ALT BÖLMƏ - POZİSİYALAR */
+.network-overlay-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 37.5%; /* Şəklin alt statistika hissəsinin nisbəti */
+}
+
+.export-info-left {
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 22%;
+}
+
+.export-info-left h2 {
+  font-size: clamp(16px, 2.2vw, 26px);
+  font-weight: 900;
+  color: #0b1c33;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.export-info-left p {
+  font-size: clamp(11px, 1.1vw, 14px);
+  color: #4a5568;
+  line-height: 1.4;
+  margin-bottom: 15px;
+}
+
+.net-btn-light {
+  display: inline-block;
+  background: transparent;
+  color: #0b1c33;
+  border: 1px solid #0b1c33;
+  padding: 8px 16px;
+  font-size: clamp(10px, 1vw, 12px);
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.net-btn-light:hover {
+  background: #0b1c33;
+  color: #fff;
+}
+
+/* Statistika Kartlarının Mətnləri */
+.stats-grid {
+  position: absolute;
+  top: 20%;
+  left: 31%;
+  width: 63%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2%;
+}
+
+.stat-box {
+  text-align: center;
+  padding-top: 18%; /* Yazıları ikonların altına itələmək üçün */
+}
+
+.stat-number {
+  display: block;
+  font-size: clamp(22px, 3.2vw, 42px);
+  font-weight: 900;
+  color: #0b1c33;
+  line-height: 1;
+}
+
+.stat-label {
+  display: block;
+  font-size: clamp(9px, 0.9vw, 12px);
+  font-weight: 800;
+  color: #4a5568;
+  margin-top: 5px;
+  letter-spacing: 0.5px;
+}
+
+/* Mobil və Kiçik Ekranlar üçün Uyğunlaşdırma */
+@media (max-width: 768px) {
+  .network-overlay-top, .network-overlay-bottom {
+    position: relative;
+    height: auto;
+    width: 100%;
+    padding: 30px 20px;
+  }
+  .global-network-image {
+    display: none; /* Mobildə arxa plan şəklini gizlədib normal blok nizamına keçirik */
+  }
+  .network-info-left, .export-info-left, .card-china, .card-dubai, .card-kazakhstan, .stats-grid {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-box {
+    padding-top: 10px;
+    background: #fff;
+    border: 1px solid #eef2f7;
+    border-radius: 8px;
+    padding: 15px;
+  }
 }
 </style>
