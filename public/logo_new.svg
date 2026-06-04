@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 180" width="100%" height="100%">
+  <defs>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C62828" />
+      <stop offset="100%" stop-color="#880E4F" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0D47A1" />
+      <stop offset="100%" stop-color="#001845" />
+    </linearGradient>
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EEEEEE" />
+      <stop offset="50%" stop-color="#9E9E9E" />
+      <stop offset="100%" stop-color="#757575" />
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(10, 10)">
+    <path d="M 30,0 L 95,0 C 145,0 165,35 165,80 C 165,125 145,160 95,160 L 30,160 Z M 65,30 L 65,130 L 90,130 C 115,130 130,115 130,80 C 130,45 115,30 90,30 Z" fill="url(#metalGrad)" />
+    
+    <path d="M 32,2 L 63,2 L 63,158 L 32,158 Z" fill="url(#blueGrad)" />
+    <g fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.7" opacity="0.9">
+      <line x1="38" y1="25" x2="48" y2="35" />
+      <line x1="48" y1="35" x2="45" y2="55" />
+      <line x1="45" y1="55" x2="55" y2="70" />
+      <line x1="55" y1="70" x2="42" y2="95" />
+      <line x1="42" y1="95" x2="52" y2="120" />
+      <line x1="52" y1="120" x2="38" y2="140" />
+      
+      <circle cx="38" cy="25" r="2.5" />
+      <circle cx="48" cy="35" r="2" />
+      <circle cx="45" cy="55" r="2" />
+      <circle cx="55" cy="70" r="2.5" />
+      <circle cx="42" cy="95" r="2" />
+      <circle cx="52" cy="120" r="2" />
+      <circle cx="38" cy="140" r="3" />
+    </g>
+
+    <g>
+      <path d="M 65,2 L 92,2 C 135,2 153,32 153,80 C 153,128 135,158 92,158 L 65,158 Z M 65,30 L 65,130 L 90,130 C 115,130 130,115 130,80 C 130,45 115,30 90,30 Z" fill="url(#redGrad)" />
+      <path d="M 65,50 Q 110,60 145,50 M 65,80 Q 115,85 153,80 M 65,110 Q 110,100 144,110" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.25" />
+      <path d="M 90,2 Q 115,80 90,158 M 115,5 Q 135,80 115,155" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.25" />
+    </g>
+  </g>
+
+  <text x="195" y="92" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="76" font-weight="bold" fill="#002D62" letter-spacing="1.5">DELPHIX</text>
+  
+  <text x="198" y="148" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif" font-size="40" font-weight="800" fill="#0A2540" letter-spacing="9">GLOBAL</text>
+</svg>

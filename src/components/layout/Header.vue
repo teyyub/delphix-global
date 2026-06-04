@@ -126,7 +126,7 @@ const handleQuote = () => {
       <!-- LOGO -->
 
       <router-link to="/" class="logo">
-        <img src="/new_logo.jpeg" alt="Delphix Global Logo" class="navbar-logo" />
+        <img src="/logo_new.svg" alt="Delphix Global Logo" class="navbar-logo" />
       </router-link>
       <!-- LINKS -->
       <ul class="nav-links">
@@ -231,23 +231,13 @@ const handleQuote = () => {
   display: block;
 }
 .logo {
-  font-size: 22px;
-  font-weight: 900;
   color: #0b1c33;
 }
-
-.logo span {
-  color: #e53e3e;
-}
-.logo {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  transition: 0.2s ease;
-}
-
-.logo:hover {
-  opacity: 0.7;
+.navbar-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  fill: currentColor;
 }
 
 /* NAV */
