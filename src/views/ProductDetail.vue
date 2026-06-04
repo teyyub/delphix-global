@@ -4,29 +4,6 @@ import {useRoute} from "vue-router";
 import {categories} from "@/data/categories.js";
 import {highlights} from "@/data/highlights.js";
 const route = useRoute()
-// Məhsulun əsas datası
-// const product = reactive({
-//   voltage: '12V',
-//   capacity: '45Ah',
-//   cca: '500A'
-// })
-
-// const product = computed(() => {
-//   return JSON.parse(
-//       decodeURIComponent(route.query.product)
-//   )
-// })
-
-
-// const product = computed(() => {
-//   const id = route.params.id
-//
-//   return Object.values(categories)
-//       .flatMap(c => c.series)
-//       .flatMap(s => s.products)
-//       .find(p => p.id === id)
-// })
-
 const product = computed(() => {
   const id = route.params.id
   console.log("ROUTE ID:", id)
@@ -35,11 +12,12 @@ const product = computed(() => {
       const found = brands.products.find(p => p.id === id)
 
       if (found) {
-        console.log("FOUND PRODUCT:", found)
+        console.log("FOUND PRODUCT:", JSON.stringify(found))
         return {
           ...found,
           categoryKey,
-          brandId: brands.id
+          brandId: brands.id,
+          hero:brands?.hero
         }
       }
     }
@@ -100,7 +78,9 @@ const advantages = reactive([
 <template>
   <div class="product-container">
     <header class="battery-header">
-      <div class="brand-title">DELPHIX <span>AGM</span></div>
+      <div class="brand-title"> {{ product.hero.brand}}
+        <span> {{ product.hero.technology }}</span>
+      </div>
       <div class="sub-brand">TECHNOLOGY</div>
     </header>
 
@@ -116,19 +96,6 @@ const advantages = reactive([
           <p class="tech-desc">Advanced AGM Technology for Modern Vehicles</p>
         </div>
 
-<!--        <div-->
-<!--            v-for="(feature, index) in features"-->
-<!--            :key="index"-->
-<!--            class="feature-item"-->
-<!--        >-->
-<!--          <div class="feature-icon">-->
-<!--            <i :class="feature.icon"></i>-->
-<!--          </div>-->
-<!--          <div class="feature-details">-->
-<!--            <h4>{{ feature.title }}</h4>-->
-<!--            <p>{{ feature.description }}</p>-->
-<!--          </div>-->
-<!--        </div>-->
         <div
             v-for="(highlight, index) in currentHighlights?.features"
             :key="index"
@@ -162,8 +129,8 @@ const advantages = reactive([
         </table>
 
         <div class="origin-badge">
-          <span class="usa-tech">MADE IN USA TECHNOLOGY</span><br>
-          <small class="euro-eng">Engineered in Europe</small>
+          <span class="usa-tech"> {{ product.hero.originTitle }} </span><br>
+          <small class="euro-eng"> {{ product.hero?.originSubtitle }}</small>
         </div>
       </section>
     </main>

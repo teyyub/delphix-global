@@ -6,19 +6,19 @@ const router = useRouter();
 const categories = ref([
   { title: "Batteries",
     slug: 'batteries',
-    image: '/images/batteries.webp'
+    icon: '/images/batteries.webp'
   },
   { title: "Lubricants",
     slug: 'lubricants',
-    image: '/images/lubricants.webp'
+    icon: '/images/lubricants.webp'
   },
   { title: "Filters",
     slug: 'filters',
-    image: '/images/filters.webp'
+    icon: '/images/filters.webp'
   },
   { title: "Tires",
     slug: 'tires',
-    image: '/images/tires.webp'
+    icon: '/images/tires.webp'
   }
 ]);
 
@@ -75,17 +75,13 @@ const viewCategory = (slug) => {
             :key="category.title"
             class="category-card"
         >
-          <div class="category-image">
-            <img :src="category.image" :alt="category.title" />
+          <div class="category-icon">
+            <img :src="category.icon" :alt="category.title" />
           </div>
-
-          <div class="category-content">
-            <h3>{{ category.title }}</h3>
-
-            <a href="#" @click.prevent="viewCategory(category.slug)">
-              View Products →
-            </a>
-          </div>
+          <h3>{{ category.title }}</h3>
+          <a href="#" @click.prevent="viewCategory(category.slug)">
+            View Products →
+          </a>
         </div>
       </div>
     </section>
@@ -196,76 +192,103 @@ const viewCategory = (slug) => {
 
 .grid-categories {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
 .category-card {
-  background: #fff;
-  border-radius: 16px;
+  background: white;
+  border-radius: 20px;
   overflow: hidden;
 
-  border: 1px solid #eef2f7;
+  border: 1px solid #e5e7eb;
 
-  transition: all .25s ease;
+  transition: all .35s ease;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .category-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
 }
-.category-image {
-  height: 240px;
-  background: #ffffff;
+
+.category-icon {
+  width: 140px;
+  height: 140px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 26px;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+
+  background: linear-gradient(145deg, #ffffff, #eef2f7);
+
+  box-shadow:
+      0 25px 50px rgba(0,0,0,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.9);
+
+  position: relative;
+
+  transform: translateY(-14px);
 }
 
-.category-image img {
+.category-icon img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center 30%;
-  display: block;
+  object-fit: contain;
+  padding: 12px; /* ⭐ boşluq verir, “logo kimi” yox real image kimi göstərir */
+  transform: scale(1.05);
 }
 
-.category-card:hover .category-image img {
-  transform: scale(1.06);
+.category-card:hover .category-icon {
+  transform: translateY(-4px);
+  box-shadow:
+      0 18px 40px rgba(0,0,0,0.12),
+      inset 0 1px 0 rgba(255,255,255,0.7);
 }
 
-.category-content {
-  padding: 18px;
+.category-card:hover .category-icon img {
+  transform: scale(1.1);
+}
+.category-icon::before {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  background: radial-gradient(circle, rgba(229,62,62,0.15), transparent 60%);
+  filter: blur(15px);
+  z-index: 0;
+}
+.category-icon::after {
+  content: "";
+  position: absolute;
+}
+.category-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
   text-align: center;
-}
-.category-content h3 {
-  margin: 0 0 8px;
-
-  font-size: 18px;
-  font-weight: 800;
-
-  text-transform: uppercase;
-  letter-spacing: 1px;
-
-  color: #111827;
+  padding: 30px 20px;
+  margin-top: 10px;
+  color: #0f172a;
 }
 
-.category-content a {
-  font-size: 13px;
-  font-weight: 600;
+.category-card a {
+  display: inline-block;
+  margin-top: 6px;
 
-  color: #6b7280;
+  font-size: 12px;
+  color: #64748b;
 
-  text-decoration: none;
-
-  transition: .2s;
+  transition: 0.2s;
 }
 
-.category-content a:hover {
-  color: #e53e3e;
-  letter-spacing: 0.5px;
+.category-card a:hover {
+  color: #0b1c33;
+  transform: translateX(3px);
 }
 
 /* FEATURES */

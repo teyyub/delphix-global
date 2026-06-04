@@ -8,6 +8,14 @@ export const categories = {
             {
                 id: 'delphix',
                 title: "DELPHIX BATTERIES",
+                hero:{
+                    brand:"DELPHIX",
+                    technology:"AGM",
+                    tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+                    description: "Advanced AGM Technology for Modern Vehicles",
+                    originTitle: "MADE IN USA TECHNOLOGY",
+                    originSubtitle: "Engineered in Europe"
+                },
                 products: [
                     {
                         id: "500A",
@@ -222,7 +230,15 @@ export const categories = {
             },
             {
                 id: 'panasonic',
-                title: "PANASONIC PLUS BATTERIES",
+                title: "PANOSONIC PLUS BATTERIES",
+                hero:{
+                    brand:"PANOSONIC",
+                    technology:"AGM + Plus",
+                    tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+                    description: "Advanced AGM Technology for Modern Vehicles",
+                    originTitle: "MADE IN JAPAN TECHNOLOGY",
+                    originSubtitle: ""
+                },
                 products: [
                     {
                         id: "420A",
@@ -426,6 +442,14 @@ export const categories = {
             {
                 id: 'denzo',
                 title: "DENZO BATTERIES",
+                hero:{
+                    brand:"DENZO",
+                    technology:"AGM",
+                    tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+                    description: "Advanced AGM Technology for Modern Vehicles",
+                    originTitle: "MADE IN USA TECHNOLOGY",
+                    originSubtitle: "Engineered in Europe"
+                },
                 products: [
                     {
                         id: "500A",
@@ -652,53 +676,28 @@ export const categories = {
                 title: "DELPHIX FILTERS",
                 products: [
                     {
-                        title: "680A Battery",
+                        title: "Air Filter",
                         image: "/images/filters/aid.jpeg"
                     },
                     {
-                        title: "680A Battery",
+                        title: "Cabin Filter",
                         image: "/images/filters/cabin.jpeg"
                     },
                     {
-                        title: "680A Battery",
+                        title: "Engine Filter",
                         image: "/images/filters/engine.jpeg"
                     },
                     {
-                        title: "680A Battery",
+                        title: "Fuel Filter",
                         image: "/images/filters/fuel.jpeg"
                     },
                     {
-                        title: "680A Battery",
+                        title: "Transmission Filter",
                         image: "/images/filters/transmission.jpeg"
                     },
                 ]
             },
-            {
-                id: 'denzo',
-                title: "DENZO FILTERS",
-                products: [
-                    {
-                        title: "680A Battery",
-                        image: "/images/filters/aid.jpeg"
-                    },
-                    {
-                        title: "680A Battery",
-                        image: "/images/filters/cabin.jpeg"
-                    },
-                    {
-                        title: "680A Battery",
-                        image: "/images/filters/engine.jpeg"
-                    },
-                    {
-                        title: "680A Battery",
-                        image: "/images/filters/fuel.jpeg"
-                    },
-                    {
-                        title: "680A Battery",
-                        image: "/images/filters/transmission.jpeg"
-                    },
-                ]
-            },
+
         ]
     },
     tires: {

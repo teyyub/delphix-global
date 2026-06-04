@@ -16,7 +16,7 @@ export const delphixTranslations = {
                 label: 'BRANDS',
                 items: {
                     panasonic: 'Panosonic Plus',
-                    philips: 'Phillips',
+                    philips: 'Phillips XPro',
                     delphix: 'Delphix',
                     denzo: 'Denzo',
                     platin: 'Platin',
