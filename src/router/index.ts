@@ -13,7 +13,7 @@ const routes = [
     },
 
     {
-        path: "/product/:id",
+        path: "/product/:brandId/:id",
         name: "product-detail",
         component: () => import("@/views/ProductDetail.vue")
     },
@@ -21,6 +21,12 @@ const routes = [
     {
         path: "/categories/:slug",
         name: "category",
+        component: () => import("@/views/CategoryPage.vue")
+    },
+
+    {
+        path: "/brands/:brandId",
+        name: "brand-products",
         component: () => import("@/views/CategoryPage.vue")
     },
 

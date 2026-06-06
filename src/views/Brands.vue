@@ -1,14 +1,30 @@
 <script setup>
-import { ref } from "vue";
+import {categories} from "@/data/categories.js";
+import {useRoute} from "vue-router";
+const route = useRoute()
+const brandId = route.params.brandId
 
-const brands = ref([
-  { name: "Delphix", logo: "🏷️", desc: "Premium industrial solutions" },
-  { name: "TurboLube", logo: "🛢️", desc: "High-performance lubricants" },
-  { name: "PowerCell", logo: "🔋", desc: "Advanced battery technology" },
-  { name: "FilterPro", logo: "🌪️", desc: "Filtration systems" },
-  { name: "RoadGrip", logo: "🛞", desc: "Tire & traction solutions" },
-  { name: "AutoMax", logo: "🚗", desc: "Automotive excellence" }
-]);
+const allProducts = []
+
+for (const category of Object.values(categories)) {
+  for (const brand of category.brands || []) {
+    if (brand.id.toLowerCase() === brandId.toLowerCase()) {
+      allProducts.push({
+        category: category.id,
+        brand: brand.title,
+        products: brand.products
+      })
+    }
+  }
+}
+// const brands = ref([
+//   { name: "Delphix", logo: "🏷️", desc: "Premium industrial solutions" },
+//   { name: "TurboLube", logo: "🛢️", desc: "High-performance lubricants" },
+//   { name: "PowerCell", logo: "🔋", desc: "Advanced battery technology" },
+//   { name: "FilterPro", logo: "🌪️", desc: "Filtration systems" },
+//   { name: "RoadGrip", logo: "🛞", desc: "Tire & traction solutions" },
+//   { name: "AutoMax", logo: "🚗", desc: "Automotive excellence" }
+// ]);
 </script>
 
 <template>

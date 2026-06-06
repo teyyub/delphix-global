@@ -1,50 +1,48 @@
 <script setup>
 import {computed, reactive} from 'vue'
 import {useRoute} from "vue-router";
-import {categories} from "@/data/categories.js";
+
 import {highlights} from "@/data/highlights.js";
+import { products } from "@/data/products.js"
+import {brands} from "@/data/brands.js";
 const route = useRoute()
+const { brandId, id } = route.params
+const brand = computed(() => {
+  if (!product.value) return null
+
+  return brands[product.value.brandId]
+})
 const product = computed(() => {
-  const id = route.params.id
-  console.log("ROUTE ID:", id)
-  for (const [categoryKey, category] of Object.entries(categories)) {
-    for (const brands of category.brands) {
-      const found = brands.products.find(p => p.id === id)
-
-      if (found) {
-        console.log("FOUND PRODUCT:", JSON.stringify(found))
-        return {
-          ...found,
-          categoryKey,
-          brandId: brands.id,
-          hero:brands?.hero
-        }
-      }
-    }
-  }
-
-  return null
+  const result =  products.find(
+      p =>
+          p.brandId ===brandId && p.id === id
+  )
+  console.log('id: ',id)
+  console.log('brandId: ',brand)
+  console.log(result)
+  return result;
 })
 
 const currentHighlights = computed(() => {
   if (!product.value) return null
-
-  return highlights[
-      product.value.categoryKey
-      ]?.[
-      product.value.brandId
-      ]
+  const bId = product.value.brandId;
+  const cId = product.value.categoryId;
+  console.log('id: ',bId);
+  console.log('cId: ',cId);
+  const res = highlights[cId];
+  console.log('res: ',res);
+  return res[bId];
 })
 
 // Sol tərəfdəki ikonlu üstünlüklər
-const features = reactive([
-  { title: 'High Starting Power', description: 'Strong engine starts even in cold weather', icon: 'fa-solid fa-car-battery' },
-  { title: 'Long Service Life', description: 'Enhanced cycle life for extended durability', icon: 'fa-solid fa-shield-halved' },
-  { title: 'Vibration Resistant', description: 'Built to perform in demanding driving conditions', icon: 'fa-solid fa-waveform-path' },
-  { title: 'Maintenance Free', description: 'No need to add water. Ready to use', icon: 'fa-solid fa-faucet-drip' },
-  { title: 'Fast Recharge', description: 'Optimized for quick and efficient charging', icon: 'fa-solid fa-bolt' },
-  { title: 'Start-Stop Ready', description: 'Ideal for vehicles with Start-Stop systems', icon: 'fa-solid fa-circle-a' }
-])
+// const features = reactive([
+//   { title: 'High Starting Power', description: 'Strong engine starts even in cold weather', icon: 'fa-solid fa-car-battery' },
+//   { title: 'Long Service Life', description: 'Enhanced cycle life for extended durability', icon: 'fa-solid fa-shield-halved' },
+//   { title: 'Vibration Resistant', description: 'Built to perform in demanding driving conditions', icon: 'fa-solid fa-waveform-path' },
+//   { title: 'Maintenance Free', description: 'No need to add water. Ready to use', icon: 'fa-solid fa-faucet-drip' },
+//   { title: 'Fast Recharge', description: 'Optimized for quick and efficient charging', icon: 'fa-solid fa-bolt' },
+//   { title: 'Start-Stop Ready', description: 'Ideal for vehicles with Start-Stop systems', icon: 'fa-solid fa-circle-a' }
+// ])
 
 // Texniki göstəricilər cədvəli
 // const specifications = reactive([
@@ -78,8 +76,8 @@ const advantages = reactive([
 <template>
   <div class="product-container">
     <header class="battery-header">
-      <div class="brand-title"> {{ product.hero.brand}}
-        <span> {{ product.hero.technology }}</span>
+      <div class="brand-title"> {{ brand?.hero.brand}}
+        <span> {{ brand?.hero.technology }}</span>
       </div>
       <div class="sub-brand">TECHNOLOGY</div>
     </header>
@@ -89,8 +87,8 @@ const advantages = reactive([
       <section class="left-column">
         <div class="hero-text">
           <h1>
-            {{ product.specs.voltage }} {{ product.specs.capacity }}
-            <span>{{ product.specs.cca }} <small class="en-tag">(EN)</small></span>
+            {{ product.specs.Voltage }} {{ product.specs.Capacity }}
+            <span>{{ product.specs.CCA }} <small class="en-tag">(EN)</small></span>
           </h1>
           <p class="tagline">PREMIUM POWER. MAXIMUM RELIABILITY.</p>
           <p class="tech-desc">Advanced AGM Technology for Modern Vehicles</p>
@@ -129,8 +127,8 @@ const advantages = reactive([
         </table>
 
         <div class="origin-badge">
-          <span class="usa-tech"> {{ product.hero.originTitle }} </span><br>
-          <small class="euro-eng"> {{ product.hero?.originSubtitle }}</small>
+          <span class="usa-tech"> {{ brand.hero.originTitle }} </span><br>
+          <small class="euro-eng"> {{ brand.hero?.originSubtitle }}</small>
         </div>
       </section>
     </main>

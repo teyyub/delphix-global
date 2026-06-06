@@ -16,20 +16,20 @@ const languages = [
   { code: 'ar', label: 'AR' }
 ]
 
-const navLinks = [
-  { key: 'home', isActive: true },
-  { key: 'about', isActive: false },
-  { key: 'products', isActive: false },
-  { key: 'brands', isActive: false },
-  { key: 'oem', isActive: false },
-  { key: 'manufacturing', isActive: false },
-  { key: 'news', isActive: false },
-  { key: 'contact', isActive: false }
-]
+// const navLinks = [
+//   { key: 'home', isActive: true },
+//   { key: 'about', isActive: false },
+//   { key: 'products', isActive: false },
+//   { key: 'brands', isActive: false },
+//   { key: 'oem', isActive: false },
+//   { key: 'manufacturing', isActive: false },
+//   { key: 'news', isActive: false },
+//   { key: 'contact', isActive: false }
+// ]
 
-const setActiveLink = (clicked) => {
-  navLinks.forEach(l => l.isActive = l.key === clicked.key)
-}
+// const setActiveLink = (clicked) => {
+//   navLinks.forEach(l => l.isActive = l.key === clicked.key)
+// }
 
 const handleQuote = () => {
   alert('Quote request')

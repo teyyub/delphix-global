@@ -330,7 +330,7 @@ const viewCategory = (slug) => {
   box-shadow: 0 20px 50px rgba(0,0,0,0.08);
 }
 .category-image {
-  height: 240px;
+  height: 280px;
   background: #ffffff;
 
   display: flex;
