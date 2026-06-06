@@ -97,6 +97,58 @@ const processes = ref([
       </div>
     </section>
 
+    <!-- FACTORIES -->
+    <section class="factories">
+      <h2>OUR GLOBAL FACTORIES</h2>
+      <p>Strategically located production facilities ensuring global efficiency and quality.</p>
+
+      <div class="factory-grid">
+
+        <div class="factory-card china">
+          <div class="overlay">
+            <h3></h3>
+            <p>Advanced Manufacturing Hub</p>
+          </div>
+        </div>
+
+        <div class="factory-card dubai">
+          <div class="overlay">
+            <h3>DENZO</h3>
+            <p>Logistics & Distribution Center</p>
+          </div>
+        </div>
+
+        <div class="factory-card kazakhstan">
+          <div class="overlay">
+            <h3>PANOSONIC</h3>
+            <p>Heavy Production Facility</p>
+          </div>
+        </div>
+
+        <div class="factory-card germany">
+          <div class="overlay">
+            <h3>PANASONIC</h3>
+            <p>Engineering & R&D Center</p>
+          </div>
+        </div>
+
+        <div class="factory-card turkey">
+          <div class="overlay">
+            <h3>PHILLIPS</h3>
+            <p>Regional Manufacturing Plant</p>
+          </div>
+        </div>
+
+        <div class="factory-card usa">
+          <div class="overlay">
+            <h3>PLATIN</h3>
+            <p>Quality Control & Export Hub</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     <!-- MISSION -->
     <section class="block center">
       <h2>OUR MISSION</h2>
@@ -246,65 +298,107 @@ const processes = ref([
   line-height: 2;
   letter-spacing: 1px;
 }
+.factories {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.factories h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0a192f;
+  letter-spacing: 2px;
+}
+
+.factories p {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* GRID */
+.factory-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.factory-card {
+  aspect-ratio: 16 / 10;   /* 🔥 ən vacib fix */
+  height: auto;            /* artıq fixed height yox */
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s;
+  background-size: cover;
+  background-position: center;
+}
+
+
+/* HOVER EFFECT */
+.factory-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.factory-card .overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.75),
+      rgba(0,0,0,0.25)
+  );
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  padding: 20px;
+  color: white;
+}
+
+.factory-card:hover .overlay {
+  background: rgba(10, 25, 47, 0.75);
+}
+
+.factory-card h3 {
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.factory-card p {
+  font-size: 13px;
+  color: #cbd5e0;
+}
+
+/* BACKGROUNDS */
+.china {
+  background-image: url('/images/factories/1.jpeg');
+}
+
+.dubai {
+  background-image: url('/images/factories/2.jpeg');
+}
+
+.kazakhstan {
+  background-image: url('/images/factories/3.jpeg');
+}
+
+.germany {
+  background-image: url('/images/factories/4.jpeg');
+}
+
+.turkey {
+  background-image: url('/images/factories/5.jpeg');
+}
+
+.usa {
+  background-image: url('/images/factories/6.jpeg');
+}
 </style>
-<!--<style scoped>-->
-<!--.manufacturing-page {-->
-<!--  background: #f9f9f9;-->
-<!--  color: #333;-->
-<!--}-->
-
-<!--/* HERO */-->
-<!--.man-hero {-->
-<!--  background: linear-gradient(90deg, #0a192f, #132a4e);-->
-<!--  color: white;-->
-<!--  padding: 70px 50px;-->
-<!--  text-align: center;-->
-<!--}-->
-
-<!--.man-hero h1 {-->
-<!--  font-size: 36px;-->
-<!--  font-weight: 900;-->
-<!--}-->
-
-<!--.man-hero p {-->
-<!--  color: #cbd5e0;-->
-<!--  margin-top: 10px;-->
-<!--}-->
-
-<!--/* GRID */-->
-<!--.process-grid {-->
-<!--  display: grid;-->
-<!--  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));-->
-<!--  gap: 25px;-->
-<!--  padding: 60px 50px;-->
-<!--}-->
-
-<!--/* CARD */-->
-<!--.process-card {-->
-<!--  background: white;-->
-<!--  border-radius: 10px;-->
-<!--  padding: 25px;-->
-<!--  text-align: center;-->
-<!--  transition: 0.2s;-->
-<!--  box-shadow: 0 2px 10px rgba(0,0,0,0.05);-->
-<!--}-->
-
-<!--.process-card:hover {-->
-<!--  transform: translateY(-5px);-->
-<!--}-->
-
-<!--.icon {-->
-<!--  font-size: 35px;-->
-<!--  margin-bottom: 15px;-->
-<!--}-->
-
-<!--.process-card h3 {-->
-<!--  font-size: 16px;-->
-<!--  margin-bottom: 10px;-->
-<!--}-->
-
-<!--.process-card p {-->
-<!--  font-size: 13px;-->
-<!--  color: #666;-->
-<!--}-->
-<!--</style>-->
