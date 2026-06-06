@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import {onMounted, onUnmounted, ref} from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
@@ -32,25 +32,19 @@ const features = ref([
 
 const heroSlides = ref([
   {
-    image: "/images/hero/batteries.webp",
+    image: "/images/hero/slide1.webp",
     tag: "Delphix Global",
     title: "ENGINEERED FOR GLOBAL PERFORMANCE",
     description: "Premium Lubricants, Batteries, Filters & Tires – Built to Power Your World."
   },
   {
-    image: "/images/hero/filters.webp",
+    image: "/images/hero/slide2.webp",
     tag: "Delphix Batteries",
     title: "POWER THAT LASTS",
     description: "Reliable battery solutions for every vehicle."
   },
   {
-    image: "/images/hero/lubricants.webp",
-    tag: "Delphix Lubricants",
-    title: "ADVANCED ENGINE PROTECTION",
-    description: "Designed for extreme performance and durability."
-  },
-  {
-    image: "/images/hero/tires.webp",
+    image: "/images/hero/slide3.webp",
     tag: "Delphix Lubricants",
     title: "ADVANCED ENGINE PROTECTION",
     description: "Designed for extreme performance and durability."
@@ -59,10 +53,19 @@ const heroSlides = ref([
 
 const currentSlide = ref(0)
 
-setInterval(() => {
-  currentSlide.value =
-      (currentSlide.value + 1) % heroSlides.value.length
-}, 5000)
+
+let interval
+
+onMounted(() => {
+  interval = setInterval(() => {
+    currentSlide.value =
+        (currentSlide.value + 1) % heroSlides.value.length
+  }, 5000)
+})
+
+onUnmounted(() => {
+  clearInterval(interval)
+})
 
 const exploreProducts = () => {};
 const handleQuote = () => {};
@@ -81,8 +84,8 @@ const viewCategory = (slug) => {
     <section
         class="hero"
         :style="{
-    backgroundImage: `url(${heroSlides[currentSlide].image})`
-  }"
+      backgroundImage: `url(${heroSlides[currentSlide].image})`
+    }"
     >
       <div class="hero-text">
         <div class="hero-tag">
@@ -98,14 +101,29 @@ const viewCategory = (slug) => {
         </p>
 
         <div class="hero-btns">
-          <button class="btn-explore">
+          <button
+              class="btn-explore"
+              @click="exploreProducts"
+          >
             EXPLORE PRODUCTS →
           </button>
 
-          <button class="btn-outline">
+          <button
+              class="btn-outline"
+              @click="handleQuote"
+          >
             GET A QUOTE
           </button>
         </div>
+      </div>
+
+      <div class="hero-dots">
+    <span
+        v-for="(_, index) in heroSlides"
+        :key="index"
+        :class="['dot', { active: index === currentSlide }]"
+        @click="currentSlide = index"
+    />
       </div>
     </section>
 

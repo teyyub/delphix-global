@@ -44,7 +44,7 @@ export const navStructure = [
             },
             {
                 key: 'philips',
-                route: '/brands/philips',
+                route: '/brands/phillips',
 
             } ,
             {

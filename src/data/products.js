@@ -743,36 +743,55 @@ export const products = [
         categoryId: "filters",
         brandId: "delphix",
         title: "Transmission Filter",
-        image: "/images/filters/transmission.jpeg"
+        image: "/images/filters/transmission.jpeg",
+        specs: {
+
+        },
     },
 
 
     {
+        id: "tires_2055516",
+        title: "Tires",
+        image: "/images/tires/denzo/205_55_16.jpeg",
         categoryId: "tires",
         brandId: "denzo",
-        title: "Tires",
-        image: "/images/tires/denzo/205_55_16.jpeg"
+        specs: {
+
+        },
     },
 
     {
+        id: "tires_2255516",
         categoryId: "tires",
         brandId: "denzo",
         title: "Tires",
-        image: "/images/tires/denzo/225_55_16.jpeg"
+        image: "/images/tires/denzo/225_55_16.jpeg",
+        specs: {
+
+        },
     },
 
     {
+        id: "tires_2355519",
         categoryId: "tires",
         brandId: "denzo",
         title: "Tires",
-        image: "/images/tires/denzo/235_55_19.jpeg"
+        image: "/images/tires/denzo/235_55_19.jpeg",
+        specs: {
+
+        },
     },
 
     {
+        id: "tires_2454518",
         categoryId: "tires",
         brandId: "denzo",
         title: "Tires",
-        image: "/images/tires/denzo/245_45_18.jpeg"
+        image: "/images/tires/denzo/245_45_18.jpeg",
+        specs: {
+
+        },
     },
 ]
 export const products1 = {
