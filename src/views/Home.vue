@@ -9,6 +9,44 @@ const stats = ref([
   { target: 500, current: 0, label: "PARTNERS" },
   { target: 20, current: 0, label: "YEARS EXPERIENCE" }
 ]);
+let intervals = [];
+
+let hasAnimated = false;
+const resetAll = () => {
+
+  intervals.forEach(clearInterval);
+  intervals = [];
+
+  // rəqəmləri sıfırla
+  stats.value.forEach(stat => {
+    stat.current = 0;
+  });
+};
+const animateAll = () => {
+  resetAll();
+
+  const duration = 1200;
+  const steps = 60;
+
+  stats.value.forEach((stat) => {
+    const increment = stat.target / steps;
+    let step = 0;
+
+    const interval = setInterval(() => {
+      step++;
+
+      stat.current = Math.min(
+          Math.floor(increment * step),
+          stat.target
+      );
+
+      if (step >= steps) {
+        clearInterval(interval);
+        stat.current = stat.target;
+      }
+    }, duration / steps);
+  });
+};
 
 const animateCount = (index) => {
   const item = stats.value[index];
@@ -225,7 +263,9 @@ const viewCategory = (slug) => {
             <a href="#" class="net-btn-light" @click.prevent="">VIEW EXPORT MAP →</a>
           </div>
 
-          <div class="stats-grid">
+          <div class="stats-grid"
+               @mouseleave="resetAll"
+               @mouseenter="animateAll">
             <div class="stat-box"
                  v-for="(stat, index) in stats"
                  :key="index"
