@@ -3,6 +3,39 @@ import { ref } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
 
+const stats = ref([
+  { target: 80, current: 0, label: "COUNTRIES" },
+  { target: 1000, current: 0, label: "PRODUCTS" },
+  { target: 500, current: 0, label: "PARTNERS" },
+  { target: 20, current: 0, label: "YEARS EXPERIENCE" }
+]);
+
+const animateCount = (index) => {
+  const item = stats.value[index];
+
+  // artıq animasiya olunubsa yenidən başlamasın
+  if (item.current > 0) return;
+
+  const duration = 1200; // ms
+  const steps = 60;
+  const increment = item.target / steps;
+
+  let currentStep = 0;
+
+  const interval = setInterval(() => {
+    currentStep++;
+
+    item.current = Math.min(
+        Math.floor(increment * currentStep),
+        item.target
+    );
+
+    if (currentStep >= steps) {
+      clearInterval(interval);
+      item.current = item.target;
+    }
+  }, duration / steps);
+};
 const categories = ref([
   { title: "Batteries",
     slug: 'batteries',
@@ -152,7 +185,7 @@ const viewCategory = (slug) => {
     <section class="global-network-section">
       <div class="network-wrapper">
         <img
-            src="/images/network.webp"
+            src="/images/network_main.webp"
             alt="Global Manufacturing Network and Statistics"
             class="global-network-image"
         />
@@ -193,21 +226,15 @@ const viewCategory = (slug) => {
           </div>
 
           <div class="stats-grid">
-            <div class="stat-box">
-              <span class="stat-number">80+</span>
-              <span class="stat-label">COUNTRIES</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-number">1000+</span>
-              <span class="stat-label">PRODUCTS</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-number">500+</span>
-              <span class="stat-label">PARTNERS</span>
-            </div>
-            <div class="stat-box">
-              <span class="stat-number">20+</span>
-              <span class="stat-label">YEARS EXPERIENCE</span>
+            <div class="stat-box"
+                 v-for="(stat, index) in stats"
+                 :key="index"
+                 @mouseenter="animateCount(index)"
+            >
+  <span class="stat-number">
+    {{ stat.current }}
+  </span>
+              <span class="stat-label">{{ stat.label }}</span>
             </div>
           </div>
         </div>
