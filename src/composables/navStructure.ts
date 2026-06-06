@@ -53,7 +53,7 @@ export const navStructure = [
             },
             {
                 key: 'denzo',
-                route: '/brands/denso',
+                route: '/brands/denzo',
             },
             {
                 key: 'platin',
@@ -61,7 +61,7 @@ export const navStructure = [
             },
             {
                 key: 'westol',
-                route: '/brands/westell',
+                route: '/brands/westol',
             }
         ]
     },

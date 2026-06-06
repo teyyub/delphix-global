@@ -440,13 +440,15 @@ const viewCategory = (slug) => {
 .network-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1440px; /* Şəklin orijinal maksimum eni */
+  min-width: 1440px;
   margin: 0 auto;
+  height: 600px;   /* ← burda düzbucaqlı forma yaranır */
+  overflow: hidden;
 }
 
 .global-network-image {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block;
 }
 

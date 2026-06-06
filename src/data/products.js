@@ -547,60 +547,174 @@ export const products = [
         title: "ATF 4",
         image: "/images/lubricants/ATF-4-L.jpeg"
     },
+
     {
         categoryId: "lubricants",
         brandId: "platin",
-        title: "5W30 SN/Cf C2/C3 A4/B4",
-        image: "/images/lubricants/5W-30-C2-C3-A4-B4.jpeg"
+        title: "5W-30 SP C3",
+        image: "/images/lubricants/platin/5W30_1L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
         title: "5W-30 SP C3",
-        image: "/images/lubricants/5W-30Premium.jpeg"
-    },
-    {
-        categoryId: "lubricants",
-        brandId: "platin",
-        title: "5W-30 SP C3",
-        image: "/images/lubricants/5W-30SPC3.jpeg"
+        image: "/images/lubricants/platin/5W40_1L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
         title: "10W-40 SN/CF",
-        image: "/images/lubricants/10W-40-4L.jpeg"
+        image: "/images/lubricants/platin/5W40_4L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
         title: "10W-40 LA",
-        image: "/images/lubricants/10W-40LA.jpeg"
+        image: "/images/lubricants/platin/10W40_1L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
         title: "10W-40 SN/CF",
-        image: "/images/lubricants/10W-40SNCF.jpeg"
+        image: "/images/lubricants/platin/10W40_4L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
         title: "ATF",
-        image: "/images/lubricants/ATF.jpeg"
+        image: "/images/lubricants/platin/ATF_1L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
         title: "ATF 4",
-        image: "/images/lubricants/ATF-4-L.jpeg"
+        image: "/images/lubricants/platin/ATF_4L.jpeg"
     },
     {
         categoryId: "lubricants",
         brandId: "platin",
-        title: "Premium",
-        image: "/images/lubricants/premium.jpeg"
+        title: "ATF 4",
+        image: "/images/lubricants/platin/b.jpeg"
     },
+
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/5W30_1L.jpeg"
+    },
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/5W30_4L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/5W40_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/10W40_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/10W40_4L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/ATF_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "denzo",
+        title: "ATF 4",
+        image: "/images/lubricants/denzo/ATF_4L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/5W30_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/5W40_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/5W40_1L_SN_CF.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/5W40_5L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/10W40_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/5W40_5L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/15W40_5L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/ATF_1L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/ATF_5L.jpeg"
+    },
+
+    {
+        categoryId: "lubricants",
+        brandId: "westol",
+        title: "ATF 4",
+        image: "/images/lubricants/westol/b.jpeg"
+    },
+
     {
         categoryId: "filters",
         brandId: "delphix",
@@ -633,6 +747,33 @@ export const products = [
     },
 
 
+    {
+        categoryId: "tires",
+        brandId: "denzo",
+        title: "Tires",
+        image: "/images/tires/denzo/205_55_16.jpeg"
+    },
+
+    {
+        categoryId: "tires",
+        brandId: "denzo",
+        title: "Tires",
+        image: "/images/tires/denzo/225_55_16.jpeg"
+    },
+
+    {
+        categoryId: "tires",
+        brandId: "denzo",
+        title: "Tires",
+        image: "/images/tires/denzo/235_55_19.jpeg"
+    },
+
+    {
+        categoryId: "tires",
+        brandId: "denzo",
+        title: "Tires",
+        image: "/images/tires/denzo/245_45_18.jpeg"
+    },
 ]
 export const products1 = {
     batteries: {
