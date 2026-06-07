@@ -129,7 +129,7 @@ const advantages = reactive([
         >
           <i :class="spec.icon"></i>
           <div>
-            <span class="label">{{ key }}  </span>
+            <span class="label">{{ key }}:  </span>
             <span class="value">{{ spec }}</span>
           </div>
         </div>
@@ -180,64 +180,66 @@ const advantages = reactive([
 </template>
 <style scoped>
 .product-page {
-  background: #0b0f17;
-  color: #fff;
-  padding: 40px;
   font-family: Inter, sans-serif;
+  background: #ffffff;
 }
 
 /* HERO */
 .hero {
   display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 60px;
+  grid-template-columns: 1.4fr 0.9fr;
+  gap: 40px;
   align-items: center;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
 }
 
+/* BRAND */
 .brand {
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 2px;
-  opacity: 0.7;
+  margin-bottom: 10px;
 }
 
+/* TITLE */
 .title {
-  font-size: 54px;
-  font-weight: 800;
+  font-size: 44px;
+  font-weight: 750;
   line-height: 1.1;
 }
 
 .title span {
   display: block;
-  font-size: 18px;
-  opacity: 0.7;
-  margin-top: 10px;
+  font-size: 16px;
+  color: #6B7280;
+  margin-top: 6px;
 }
 
+/* SUBTITLE */
 .subtitle {
   margin-top: 10px;
-  opacity: 0.6;
+  font-size: 13px;
+  color: #6B7280;
 }
 
 /* FEATURES */
 .features {
-  margin-top: 30px;
+  margin-top: 22px;
   display: grid;
-  gap: 14px;
+  gap: 10px;
 }
 
 .feature-card {
   display: flex;
-  gap: 12px;
-  padding: 14px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(12px);
+  gap: 10px;
+  padding: 12px 14px;
+
+  border: 1px solid #E8EBF1;
+  border-radius: 12px;
+
 }
 
-/* IMAGE */
+/* RIGHT IMAGE */
 .hero-right {
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -245,53 +247,72 @@ const advantages = reactive([
 
 .image-box {
   position: relative;
-  padding: 40px;
+  width: 85%;
+  padding: 16px;
+
+  background: #FFFFFF;
+  border: 1px solid #E8EBF1;
+  border-radius: 16px;
+
 }
 
 .image-box img {
   width: 100%;
-  filter: drop-shadow(0 30px 80px rgba(0,0,0,0.6));
-}
-
-.glow {
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle, rgba(0,255,200,0.25), transparent 60%);
+  height: auto;
+  object-fit: contain;
 }
 
 /* ORIGIN */
 .origin {
-  margin-top: 20px;
+  margin-top: 14px;
   text-align: center;
-  opacity: 0.7;
+  font-size: 12px;
+  color: #6B7280;
 }
 
 /* SECTION */
 .section {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
+  background: transparent;
 }
 
 .section h2 {
-  font-size: 22px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #111827;
 }
 
 /* SPECS */
 .spec-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-
-.spec-card {
-  background: rgba(255,255,255,0.05);
-  padding: 16px;
-  border-radius: 14px;
-  display: flex;
   gap: 10px;
 }
 
-/* CHIPS */
+.spec-card {
+  background: #FFFFFF;
+  border: 1px solid #E8EBF1;
+  padding: 12px 14px;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.label {
+  font-size: 12px;
+  color: #6B7280;
+}
+
+.value {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111827;
+}
+
+/* IDEAL FOR */
 .chip-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -299,55 +320,69 @@ const advantages = reactive([
 }
 
 .chip {
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.06);
-  font-size: 13px;
+
+  background: #FFFFFF;
+  border: 1px solid #E8EBF1;
+
+  font-size: 12px;
+  color: #374151;
 }
 
-/* ADV */
+/* ADVANTAGES */
 .adv-grid {
   display: grid;
-  gap: 12px;
+  gap: 10px;
 }
 
 .adv-card {
   display: flex;
   gap: 10px;
-  padding: 12px;
-  border-left: 3px solid #00ffd5;
-  background: rgba(255,255,255,0.03);
+  padding: 10px 12px;
+
+  background: #FFFFFF;
+  border-left: 3px solid #3B82F6;
+
+  box-shadow: 0 2px 6px rgba(0,0,0,0.03);
 }
 
-/* FOOTER STRIP */
+/* FOOTER */
 .footer-strip {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  background: rgba(255,255,255,0.04);
-  border-radius: 12px;
-  font-size: 12px;
-  opacity: 0.7;
+  padding: 16px;
+
+  background: #FFFFFF;
+  border: 1px solid #E8EBF1;
+  border-radius: 10px;
+
+  font-size: 11px;
+  color: #6B7280;
 }
 
+/* FILTER IMAGE */
 .filter-image-box {
   position: relative;
   width: 100%;
-  height: 520px; /* vacibdir */
+  height: 480px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle, rgba(0,255,213,0.15), transparent 70%);
-  border-radius: 20px;
-  overflow: hidden;
+
+  background: #FFFFFF;
+  border: 1px solid #E8EBF1;
+  border-radius: 18px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
 
 .filter-image-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* FILTER üçün əsas hissə */
-  padding: 20px; /* kənarlara nəfəs verir */
-  filter: drop-shadow(0 40px 100px rgba(0, 255, 213, 0.25));
+  width: 85%;
+  height: 85%;
+  object-fit: contain;
+  padding: 10px;
 }
 </style>
 

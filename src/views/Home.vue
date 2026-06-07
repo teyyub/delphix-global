@@ -143,9 +143,24 @@ const viewCategory = (slug) => {
 };
 
 
+const showMap = ref(false);
+
+const openMap = () => {
+  showMap.value = true;
+};
+
+const closeMap = () => {
+  showMap.value = false;
+};
+
 </script>
 
 <template>
+
+  <div v-if="showMap" class="map-overlay" @click="closeMap">
+    <img src="/images/network.webp" class="map-image" />
+  </div>
+
   <div class="home">
 
     <!-- Hero Section -->
@@ -260,7 +275,7 @@ const viewCategory = (slug) => {
             <span class="net-tag">GLOBAL EXPORT</span>
             <h2>DELIVERING TO MORE<br>THAN 80 COUNTRIES</h2>
             <p>Our products are trusted by customers in over 80 countries across 6 continents.</p>
-            <a href="#" class="net-btn-light" @click.prevent="">VIEW EXPORT MAP →</a>
+            <a href="#" class="net-btn-light" @click.prevent="openMap">VIEW EXPORT MAP →</a>
           </div>
 
           <div class="stats-grid"
@@ -757,5 +772,24 @@ const viewCategory = (slug) => {
     border-radius: 8px;
     padding: 15px;
   }
+}
+.map-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+}
+
+.map-image {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 </style>
