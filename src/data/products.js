@@ -702,6 +702,7 @@ export const products = [
     },
 
     {
+        id:"d5W30SN_CF_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "5W30 SN/Cf C2/C3 A4/B4",
@@ -716,6 +717,7 @@ export const products = [
         }
     },
     {
+        id:"d5W30SN_CF_PREMIUM_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "5W-30 SP C3",
@@ -730,6 +732,7 @@ export const products = [
         }
     },
     {
+        id:"d5W30SN_CF_CP_C3_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "5W-30 SP C3",
@@ -744,6 +747,7 @@ export const products = [
         }
     },
     {
+        id:"d10W40SN_CF_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "10W-40 SN/CF",
@@ -758,6 +762,7 @@ export const products = [
         }
     },
     {
+        id:"d10W40LA_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "10W-40 LA",
@@ -772,6 +777,7 @@ export const products = [
         }
     },
     {
+        id:"d10W40SN_CF_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "10W-40 SN/CF",
@@ -786,6 +792,7 @@ export const products = [
         }
     },
     {
+        id:"dATF",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "ATF",
@@ -800,6 +807,7 @@ export const products = [
         }
     },
     {
+        id:"dATF_4L",
         categoryId: "lubricants",
         brandId: "delphix",
         title: "ATF 4",
@@ -815,6 +823,7 @@ export const products = [
     },
 
     {
+        id:"p5W30CP_CF_1L",
         categoryId: "lubricants",
         brandId: "platin",
         title: "5W-30 SP C3",
@@ -829,6 +838,7 @@ export const products = [
         }
     },
     {
+        id:"p5W40CP_C3_4L",
         categoryId: "lubricants",
         brandId: "platin",
         title: "5W-30 SP C3",
@@ -843,6 +853,7 @@ export const products = [
         }
     },
     {
+        id:"p10W40CN_CF_4L",
         categoryId: "lubricants",
         brandId: "platin",
         title: "10W-40 SN/CF",
@@ -857,6 +868,7 @@ export const products = [
         }
     },
     {
+        id:"p10W40LA_1",
         categoryId: "lubricants",
         brandId: "platin",
         title: "10W-40 LA",
@@ -871,6 +883,7 @@ export const products = [
         }
     },
     {
+        id:"p10W40SN_CF_4L",
         categoryId: "lubricants",
         brandId: "platin",
         title: "10W-40 SN/CF",
@@ -885,6 +898,7 @@ export const products = [
         }
     },
     {
+        id:"pATF_1L",
         categoryId: "lubricants",
         brandId: "platin",
         title: "ATF",
@@ -899,6 +913,7 @@ export const products = [
         }
     },
     {
+        id:"pATF_4L",
         categoryId: "lubricants",
         brandId: "platin",
         title: "ATF 4",
@@ -913,6 +928,7 @@ export const products = [
         }
     },
     {
+        id:"pB",
         categoryId: "lubricants",
         brandId: "platin",
         title: "ATF 4",
@@ -928,6 +944,7 @@ export const products = [
     },
 
     {
+        id:"d5W30_1L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -942,6 +959,7 @@ export const products = [
         }
     },
     {
+        id:"d5W30_4L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -957,6 +975,7 @@ export const products = [
     },
 
     {
+        id:"d5W40_1L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -972,6 +991,7 @@ export const products = [
     },
 
     {
+        id:"d10W40_1L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -987,6 +1007,7 @@ export const products = [
     },
 
     {
+        id:"d10W40_4L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -1002,6 +1023,7 @@ export const products = [
     },
 
     {
+        id:"dATF_1L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -1017,6 +1039,7 @@ export const products = [
     },
 
     {
+        id:"dATF_4L",
         categoryId: "lubricants",
         brandId: "denzo",
         title: "ATF 4",
@@ -1191,6 +1214,7 @@ export const products = [
     },
 
     {
+        id:"d_aid",
         categoryId: "filters",
         brandId: "delphix",
         title: "Air Filter",
@@ -1205,6 +1229,7 @@ export const products = [
         }
     },
     {
+        id:"d_cabin",
         categoryId: "filters",
         brandId: "delphix",
         title: "Cabin Filter",
@@ -1219,6 +1244,7 @@ export const products = [
         }
     },
     {
+        id:"d_engine",
         categoryId: "filters",
         brandId: "delphix",
         title: "Engine Filter",
@@ -1233,6 +1259,7 @@ export const products = [
         }
     },
     {
+        id:"d_fuel",
         categoryId: "filters",
         brandId: "delphix",
         title: "Fuel Filter",
@@ -1247,6 +1274,7 @@ export const products = [
         }
     },
     {
+        id:"d_transmission",
         categoryId: "filters",
         brandId: "delphix",
         title: "Transmission Filter",
@@ -1268,13 +1296,16 @@ export const products = [
         image: "/images/tires/denzo/205_55_16.jpeg",
         categoryId: "tires",
         brandId: "denzo",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "205/55 R16",
+        subHeadline: "High Performance All-Season Tires",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Width: "205 mm",
+            AspectRatio: "55",
+            RimDiameter: "R16",
+            Season: "All Season",
+            LoadIndex: "91",
+            SpeedRating: "V",
+            Type: "Radial Tubeless"
         }
     },
 
@@ -1282,15 +1313,20 @@ export const products = [
         id: "tires_2255516",
         categoryId: "tires",
         brandId: "denzo",
-        title: "Tires",
+        title: "Denzo Tires 225/55 R16",
         image: "/images/tires/denzo/225_55_16.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+
+        headline: "225/55 R16",
+        subHeadline: "All-Season High Performance Tires",
+
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Width: "225 mm",
+            AspectRatio: "55",
+            RimDiameter: "R16",
+            Season: "All Season",
+            LoadIndex: "95",
+            SpeedRating: "V",
+            Type: "Radial Tubeless"
         }
     },
 
@@ -1298,15 +1334,21 @@ export const products = [
         id: "tires_2355519",
         categoryId: "tires",
         brandId: "denzo",
-        title: "Tires",
+        title: "Denzo Tires 235/55 R19",
         image: "/images/tires/denzo/235_55_19.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+
+        headline: "235/55 R19",
+        subHeadline: "Premium All-Season SUV Tires",
+
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Width: "235 mm",
+            AspectRatio: "55",
+            RimDiameter: "R19",
+            Season: "All Season",
+            LoadIndex: "101",
+            SpeedRating: "W",
+            Type: "Radial Tubeless",
+            VehicleType: "SUV / Crossover"
         }
     },
 
@@ -1314,15 +1356,21 @@ export const products = [
         id: "tires_2454518",
         categoryId: "tires",
         brandId: "denzo",
-        title: "Tires",
+        title: "Denzo Tires 245/45 R18",
         image: "/images/tires/denzo/245_45_18.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+
+        headline: "245/45 R18",
+        subHeadline: "High Performance Sport Tires",
+
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Width: "245 mm",
+            AspectRatio: "45",
+            RimDiameter: "R18",
+            Season: "All Season",
+            LoadIndex: "96",
+            SpeedRating: "Y",
+            Type: "Radial Tubeless",
+            Performance: "Sport / High Grip"
         }
     },
 ]

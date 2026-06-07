@@ -208,6 +208,206 @@ export const highlights = {
                     description: "Reliable performance in all weather conditions"
                 }
             ]
+        },
+
+
+
+    },
+
+    filters: {
+        cabin: {
+            headline: "PURE AIR INSIDE YOUR CAR.",
+            subtitle: "Advanced cabin filtration for clean breathing",
+
+            features: [
+                {
+                    title: "Dust Protection",
+                    description: "Blocks fine dust particles effectively"
+                },
+                {
+                    title: "Allergen Control",
+                    description: "Reduces pollen and allergen exposure"
+                },
+                {
+                    title: "Odor Removal",
+                    description: "Helps eliminate bad smells inside cabin"
+                },
+                {
+                    title: "Clean Air Flow",
+                    description: "Maintains smooth and fresh airflow"
+                },
+                {
+                    title: "Health Protection",
+                    description: "Improves in-car air quality for passengers"
+                },
+                {
+                    title: "Long Life",
+                    description: "Durable filter material for extended use"
+                }
+            ]
+        },
+
+        air: {
+            headline: "OPTIMAL AIRFLOW. MAXIMUM ENGINE EFFICIENCY.",
+            subtitle: "High-performance air filtration for engines",
+
+            features: [
+                {
+                    title: "Engine Protection",
+                    description: "Prevents dust and debris from entering engine"
+                },
+                {
+                    title: "Improved Combustion",
+                    description: "Ensures clean air for better fuel burning"
+                },
+                {
+                    title: "Better Performance",
+                    description: "Enhances engine response and power"
+                },
+                {
+                    title: "Fuel Efficiency",
+                    description: "Optimized air intake reduces fuel consumption"
+                },
+                {
+                    title: "Long Engine Life",
+                    description: "Reduces internal engine wear"
+                },
+                {
+                    title: "High Filtration",
+                    description: "Captures fine particles effectively"
+                }
+            ]
+        },
+
+        engine: {
+            headline: "MAXIMUM ENGINE PROTECTION.",
+            subtitle: "Reliable filtration for engine durability",
+
+            features: [
+                {
+                    title: "Wear Reduction",
+                    description: "Minimizes friction and engine damage"
+                },
+                {
+                    title: "Oil Cleanliness",
+                    description: "Keeps engine oil free from contaminants"
+                },
+                {
+                    title: "Heat Resistance",
+                    description: "Performs under high engine temperatures"
+                },
+                {
+                    title: "Extended Engine Life",
+                    description: "Improves overall engine durability"
+                },
+                {
+                    title: "Stable Performance",
+                    description: "Ensures consistent engine operation"
+                },
+                {
+                    title: "High Efficiency",
+                    description: "Supports smooth engine lubrication flow"
+                }
+            ]
+        },
+
+        fuel: {
+            headline: "CLEAN FUEL. STRONG PERFORMANCE.",
+            subtitle: "Advanced fuel filtration technology",
+
+            features: [
+                {
+                    title: "Contaminant Removal",
+                    description: "Filters dirt and particles from fuel"
+                },
+                {
+                    title: "Injector Protection",
+                    description: "Protects fuel injectors from clogging"
+                },
+                {
+                    title: "Better Combustion",
+                    description: "Ensures clean fuel delivery to engine"
+                },
+                {
+                    title: "Fuel Efficiency",
+                    description: "Improves mileage and reduces consumption"
+                },
+                {
+                    title: "Engine Safety",
+                    description: "Prevents engine damage from dirty fuel"
+                },
+                {
+                    title: "Stable Flow",
+                    description: "Maintains consistent fuel supply"
+                }
+            ]
+        },
+
+        transmission: {
+            headline: "SMOOTH SHIFTING. RELIABLE DRIVE.",
+            subtitle: "Precision filtration for transmission systems",
+
+            features: [
+                {
+                    title: "Smooth Gear Shifting",
+                    description: "Ensures seamless transmission operation"
+                },
+                {
+                    title: "Wear Protection",
+                    description: "Reduces friction between moving parts"
+                },
+                {
+                    title: "Fluid Cleanliness",
+                    description: "Keeps transmission fluid clean"
+                },
+                {
+                    title: "Heat Resistance",
+                    description: "Performs under high transmission load"
+                },
+                {
+                    title: "Long System Life",
+                    description: "Extends transmission durability"
+                },
+                {
+                    title: "Stable Performance",
+                    description: "Ensures consistent driving experience"
+                }
+            ]
+        }
+    },
+
+
+    tires: {
+        denzol: {
+            headline: "MAXIMUM ROAD CONTROL. ULTIMATE SAFETY.",
+            subtitle: "High-performance tires for every road condition",
+
+            features: [
+                {
+                    title: "Superior Grip",
+                    description: "Excellent traction on both wet and dry roads"
+                },
+                {
+                    title: "Short Braking Distance",
+                    description: "Improved safety with faster stopping power"
+                },
+                {
+                    title: "Long Lifespan",
+                    description: "Durable rubber compound for extended use"
+                },
+                {
+                    title: "Fuel Efficiency",
+                    description: "Low rolling resistance reduces fuel consumption"
+                },
+                {
+                    title: "All-Weather Performance",
+                    description: "Reliable driving in summer and winter conditions"
+                },
+                {
+                    title: "Comfortable Ride",
+                    description: "Reduces noise and vibration for smooth driving"
+                }
+            ]
         }
     }
 }

@@ -30,7 +30,7 @@ export const brands = {
         title: "PHILLIPS",
         label: "Phillips",
         hero:{
-            brand:"phillips",
+            brand:"PHILLIPS",
             technology:"AGM",
             tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
             description: "Advanced AGM Technology for Modern Vehicles",

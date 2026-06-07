@@ -12,6 +12,11 @@ const brand = computed(() => {
 
   return brands[product.value.brandId]
 })
+
+const isFilterProduct = computed(() => {
+  return product.value?.categoryId === 'filters'
+})
+
 const product = computed(() => {
   const result =  products.find(
       p =>
@@ -55,7 +60,11 @@ const advantages = reactive([
 
 <template>
   <div class="product-page">
-
+    <div v-if="isFilterProduct" class="filter-image-box">
+      <div class="glow"></div>
+      <img :src="product?.image"  alt="filter atrribute" />
+    </div>
+    <div v-else >
     <!-- HERO -->
     <header class="hero">
 
@@ -94,6 +103,7 @@ const advantages = reactive([
 
       <!-- RIGHT -->
       <div class="hero-right">
+
         <div class="image-box">
           <div class="glow"></div>
           <img :src="product?.image" />
@@ -119,7 +129,7 @@ const advantages = reactive([
         >
           <i :class="spec.icon"></i>
           <div>
-            <span class="label">{{ key }}</span>
+            <span class="label">{{ key }}  </span>
             <span class="value">{{ spec }}</span>
           </div>
         </div>
@@ -165,6 +175,7 @@ const advantages = reactive([
       <div>3X CYCLE LIFE</div>
     </footer>
 
+  </div>
   </div>
 </template>
 <style scoped>
@@ -317,6 +328,26 @@ const advantages = reactive([
   border-radius: 12px;
   font-size: 12px;
   opacity: 0.7;
+}
+
+.filter-image-box {
+  position: relative;
+  width: 100%;
+  height: 520px; /* vacibdir */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(0,255,213,0.15), transparent 70%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.filter-image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* FILTER üçün əsas hissə */
+  padding: 20px; /* kənarlara nəfəs verir */
+  filter: drop-shadow(0 40px 100px rgba(0, 255, 213, 0.25));
 }
 </style>
 
