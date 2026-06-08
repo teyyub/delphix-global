@@ -117,56 +117,60 @@ const advantages = reactive([
 
     </header>
 
-    <!-- SPECS -->
-    <section class="section">
-      <h2>Specifications</h2>
+      <section class="info-panel">
 
-      <div class="spec-grid">
-        <div
-            v-for="(spec, key) in product?.specs"
-            :key="key"
-            class="spec-card"
-        >
-          <i :class="spec.icon"></i>
-          <div>
-            <span class="label">{{ key }}:  </span>
-            <span class="value">{{ spec }}</span>
+        <!-- Specifications -->
+        <div class="panel-block">
+          <h2>Specifications</h2>
+
+          <div class="spec-grid compact">
+            <div
+                v-for="(spec, key) in product?.specs"
+                :key="key"
+                class="spec-card"
+            >
+              <i :class="spec.icon"></i>
+              <div>
+                <span class="label">{{ key }}:</span>
+                <span class="value">{{ spec }}</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- IDEAL FOR -->
-    <section class="section">
-      <h2>Ideal For</h2>
+        <!-- Ideal For -->
+        <div class="panel-block">
+          <h2>Ideal For</h2>
 
-      <div class="chip-wrap">
-        <div
-            v-for="item in idealFor"
-            :key="item.text"
-            class="chip"
-        >
-          <i :class="item.icon"></i>
-          {{ item.text }}
+          <div class="chip-wrap compact">
+            <div
+                v-for="item in idealFor"
+                :key="item.text"
+                class="chip"
+            >
+              <i :class="item.icon"></i>
+              {{ item.text }}
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
 
-    <!-- ADVANTAGES -->
-    <section class="section">
-      <h2>Advantages</h2>
+        <!-- Advantages -->
+        <div class="panel-block">
+          <h2>Advantages</h2>
 
-      <div class="adv-grid">
-        <div
-            v-for="adv in advantages"
-            :key="adv"
-            class="adv-card"
-        >
-          <i class="fa-solid fa-check"></i>
-          <span>{{ adv }}</span>
+          <div class="adv-grid compact">
+            <div
+                v-for="adv in advantages"
+                :key="adv"
+                class="adv-card"
+            >
+              <i class="fa-solid fa-check"></i>
+              <span>{{ adv }}</span>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+
+      </section>
 
     <!-- FOOTER STRIP -->
     <footer class="footer-strip">
@@ -296,19 +300,27 @@ const advantages = reactive([
   border-radius: 12px;
 
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;   /* 🔥 əsas dəyişiklik */
+  gap: 4px;
+  transition: all 0.2s ease;
+}
 
+.spec-card:hover {
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transform: translateY(-2px);
 }
 
 .label {
-  font-size: 12px;
-  color: #6B7280;
+  font-size: 11px;
+  color: #9CA3AF;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 }
 
 .value {
-  font-size: 13px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 600;
   color: #111827;
 }
 
@@ -383,6 +395,26 @@ const advantages = reactive([
   height: 85%;
   object-fit: contain;
   padding: 10px;
+}
+.info-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* hər section bir kart kimi */
+.panel-block {
+  border: 1px solid #E8EBF1;
+  border-radius: 14px;
+  padding: 16px;
+  background: #fff;
+}
+
+/* başlıq daha compact */
+.panel-block h2 {
+  font-size: 15px;
+  margin-bottom: 12px;
 }
 </style>
 

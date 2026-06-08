@@ -104,6 +104,12 @@ const processes = ref([
 
       <div class="factory-grid">
 
+        <div class="factory-card delphix">
+          <div class="overlay">
+            <h3></h3>
+            <p>Advanced Manufacturing Hub</p>
+          </div>
+        </div>
         <div class="factory-card china">
           <div class="overlay">
             <h3></h3>
@@ -375,6 +381,10 @@ const processes = ref([
 .factory-card p {
   font-size: 13px;
   color: #cbd5e0;
+}
+
+.delphix {
+  background-image: url('/images/factories/7.jpeg');
 }
 
 /* BACKGROUNDS */
