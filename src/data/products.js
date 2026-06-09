@@ -823,6 +823,23 @@ export const products = [
     },
 
     {
+        id:"delphix_80W90",
+        categoryId: "lubricants",
+        brandId: "delphix",
+        title: "80W90 TRANSMISSION OIL-DELPHIX",
+        image: "/images/lubricants/premium.jpeg",
+        headline: "580W90 TRANSMISSION OIL-DELPHI",
+        subHeadline: "200L",
+        specs: {
+            Viscosity: "80W90",
+            Volume: "200L",
+            API: "",
+            ACEA: ""
+        }
+    },
+
+
+    {
         id:"p5W30CP_CF_1L",
         categoryId: "lubricants",
         brandId: "platin",
@@ -901,45 +918,45 @@ export const products = [
         id:"pATF_1L",
         categoryId: "lubricants",
         brandId: "platin",
-        title: "ATF",
+        title: "ATF III",
         image: "/images/lubricants/platin/ATF_1L.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "ATF III",
+        subHeadline: "1L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "ATF",
+            Volume: "1L",
+            API: "",
+            ACEA: ""
         }
     },
     {
         id:"pATF_4L",
         categoryId: "lubricants",
         brandId: "platin",
-        title: "ATF 4",
+        title: "ATF III",
         image: "/images/lubricants/platin/ATF_4L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "ATF III",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "ATF",
             Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            API: "",
+            ACEA: ""
         }
     },
     {
-        id:"pB",
+        id:"platin_HLP",
         categoryId: "lubricants",
         brandId: "platin",
-        title: "ATF 4",
+        title: "HLP-46 HYDRAULIC OIL",
         image: "/images/lubricants/platin/b.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "HLP-46 HYDRAULIC OIL",
+        subHeadline: "200L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "HLP",
+            Volume: "200L",
+            API: "",
+            ACEA: ""
         }
     },
 
@@ -1026,15 +1043,15 @@ export const products = [
         id:"dATF_1L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "5W30 SN/CF",
+        title: "ATF III",
         image: "/images/lubricants/denzo/ATF_1L.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "ATF",
+        subHeadline: "1L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "ATF",
+            Volume: "1L",
+            API: "ATF",
+            ACEA: "III"
         }
     },
 
@@ -1042,15 +1059,15 @@ export const products = [
         id:"dATF_4L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "ATF III",
         image: "/images/lubricants/denzo/ATF_4L.jpeg",
         headline: "ATF",
         subHeadline: "4L",
         specs: {
             Viscosity: "ATF",
             Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            API: "ATF",
+            ACEA: "III"
         }
     },
 
@@ -1061,12 +1078,12 @@ export const products = [
         title: "5W30",
         image: "/images/lubricants/westol/5W30_1L.jpeg",
         headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "1L",
+            API: "SN/CF",
+            ACEA: "A3/B4"
         }
     },
 
@@ -1077,12 +1094,12 @@ export const products = [
         title: "5W40",
         image: "/images/lubricants/westol/5W40_1L.jpeg",
         headline: "5W40 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-40",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "1L",
+            API: "SN/CF",
+            ACEA: "A3/B4"
         }
     },
 
@@ -1093,12 +1110,12 @@ export const products = [
         title: "5W40 1L SN/CF",
         image: "/images/lubricants/westol/5W40_1L_SN_CF.jpeg",
         headline: "5W40 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-40",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "1L",
+            API: "SN/Cf",
+            ACEA: "A3/B4"
         }
     },
 
@@ -1122,15 +1139,15 @@ export const products = [
         id:"westol_10W40_1",
         categoryId: "lubricants",
         brandId: "westol",
-        title: "10W40 1L",
+        title: "10W40",
         image: "/images/lubricants/westol/10W40_1L.jpeg",
-        headline: "10W40 SN/CF",
-        subHeadline: "4L",
+        headline: "10W40 SL/CF",
+        subHeadline: "1L",
         specs: {
             Viscosity: "10W-40",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "1L",
+            API: "SL/CF",
+            ACEA: "A3/B4"
         }
     },
 
@@ -1138,15 +1155,15 @@ export const products = [
         id: "westol_5W40_5",
         categoryId: "lubricants",
         brandId: "westol",
-        title: "5W40 5L",
+        title: "5W40",
         image: "/images/lubricants/westol/5W40_5L.jpeg",
         headline: "5W40 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "5L",
         specs: {
             Viscosity: "5W-40",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "5L",
+            API: "SN/CF",
+            ACEA: "A3/B4"
         }
     },
 
@@ -1154,15 +1171,15 @@ export const products = [
         id:"westol_15W40_5",
         categoryId: "lubricants",
         brandId: "westol",
-        title: "15W40 5L",
+        title: "15W40",
         image: "/images/lubricants/westol/15W40_5L.jpeg",
         headline: "15W40 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "5L",
         specs: {
             Viscosity: "15W-40",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "5L",
+            API: "SL/CF",
+            ACEA: "A3/B3"
         }
     },
 
@@ -1170,46 +1187,47 @@ export const products = [
         id:"westol_atf_1",
         categoryId: "lubricants",
         brandId: "westol",
-        title: "ATF 1L",
+        title: "ATF III",
         image: "/images/lubricants/westol/ATF_1L.jpeg",
         headline: "ATF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "ATF",
             Volume: "1L",
-            API: "SN",
-            ACEA: "C3"
+            API: "",
+            ACEA: ""
         }
     },
 
     {
-        id: "westol_atf_5",
+        id: "westol_atf3_5",
         categoryId: "lubricants",
         brandId: "westol",
-        title: "ATF 5L",
+        title: "ATF III",
         image: "/images/lubricants/westol/ATF_5L.jpeg",
-        headline: "ATF",
+        headline: "ATF III",
         subHeadline: "5L",
         specs: {
             Viscosity: "ATF",
             Volume: "5L",
-            API: "SN",
-            ACEA: "C3"
+            API: "",
+            ACEA: ""
         }
     },
 
     {
+        id: "westol_hidrolyc_200L",
         categoryId: "lubricants",
         brandId: "westol",
-        title: "ATF 4",
+        title: "HLP-46 HYDRAULIC OIL",
         image: "/images/lubricants/westol/b.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "HLP-46 HYDRAULIC OIL",
+        subHeadline: "200L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "HLP",
+            Volume: "200L",
+            API: "HLP",
+            ACEA: "HLP"
         }
     },
 

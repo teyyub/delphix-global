@@ -14,8 +14,8 @@ export const brands = {
     },
     panasonic: {
         id: 'panasonic',
-        title: "PANASONIC",
-        label: "Panasonic Plus",
+        title: "PANOSONIC",
+        label: "Panosonic Plus",
         hero:{
             brand:"PANOSONIC",
             technology:"AGM + Plus",
@@ -27,8 +27,8 @@ export const brands = {
     },
     phillips: {
         id: 'phillips',
-        title: "PHILLIPS",
-        label: "Phillips",
+        title: "PHILLIPS XPRO",
+        label: "Phillips XPro",
         hero:{
             brand:"PHILLIPS",
             technology:"AGM",
@@ -38,41 +38,41 @@ export const brands = {
             originSubtitle: "Engineered in Europe"
         },
     },
-platin: {
-    id: 'platin',
-    title: "PLATIN",
-    label: "Platin",
-    hero:{
-        brand:"Platin",
-        technology:"AGM",
-        tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
-        description: "Advanced AGM Technology for Modern Vehicles",
-        originTitle: "MADE IN USA TECHNOLOGY",
-        originSubtitle: "Engineered in Europe"
+    platin: {
+        id: 'platin',
+        title: "PLATIN",
+        label: "Platin",
+        hero:{
+            brand:"Platin",
+            technology:"AGM",
+            tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+            description: "Advanced AGM Technology for Modern Vehicles",
+            originTitle: "MADE IN USA TECHNOLOGY",
+            originSubtitle: "Engineered in Europe"
+        },
     },
-},
-westol: {
-    id: 'westol',
-    title: "WESTOL",
-    hero:{
-        brand:"Westol",
-        technology:"AGM",
-        tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
-        description: "Advanced AGM Technology for Modern Vehicles",
-        originTitle: "MADE IN USA TECHNOLOGY",
-        originSubtitle: "Engineered in Europe"
+    westol: {
+        id: 'westol',
+        title: "WESTOL",
+        hero:{
+            brand:"Westol",
+            technology:"AGM",
+            tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+            description: "Advanced AGM Technology for Modern Vehicles",
+            originTitle: "MADE IN USA TECHNOLOGY",
+            originSubtitle: "Engineered in Europe"
+        },
     },
-},
-denzo: {
-    id: 'denzo',
-        title: "DENZO",
-    hero:{
-        brand:"DENZO",
-        technology:"AGM",
-        tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
-        description: "Advanced AGM Technology for Modern Vehicles",
-        originTitle: "MADE IN USA TECHNOLOGY",
-        originSubtitle: "Engineered in Europe"
+    denzo: {
+        id: 'denzo',
+            title: "DENZO",
+        hero:{
+            brand:"DENZO",
+            technology:"AGM",
+            tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+            description: "Advanced AGM Technology for Modern Vehicles",
+            originTitle: "MADE IN USA TECHNOLOGY",
+            originSubtitle: "Engineered in Europe"
+        },
     },
-},
 }

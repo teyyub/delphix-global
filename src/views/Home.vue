@@ -166,9 +166,7 @@ const closeMap = () => {
     <!-- Hero Section -->
     <section
         class="hero"
-        :style="{
-    backgroundImage: `url(${heroSlides[currentSlide].image})`
-  }"
+        :style="{ backgroundImage: `url(${heroSlides[currentSlide].image})` }"
     >
       <div class="hero-text">
         <div class="hero-tag">
@@ -309,16 +307,11 @@ const closeMap = () => {
 /* HERO */
 .hero {
   position: relative;
-
-  background-image: url('/images/home.webp');
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-
   min-height: 520px;
-
-  padding: 100px 60px;
-
+  padding: 100px 20px;
   display: flex;
   align-items: center;
 
