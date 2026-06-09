@@ -146,7 +146,8 @@ const viewCategory = (slug) => {
 const showMap = ref(false);
 
 const openMap = () => {
-  showMap.value = true;
+  // showMap.value = true;
+  router.push("/export-map");
 };
 
 const closeMap = () => {
@@ -308,7 +309,7 @@ const closeMap = () => {
 .hero {
   position: relative;
   background-size: contain;
-  background-position: center;
+  background-position: right center;
   background-repeat: no-repeat;
   min-height: 520px;
   padding: 100px 20px;
@@ -763,7 +764,6 @@ const closeMap = () => {
     background: #fff;
     border: 1px solid #eef2f7;
     border-radius: 8px;
-    padding: 15px;
   }
 }
 .map-overlay {
