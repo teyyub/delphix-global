@@ -947,7 +947,7 @@ export const products = [
         id:"d5W30_1L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "5W30 SN/CF",
         image: "/images/lubricants/denzo/5W30_1L.jpeg",
         headline: "5W30 SN/CF",
         subHeadline: "4L",
@@ -962,7 +962,7 @@ export const products = [
         id:"d5W30_4L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "5W30 SN/CF",
         image: "/images/lubricants/denzo/5W30_4L.jpeg",
         headline: "5W30 SN/CF",
         subHeadline: "4L",
@@ -978,12 +978,12 @@ export const products = [
         id:"d5W40_1L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "5W40 SN/CF",
         image: "/images/lubricants/denzo/5W40_1L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "5W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -994,12 +994,12 @@ export const products = [
         id:"d10W40_1L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "10W40 SN/CF",
         image: "/images/lubricants/denzo/10W40_1L.jpeg",
         headline: "5W30 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1010,9 +1010,9 @@ export const products = [
         id:"d10W40_4L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "10W40 SN/CF",
         image: "/images/lubricants/denzo/10W40_4L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "10W40 SN/CF",
         subHeadline: "4L",
         specs: {
             Viscosity: "5W-30",
@@ -1026,7 +1026,7 @@ export const products = [
         id:"dATF_1L",
         categoryId: "lubricants",
         brandId: "denzo",
-        title: "ATF 4",
+        title: "5W30 SN/CF",
         image: "/images/lubricants/denzo/ATF_1L.jpeg",
         headline: "5W30 SN/CF",
         subHeadline: "4L",
@@ -1044,10 +1044,10 @@ export const products = [
         brandId: "denzo",
         title: "ATF 4",
         image: "/images/lubricants/denzo/ATF_4L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "ATF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "ATF",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1076,10 +1076,10 @@ export const products = [
         brandId: "westol",
         title: "5W40",
         image: "/images/lubricants/westol/5W40_1L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "5W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1092,10 +1092,10 @@ export const products = [
         brandId: "westol",
         title: "5W40 1L SN/CF",
         image: "/images/lubricants/westol/5W40_1L_SN_CF.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "5W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1108,10 +1108,10 @@ export const products = [
         brandId: "westol",
         title: "5W40 5L",
         image: "/images/lubricants/westol/5W40_5L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "5W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1124,10 +1124,10 @@ export const products = [
         brandId: "westol",
         title: "10W40 1L",
         image: "/images/lubricants/westol/10W40_1L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "10W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1140,10 +1140,10 @@ export const products = [
         brandId: "westol",
         title: "5W40 5L",
         image: "/images/lubricants/westol/5W40_5L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "5W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1156,10 +1156,10 @@ export const products = [
         brandId: "westol",
         title: "15W40 5L",
         image: "/images/lubricants/westol/15W40_5L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "15W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "15W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -1172,11 +1172,11 @@ export const products = [
         brandId: "westol",
         title: "ATF 1L",
         image: "/images/lubricants/westol/ATF_1L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "ATF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
+            Viscosity: "ATF",
+            Volume: "1L",
             API: "SN",
             ACEA: "C3"
         }
@@ -1188,11 +1188,11 @@ export const products = [
         brandId: "westol",
         title: "ATF 5L",
         image: "/images/lubricants/westol/ATF_5L.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "ATF",
+        subHeadline: "5L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
+            Viscosity: "ATF",
+            Volume: "5L",
             API: "SN",
             ACEA: "C3"
         }
