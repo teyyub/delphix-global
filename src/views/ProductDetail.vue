@@ -295,7 +295,7 @@ const advantages = reactive([
 
 .spec-card {
   background: #FFFFFF;
-  border: 1px solid #E8EBF1;
+  border: 1px solid rgba(148, 163, 184, 0.25);
   padding: 12px 14px;
   border-radius: 12px;
 

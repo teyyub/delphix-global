@@ -19,11 +19,15 @@ export const footerTranslation = {
             tires: 'Tires'
         },
 
+
+
+
+
         contact: {
             title: 'Contact Us',
-            email: 'info@delphixglobal.com',
-            phone: '+971 50 123 4567',
-            address: 'Jumeirah Lakes Towers, Dubai, UAE'
+            email: 'motec.group@gmail.com',
+            phone: '+994 55 240 93 40',
+            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'All Rights Reserved',
