@@ -71,7 +71,7 @@ const advantages = reactive([
       <!-- LEFT -->
       <div class="hero-left">
 
-        <div class="brand">
+        <div class="brand" v-if="product.categoryId === 'batteries'">
           {{ brand?.hero?.brand }}
           <span>{{ brand?.hero?.technology }}</span>
         </div>
