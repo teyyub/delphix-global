@@ -113,7 +113,6 @@
             {{ brand.title }}
           </button>
         </div>
-
       </div>
       <div class="products-grid">
         <div
@@ -301,7 +300,7 @@
    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
  }
  .image-wrapper {
-   height: 170px;
+   height: 370px;
    background: #f8fafc;
    overflow: hidden;
    padding: 12px;
