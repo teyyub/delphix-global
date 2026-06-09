@@ -712,8 +712,8 @@ export const products = [
         specs: {
             Viscosity: "5W-30",
             Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            API: "SN/CF",
+            ACEA: "C2/C3 A4/B4"
         }
     },
     {
@@ -722,12 +722,12 @@ export const products = [
         brandId: "delphix",
         title: "5W-30 SP C3",
         image: "/images/lubricants/5W-30Premium.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W30 SP/C3",
         subHeadline: "4L",
         specs: {
             Viscosity: "5W-30",
             Volume: "4L",
-            API: "SN",
+            API: "SP",
             ACEA: "C3"
         }
     },
@@ -737,12 +737,12 @@ export const products = [
         brandId: "delphix",
         title: "5W-30 SP C3",
         image: "/images/lubricants/5W-30SPC3.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "5W30 SP/C3",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
+            Volume: "1L",
+            API: "SP",
             ACEA: "C3"
         }
     },
@@ -752,10 +752,10 @@ export const products = [
         brandId: "delphix",
         title: "10W-40 SN/CF",
         image: "/images/lubricants/10W-40-4L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "10W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -767,10 +767,10 @@ export const products = [
         brandId: "delphix",
         title: "10W-40 LA",
         image: "/images/lubricants/10W-40LA.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "10W40",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
             API: "SN",
             ACEA: "C3"
@@ -782,43 +782,43 @@ export const products = [
         brandId: "delphix",
         title: "10W-40 SN/CF",
         image: "/images/lubricants/10W-40SNCF.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "10W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
             API: "SN",
-            ACEA: "C3"
+            ACEA: "CF"
         }
     },
     {
         id:"dATF",
         categoryId: "lubricants",
         brandId: "delphix",
-        title: "ATF",
+        title: "ATF III ",
         image: "/images/lubricants/ATF.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "ATF III",
+        subHeadline: "1L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "ATF",
+            Volume: "1L",
+            API: "",
+            ACEA: ""
         }
     },
     {
         id:"dATF_4L",
         categoryId: "lubricants",
         brandId: "delphix",
-        title: "ATF 4",
+        title: "ATF III",
         image: "/images/lubricants/ATF-4-L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "ATF III",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "ATF III",
             Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            API: "",
+            ACEA: ""
         }
     },
 
