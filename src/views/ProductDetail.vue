@@ -28,6 +28,16 @@ const product = computed(() => {
   return result;
 })
 
+
+const filteredSpecs = computed(() => {
+  if (!product?.value.specs) return {};
+
+  return Object.fromEntries(
+      Object.entries(product.value.specs)
+          .filter(([key]) => key !== "Weight (kg)")
+  );
+});
+
 const currentHighlights = computed(() => {
   if (!product.value) return null
   const bId = product.value.brandId;
@@ -125,7 +135,7 @@ const advantages = reactive([
 
           <div class="spec-grid compact">
             <div
-                v-for="(spec, key) in product?.specs"
+                v-for="(spec, key) in filteredSpecs"
                 :key="key"
                 class="spec-card"
             >

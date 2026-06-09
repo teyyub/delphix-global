@@ -846,57 +846,57 @@ export const products = [
         title: "5W-30 SP C3",
         image: "/images/lubricants/platin/5W30_1L.jpeg",
         headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Volume: "1L",
+            API: "SN/CF",
+            ACEA: "A3/B4"
         }
     },
     {
         id:"p5W40CP_C3_4L",
         categoryId: "lubricants",
         brandId: "platin",
-        title: "5W-30 SP C3",
+        title: "5W-40",
         image: "/images/lubricants/platin/5W40_1L.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "5W40 SN/CF",
+        subHeadline: "1L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "5W-40",
+            Volume: "1L",
+            API: "SN/CF",
+            ACEA: "A3/B4"
         }
     },
     {
         id:"p10W40CN_CF_4L",
         categoryId: "lubricants",
         brandId: "platin",
-        title: "10W-40 SN/CF",
+        title: "5W-40 SN/CF",
         image: "/images/lubricants/platin/5W40_4L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "5W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "5W-40",
             Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            API: "SN/CF",
+            ACEA: "CN/CF C2,C3"
         }
     },
     {
         id:"p10W40LA_1",
         categoryId: "lubricants",
         brandId: "platin",
-        title: "10W-40 LA",
+        title: "10W-40",
         image: "/images/lubricants/platin/10W40_1L.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "10W40 SN/CF",
+        subHeadline: "1L",
         specs: {
-            Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
-            ACEA: "C3"
+            Viscosity: "10W-40",
+            Volume: "1L",
+            API: "SN/CF",
+            ACEA: "A3/B4"
         }
     },
     {
@@ -905,12 +905,12 @@ export const products = [
         brandId: "platin",
         title: "10W-40 SN/CF",
         image: "/images/lubricants/platin/10W40_4L.jpeg",
-        headline: "5W30 SN/CF",
+        headline: "10W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
-            API: "SN",
+            API: "SN/CF C2,C3",
             ACEA: "C3"
         }
     },
@@ -967,11 +967,11 @@ export const products = [
         title: "5W30 SN/CF",
         image: "/images/lubricants/denzo/5W30_1L.jpeg",
         headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-30",
-            Volume: "4L",
-            API: "SN",
+            Volume: "1L",
+            API: "SN/CF",
             ACEA: "C3"
         }
     },
@@ -986,7 +986,7 @@ export const products = [
         specs: {
             Viscosity: "5W-30",
             Volume: "4L",
-            API: "SN",
+            API: "SN/CF",
             ACEA: "C3"
         }
     },
@@ -998,11 +998,11 @@ export const products = [
         title: "5W40 SN/CF",
         image: "/images/lubricants/denzo/5W40_1L.jpeg",
         headline: "5W40 SN/CF",
-        subHeadline: "4L",
+        subHeadline: "1L",
         specs: {
             Viscosity: "5W-40",
-            Volume: "4L",
-            API: "SN",
+            Volume: "1L",
+            API: "SN/CF",
             ACEA: "C3"
         }
     },
@@ -1013,12 +1013,12 @@ export const products = [
         brandId: "denzo",
         title: "10W40 SN/CF",
         image: "/images/lubricants/denzo/10W40_1L.jpeg",
-        headline: "5W30 SN/CF",
-        subHeadline: "4L",
+        headline: "10W40 SN/CF",
+        subHeadline: "1L",
         specs: {
             Viscosity: "10W-40",
-            Volume: "4L",
-            API: "SN",
+            Volume: "1L",
+            API: "SN/CF",
             ACEA: "C3"
         }
     },
@@ -1032,9 +1032,9 @@ export const products = [
         headline: "10W40 SN/CF",
         subHeadline: "4L",
         specs: {
-            Viscosity: "5W-30",
+            Viscosity: "10W-40",
             Volume: "4L",
-            API: "SN",
+            API: "SN/CF",
             ACEA: "C3"
         }
     },
