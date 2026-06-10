@@ -1,8 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import { useI18n } from "@/composables/useI18n"
 
-const { t } = useI18n()
 const form = ref({
   name: "",
   email: "",
@@ -10,34 +8,34 @@ const form = ref({
   message: ""
 });
 
-// const offices = ref([
-//   {
-//     title: "Delphix Global Ltd. (UK Headquarters)",
-//     address: "One Canada Square, Canary Wharf, London E14, United Kingdom",
-//     phone: "+994 77 177 95 77",
-//     email: "info@delphixglobal.com"
-//   },
-//   {
-//     title: "Delphix Global FZE (Middle East & Africa Office)",
-//     address: "Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE",
-//     phone: "+994 55 240 93 40",
-//     email: "motec.group@gmail.com"
-//   },
-//   {
-//     title: "Delphix Global CIS Regional Office ",
-//     address: "Nurly Tau Business Center 81 Al-Farabi Avenue Almaty AZ050040 Kazakhstan",
-//     phone: "+994705138450",
-//     email: "cis@delphixglobal.com delphixglobal.com"
-//   },
-//   {
-//     title: "Delphix Global Caucasus Regional Office",
-//     address: "25E 8 November Avenue White City Business District Baku AZ1025, Azerbaijan" ,
-//     phone: "+994 12 6157565 WhatsApp: +994 552409340",
-//     email: "caucasus@delphixglobal.com"
-//
-//
-//   }
-// ]);
+const offices = ref([
+  {
+    title: "Delphix Global Ltd. (UK Headquarters)",
+    address: "One Canada Square, Canary Wharf, London E14, United Kingdom",
+    phone: "+994 77 177 95 77",
+    email: "info@delphixglobal.com"
+  },
+  {
+    title: "Delphix Global FZE (Middle East & Africa Office)",
+    address: "Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE",
+    phone: "+994 55 240 93 40",
+    email: "motec.group@gmail.com"
+  },
+  {
+    title: "Delphix Global CIS Regional Office ",
+    address: "Nurly Tau Business Center 81 Al-Farabi Avenue Almaty AZ050040 Kazakhstan",
+    phone: "+994705138450",
+    email: "cis@delphixglobal.com delphixglobal.com"
+  },
+  {
+    title: "Delphix Global Caucasus Regional Office",
+    address: "25E 8 November Avenue White City Business District Baku AZ1025, Azerbaijan" ,
+    phone: "+994 12 6157565 WhatsApp: +994 552409340",
+    email: "caucasus@delphixglobal.com"
+
+
+  }
+]);
 
 
 const submitForm = () => {
@@ -51,8 +49,8 @@ const submitForm = () => {
 
     <!-- HEADER -->
     <section class="contact-hero">
-      <h1>{{ t.contact.heroTitle }}</h1>
-      <p> {{ t.contact.heroText }}</p>
+      <h1>CONTACT US</h1>
+      <p>We are here to help you. Get in touch with our team.</p>
     </section>
 
     <!-- CONTENT -->
@@ -60,9 +58,9 @@ const submitForm = () => {
 
       <!-- LEFT INFO -->
       <div class="contact-info">
-        <h2>{{  t.contact.sectionTitle }}</h2>
+        <h2>Contact</h2>
 
-        <div v-for="(office, index) in t.contact.offices" :key="index" class="office-card">
+        <div v-for="(office, index) in offices" :key="index" class="office-card">
           <h3>{{ office.title }}</h3>
 
           <div class="info-item">
@@ -81,15 +79,15 @@ const submitForm = () => {
 
       <!-- FORM -->
       <div class="contact-form">
-        <h2>{{ t.contact.formTitle }}</h2>
+        <h2>Send Message</h2>
 
-        <input v-model="form.name" :placeholder="t.contact.form.name" />
-        <input v-model="form.email" :placeholder="t.contact.form.email" />
-        <input v-model="form.subject" :placeholder="t.contact.form.subject" />
+        <input v-model="form.name" placeholder="Your Name" />
+        <input v-model="form.email" placeholder="Your Email" />
+        <input v-model="form.subject" placeholder="Subject" />
 
-        <textarea v-model="form.message" :placeholder="t.contact.form.message"></textarea>
+        <textarea v-model="form.message" placeholder="Your Message"></textarea>
 
-        <button @click="submitForm"> {{ t.contact.form.button }}</button>
+        <button @click="submitForm">Send Message</button>
       </div>
 
     </section>

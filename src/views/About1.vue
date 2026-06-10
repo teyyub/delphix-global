@@ -1,47 +1,50 @@
-<script setup>
-import { useI18n } from "@/composables/useI18n"
-
-const { t } = useI18n()
-</script>
-
 <template>
   <div class="about-page">
 
     <!-- HERO -->
     <section class="about-hero">
-      <h1>{{ t.about.heroTitle }}</h1>
-      <p>{{ t.about.heroText }}</p>
+      <h1>About Delphix Global</h1>
+      <p>
+        Delphix Global is an international automotive products company focused on
+        developing, manufacturing, and distributing high-quality mobility solutions
+        for global markets.
+      </p>
     </section>
 
     <!-- DESCRIPTION -->
     <section class="about-section">
-      <p>{{ t.about.description }}</p>
+      <p>
+        With a strong commitment to innovation, reliability, and long-term partnerships,
+        Delphix Global collaborates with leading manufacturing facilities across Asia,
+        Europe, and the Middle East to deliver products that meet international quality
+        standards and the evolving needs of the automotive industry.
+      </p>
     </section>
 
     <!-- PORTFOLIO -->
     <section class="about-values">
-      <h2>{{ t.about.portfolioTitle }}</h2>
+      <h2>Our Product Portfolio</h2>
 
       <div class="grid">
 
         <div class="card">
-          <h3>{{ t.about.portfolio.batteries.title }}</h3>
-          <p>{{ t.about.portfolio.batteries.text }}</p>
+          <h3>Automotive Batteries</h3>
+          <p>DELPHIX, PANOSONIC PLUS, PHILLIPS XPRO, DENZO</p>
         </div>
 
         <div class="card">
-          <h3>{{ t.about.portfolio.lubricants.title }}</h3>
-          <p>{{ t.about.portfolio.lubricants.text }}</p>
+          <h3>Lubricants & Fluids</h3>
+          <p>DELPHIX, PLATIN, WESTOL</p>
         </div>
 
         <div class="card">
-          <h3>{{ t.about.portfolio.filters.title }}</h3>
-          <p>{{ t.about.portfolio.filters.text }}</p>
+          <h3>Automotive Filters</h3>
+          <p>DELPHIX, DENZO</p>
         </div>
 
         <div class="card">
-          <h3>{{ t.about.portfolio.tires.title }}</h3>
-          <p>{{ t.about.portfolio.tires.text }}</p>
+          <h3>Tires</h3>
+          <p>DENZO</p>
         </div>
 
       </div>
@@ -49,25 +52,35 @@ const { t } = useI18n()
 
     <!-- GLOBAL NETWORK -->
     <section class="about-section">
-      <h2>{{ t.about.networkTitle }}</h2>
-      <p>{{ t.about.networkText }}</p>
+      <h2>Global Manufacturing Network</h2>
+      <p>
+        Our manufacturing network spans key global production hubs, including China,
+        Thailand, Germany, the United Arab Emirates, and Azerbaijan, enabling us to
+        combine advanced technology, efficient supply chains, and competitive market solutions.
+      </p>
     </section>
 
     <!-- MISSION -->
     <section class="about-section">
-      <h2>{{ t.about.missionTitle }}</h2>
-      <p>{{ t.about.missionText }}</p>
+      <h2>Our Mission</h2>
+      <p>
+        To become a trusted global supplier of automotive batteries, lubricants, filters,
+        and tires, delivering products that power mobility and support the future of transportation.
+      </p>
     </section>
 
-    <!-- FOOTER -->
+    <!-- SLOGAN -->
     <section class="about-footer">
-      <h2>{{ t.about.footerTitle }}</h2>
-      <p>{{ t.about.footerText }}</p>
+      <h2>Delphix Global</h2>
+      <p>Driving Performance. Powering Mobility. Connecting Markets.</p>
     </section>
 
   </div>
 </template>
 
+<script setup>
+// static page - no logic needed
+</script>
 
 <style scoped>
 .about-page {

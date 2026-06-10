@@ -105,7 +105,7 @@ const handleQuote = () => {
   <header class="header">
 
     <!-- TOP BAR -->
-    <div class="top-bar">
+<!--    <div class="top-bar">-->
 <!--      <div class="top-bar-left">-->
 <!--        <span>{{ contact.email }}</span>-->
 <!--        <span>{{ contact.phone }}</span>-->
@@ -118,7 +118,7 @@ const handleQuote = () => {
 <!--          </option>-->
 <!--        </select>-->
 <!--      </div>-->
-    </div>
+<!--    </div>-->
 
     <!-- NAVBAR -->
     <nav class="navbar">
@@ -189,10 +189,16 @@ const handleQuote = () => {
       </ul>
 
       <!-- CTA -->
-      <button class="btn-quote" @click="handleQuote">
-        {{ t.nav.quote || 'GET A QUOTE' }}
-      </button>
-
+<!--      <button class="btn-quote" @click="handleQuote">-->
+<!--        {{ t.nav.quote || 'GET A QUOTE' }}-->
+<!--      </button>-->
+      <div class="top-bar-right">
+        <select v-model="currentLang" @change="setLanguage(currentLang)">
+          <option v-for="l in languages" :key="l.code" :value="l.code">
+            {{ l.label }}
+          </option>
+        </select>
+      </div>
     </nav>
 
   </header>
