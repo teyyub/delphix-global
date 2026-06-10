@@ -237,37 +237,37 @@ const closeMap = () => {
     <section class="global-network-section">
       <div class="network-wrapper">
         <img
-            src="/images/network_main.webp"
+            src="/images/network.jpeg"
             alt="Global Manufacturing Network and Statistics"
             class="global-network-image"
         />
 
-        <div class="network-overlay-top">
-          <div class="network-info-left">
-            <span class="net-tag">GLOBAL MANUFACTURING NETWORK</span>
-            <h2>BUILT IN STRATEGIC<br>LOCATIONS</h2>
-            <p>
-              Our state-of-the-art manufacturing facilities in China, Dubai, and Kazakhstan
-              enable us to deliver premium quality products to global markets with efficiency and reliability.
-            </p>
-            <a href="#" class="net-btn-dark" @click.prevent="">LEARN MORE →</a>
-          </div>
+<!--        <div class="network-overlay-top">-->
+<!--          <div class="network-info-left">-->
+<!--            <span class="net-tag">GLOBAL MANUFACTURING NETWORK</span>-->
+<!--            <h2>BUILT IN STRATEGIC<br>LOCATIONS</h2>-->
+<!--            <p>-->
+<!--              Our state-of-the-art manufacturing facilities in China, Dubai, and Kazakhstan-->
+<!--              enable us to deliver premium quality products to global markets with efficiency and reliability.-->
+<!--            </p>-->
+<!--            <a href="#" class="net-btn-dark" @click.prevent="">LEARN MORE →</a>-->
+<!--          </div>-->
 
-          <div class="card-china">
-            <span class="card-title">CHINA</span>
-            <span class="card-sub">Manufacturing<br>Excellence</span>
-          </div>
+<!--          <div class="card-china">-->
+<!--            <span class="card-title">CHINA</span>-->
+<!--            <span class="card-sub">Manufacturing<br>Excellence</span>-->
+<!--          </div>-->
 
-          <div class="card-dubai">
-            <span class="card-title">DUBAI</span>
-            <span class="card-sub">Logistics<br>Hub</span>
-          </div>
+<!--          <div class="card-dubai">-->
+<!--            <span class="card-title">DUBAI</span>-->
+<!--            <span class="card-sub">Logistics<br>Hub</span>-->
+<!--          </div>-->
 
-          <div class="card-kazakhstan">
-            <span class="card-title">KAZAKHSTAN</span>
-            <span class="card-sub">Production<br>Facility</span>
-          </div>
-        </div>
+<!--          <div class="card-kazakhstan">-->
+<!--            <span class="card-title">KAZAKHSTAN</span>-->
+<!--            <span class="card-sub">Production<br>Facility</span>-->
+<!--          </div>-->
+<!--        </div>-->
 
         <div class="network-overlay-bottom">
           <div class="export-info-left">
@@ -563,7 +563,7 @@ const closeMap = () => {
   width: 100%;
   min-width: 1440px;
   margin: 0 auto;
-  height: 600px;   /* ← burda düzbucaqlı forma yaranır */
+  height: 550px;   /* ← burda düzbucaqlı forma yaranır */
   overflow: hidden;
 }
 

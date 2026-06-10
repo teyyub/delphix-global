@@ -72,6 +72,7 @@ export const navStructure = [
     },
     { key: 'manufacturing', type: 'link', route: '/manufacturing'  },
     { key: 'news', type: 'link' , route: '/news'  },
+    { key: 'certificates', type: 'link' , route: '/certificates'  },
     {
         key: 'contact',
         type: 'link' ,

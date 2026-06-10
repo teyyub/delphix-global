@@ -26,6 +26,7 @@ export const delphixTranslations = {
             oem: 'OEM & PRIVATE LABEL',
             manufacturing: 'MANUFACTURING',
             news: 'NEWS',
+            certificates: 'CERTIFICATES',
             contact: 'CONTACT US'
         }
     },

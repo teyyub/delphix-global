@@ -51,6 +51,11 @@ const routes = [
         component: () => import("@/views/News.vue")
     },
     {
+        path: "/certificates",
+        name: "certificates",
+        component: () => import("@/views/Certificates.vue")
+    },
+    {
         path: "/export-map",
         name: "export-map",
         component: () => import("@/views/ExportMapPage.vue")
