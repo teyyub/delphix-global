@@ -273,7 +273,8 @@ const closeMap = () => {
           <div class="export-info-left">
             <span class="net-tag">GLOBAL EXPORT</span>
             <h2>DELIVERING TO MORE<br>THAN 80 COUNTRIES</h2>
-            <p>Our products are trusted by customers in over 80 countries across 6 continents.</p>
+            <p>Our products are trusted by customers <br/>in
+              over 80 countries across 6 continents.</p>
             <a href="#" class="net-btn-light" @click.prevent="openMap">VIEW EXPORT MAP →</a>
           </div>
 
@@ -285,9 +286,9 @@ const closeMap = () => {
                  :key="index"
                  @mouseenter="animateCount(index)"
             >
-  <span class="stat-number">
-    {{ stat.current }}
-  </span>
+          <span class="stat-number">
+            {{ stat.current }}
+          </span>
               <span class="stat-label">{{ stat.label }}</span>
             </div>
           </div>
@@ -667,16 +668,17 @@ const closeMap = () => {
 .export-info-left {
   position: absolute;
   top: 15%;
-  left: 5%;
+  left: 2%;
   width: 22%;
 }
 
 .export-info-left h2 {
-  font-size: clamp(16px, 2.2vw, 26px);
-  font-weight: 900;
+  font-size: clamp(12px, 1.2vw, 16px);
+  font-weight: 700;
   color: #0b1c33;
   line-height: 1.2;
   margin-bottom: 10px;
+
 }
 
 .export-info-left p {
@@ -684,6 +686,7 @@ const closeMap = () => {
   color: #4a5568;
   line-height: 1.4;
   margin-bottom: 15px;
+
 }
 
 .net-btn-light {
