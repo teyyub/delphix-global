@@ -552,7 +552,6 @@ const closeMap = () => {
 }
 /* GLOBAL NETWORK SECTION */
 .global-network-section {
-  padding: 60px 0;
   background-color: #f9f9f9;
   display: flex;
   justify-content: center;
@@ -563,7 +562,7 @@ const closeMap = () => {
   width: 100%;
   min-width: 1440px;
   margin: 0 auto;
-  height: 550px;   /* ← burda düzbucaqlı forma yaranır */
+  height: 650px;   /* ← burda düzbucaqlı forma yaranır */
   overflow: hidden;
 }
 
@@ -707,8 +706,8 @@ const closeMap = () => {
 /* Statistika Kartlarının Mətnləri */
 .stats-grid {
   position: absolute;
-  top: 20%;
-  left: 31%;
+  top: 47%;
+  left: 18%;
   width: 63%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
