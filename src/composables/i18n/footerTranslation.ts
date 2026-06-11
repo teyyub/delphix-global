@@ -57,9 +57,9 @@ export const footerTranslation = {
 
         contact: {
             title: 'Əlaqə',
-            email: 'info@delphixglobal.com',
-            phone: '+971 50 123 4567',
-            address: 'Jumeirah Lakes Towers, Dubai, BƏƏ'
+            email: 'motec.group@gmail.com',
+            phone: '+994 55 240 93 40',
+            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'Bütün hüquqlar qorunur',
@@ -89,9 +89,9 @@ export const footerTranslation = {
 
         contact: {
             title: 'Контакты',
-            email: 'info@delphixglobal.com',
-            phone: '+971 50 123 4567',
-            address: 'Jumeirah Lakes Towers, Дубай, ОАЭ'
+            email: 'motec.group@gmail.com',
+            phone: '+994 55 240 93 40',
+            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'Все права защищены',
@@ -121,9 +121,9 @@ export const footerTranslation = {
 
         contact: {
             title: 'اتصل بنا',
-            email: 'info@delphixglobal.com',
-            phone: '+971 50 123 4567',
-            address: 'أبراج بحيرات الجميرا، دبي، الإمارات'
+            email: 'motec.group@gmail.com',
+            phone: '+994 55 240 93 40',
+            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'جميع الحقوق محفوظة',
