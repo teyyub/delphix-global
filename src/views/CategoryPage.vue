@@ -7,9 +7,18 @@
   import { brands as allBrands } from "@/data/brands.js"
   const router = useRouter()
   const route = useRoute()
+  import { useLanguageStore } from "@/stores/language"
   const activeSeries = ref(null)
   const selectedBrand = ref(null)
   // const category = categories[route.params.slug]
+
+
+
+
+  const langStore = useLanguageStore()
+
+  const currentLang = computed(() => langStore.currentLang)
+
   const brandId = computed(() => route.params.brandId)
   const category = computed(() => {
     return categories[route.params.slug]
@@ -94,8 +103,8 @@
 
         <!-- LEFT -->
         <div class="hero">
-          <h1>{{ category?.title }}</h1>
-          <p>{{ category?.description }}</p>
+          <h1>{{ category?.title[currentLang] }}</h1>
+          <p>{{ category?.description[currentLang] }}</p>
         </div>
 
         <!-- RIGHT -->

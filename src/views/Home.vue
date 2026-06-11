@@ -1,8 +1,14 @@
 <script setup>
-import { ref } from "vue";
+import {computed, ref} from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
+import home from "@/composables/i18n/home/home.js"
+import { useLanguageStore } from "@/stores/language"
+import featuresData from "@/composables/i18n/features/features.js"
 
+const features = computed(() => {
+  return featuresData[currentLang.value] ?? featuresData.en
+})
 const stats = ref([
   { target: 80, current: 0, label: "COUNTRIES" },
   { target: 1000, current: 0, label: "PRODUCTS" },
@@ -10,6 +16,12 @@ const stats = ref([
   { target: 20, current: 0, label: "YEARS EXPERIENCE" }
 ]);
 let intervals = [];
+
+
+const langStore = useLanguageStore()
+const currentLang = computed(() => langStore.currentLang)
+
+const t = computed(() => home[currentLang.value] ?? home.en)
 
 let hasAnimated = false;
 const resetAll = () => {
@@ -74,60 +86,230 @@ const animateCount = (index) => {
     }
   }, duration / steps);
 };
-const categories = ref([
-  { title: "Batteries",
-    slug: 'batteries',
-    image: '/images/batteries.webp'
-  },
-  { title: "Lubricants",
-    slug: 'lubricants',
-    image: '/images/lubricants.webp'
-  },
-  { title: "Filters",
-    slug: 'filters',
-    image: '/images/filters.webp'
-  },
-  { title: "Tires",
-    slug: 'tires',
-    image: '/images/tires.webp'
-  }
-]);
+// const categories = ref([
+//   { title: "Batteries",
+//     slug: 'batteries',
+//     image: '/images/batteries.webp'
+//   },
+//   { title: "Lubricants",
+//     slug: 'lubricants',
+//     image: '/images/lubricants.webp'
+//   },
+//   { title: "Filters",
+//     slug: 'filters',
+//     image: '/images/filters.webp'
+//   },
+//   { title: "Tires",
+//     slug: 'tires',
+//     image: '/images/tires.webp'
+//   }
+// ]);
 
-const features = ref([
-  { icon: "🌐", title: "Global Quality", description: "International standards you can trust" },
-  { icon: "🛡️", title: "Engineered Performance", description: "Advanced technology for maximum protection" },
-  { icon: "🤝", title: "Strong Partnerships", description: "Long-term relationships worldwide" },
-  { icon: "📜", title: "Certified Products", description: "ISO/TS certified manufacturing" },
-  { icon: "🎧", title: "Dedicated Support", description: "Professional support whenever you need" }
-]);
+const categories = ref([
+  {
+    slug: "batteries",
+    image: "/images/batteries.webp",
+
+    tag: {
+      en: "Power Solutions",
+      az: "Enerji Həlləri",
+      ru: "Энергетические решения",
+      ar: "حلول الطاقة"
+    },
+
+    title: {
+      en: "Batteries",
+      az: "Akkumulyatorlar",
+      ru: "Аккумуляторы",
+      ar: "البطاريات"
+    }
+  },
+
+  {
+    slug: "lubricants",
+    image: "/images/lubricants.webp",
+
+    tag: {
+      en: "Engine Care",
+      az: "Mühərrik Qorunması",
+      ru: "Уход за двигателем",
+      ar: "حماية المحرك"
+    },
+
+    title: {
+      en: "Lubricants",
+      az: "Yağlar",
+      ru: "Смазочные материалы",
+      ar: "مواد التشحيم"
+    }
+  },
+
+  {
+    slug: "filters",
+    image: "/images/filters.webp",
+
+    tag: {
+      en: "Filtration",
+      az: "Filtrləmə",
+      ru: "Фильтрация",
+      ar: "الترشيح"
+    },
+
+    title: {
+      en: "Filters",
+      az: "Filtrlər",
+      ru: "Фильтры",
+      ar: "الفلاتر"
+    }
+  },
+
+  {
+    slug: "tires",
+    image: "/images/tires.webp",
+
+    tag: {
+      en: "Road Safety",
+      az: "Yol Təhlükəsizliyi",
+      ru: "Безопасность на дороге",
+      ar: "سلامة الطريق"
+    },
+
+    title: {
+      en: "Tires",
+      az: "Şinlər",
+      ru: "Шины",
+      ar: "الإطارات"
+    }
+  }
+])
+// const features = ref([
+//   { icon: "🌐", title: "Global Quality", description: "International standards you can trust" },
+//   { icon: "🛡️", title: "Engineered Performance", description: "Advanced technology for maximum protection" },
+//   { icon: "🤝", title: "Strong Partnerships", description: "Long-term relationships worldwide" },
+//   { icon: "📜", title: "Certified Products", description: "ISO/TS certified manufacturing" },
+//   { icon: "🎧", title: "Dedicated Support", description: "Professional support whenever you need" }
+// ]);
+
+
+
+// const heroSlides = ref([
+//   {
+//     image: "/images/hero/batteries.webp",
+//     tag: "Delphix Global",
+//     title: "ENGINEERED FOR GLOBAL PERFORMANCE",
+//     description: "Premium Lubricants, Batteries, Filters & Tires – Built to Power Your World."
+//   },
+//   {
+//     image: "/images/hero/filters.webp",
+//     tag: "Delphix Batteries",
+//     title: "POWER THAT LASTS",
+//     description: "Reliable battery solutions for every vehicle."
+//   },
+//   {
+//     image: "/images/hero/lubricants.webp",
+//     tag: "Delphix Lubricants",
+//     title: "ADVANCED ENGINE PROTECTION",
+//     description: "Designed for extreme performance and durability."
+//   },
+//   {
+//     image: "/images/hero/tires.webp",
+//     tag: "Delphix Lubricants",
+//     title: "ADVANCED ENGINE PROTECTION",
+//     description: "Designed for extreme performance and durability."
+//   }
+// ])
+
 
 const heroSlides = ref([
   {
     image: "/images/hero/batteries.webp",
-    tag: "Delphix Global",
-    title: "ENGINEERED FOR GLOBAL PERFORMANCE",
-    description: "Premium Lubricants, Batteries, Filters & Tires – Built to Power Your World."
+    tag: {
+      en: "Delphix Global",
+      az: "Delphix Qlobal",
+      ru: "Delphix Глобал",
+      ar: "دلفيكس العالمية"
+    },
+    title: {
+      en: "ENGINEERED FOR GLOBAL PERFORMANCE",
+      az: "QLOBAL PERFORMANS ÜÇÜN İNŞA EDİLMİŞ",
+      ru: "СОЗДАНО ДЛЯ МИРОВОЙ ПРОИЗВОДИТЕЛЬНОСТИ",
+      ar: "مصمم للأداء العالمي"
+    },
+    description: {
+      en: "Premium Lubricants, Batteries, Filters & Tires – Built to Power Your World.",
+      az: "Premium yağlar, akkumulyatorlar, filtrlər və şinlər – dünyanı gücləndirmək üçün.",
+      ru: "Премиальные масла, аккумуляторы, фильтры и шины – для мощности вашего мира.",
+      ar: "زيوت وبطاريات وفلاتر وإطارات عالية الجودة – لتشغيل عالمك."
+    }
   },
+
   {
     image: "/images/hero/filters.webp",
-    tag: "Delphix Batteries",
-    title: "POWER THAT LASTS",
-    description: "Reliable battery solutions for every vehicle."
+    tag: {
+      en: "Delphix Batteries",
+      az: "Delphix Akkumulyatorlar",
+      ru: "Delphix Аккумуляторы",
+      ar: "بطاريات دلفيكس"
+    },
+    title: {
+      en: "POWER THAT LASTS",
+      az: "UZUNMÜDDƏT GÜC",
+      ru: "ЭНЕРГИЯ, КОТОРАЯ ДОЛГОВЕЧНА",
+      ar: "طاقة تدوم طويلاً"
+    },
+    description: {
+      en: "Reliable battery solutions for every vehicle.",
+      az: "Hər nəqliyyat üçün etibarlı akkumulyator həlləri.",
+      ru: "Надёжные аккумуляторы для любого транспорта.",
+      ar: "حلول بطاريات موثوقة لكل المركبات."
+    }
   },
+
   {
     image: "/images/hero/lubricants.webp",
-    tag: "Delphix Lubricants",
-    title: "ADVANCED ENGINE PROTECTION",
-    description: "Designed for extreme performance and durability."
+    tag: {
+      en: "Delphix Lubricants",
+      az: "Delphix Yağlar",
+      ru: "Delphix Смазочные материалы",
+      ar: "زيوت دلفيكس"
+    },
+    title: {
+      en: "ADVANCED ENGINE PROTECTION",
+      az: "QABAQLI MÜHƏRRİK QORUNMASI",
+      ru: "ПЕРЕДОВАЯ ЗАЩИТА ДВИГАТЕЛЯ",
+      ar: "حماية متقدمة للمحرك"
+    },
+    description: {
+      en: "Designed for extreme performance and durability.",
+      az: "Ekstrem performans və davamlılıq üçün hazırlanmışdır.",
+      ru: "Создано для экстремальной производительности и долговечности.",
+      ar: "مصمم لأداء عالي التحمل والمتانة."
+    }
   },
+
   {
     image: "/images/hero/tires.webp",
-    tag: "Delphix Lubricants",
-    title: "ADVANCED ENGINE PROTECTION",
-    description: "Designed for extreme performance and durability."
-  }
-])
+    tag: {
+      en: "Delphix Tires",
+      az: "Delphix Şinlər",
+      ru: "Delphix Шины",
+      ar: "إطارات دلفيكس"
+    },
+    title: {
+      en: "ROAD PERFORMANCE YOU CAN TRUST",
+      az: "ETİBAR EDƏ BİLƏCƏYİN YOL PERFORMANSI",
+      ru: "ДОРОЖНАЯ ПРОИЗВОДИТЕЛЬНОСТЬ, КОТОРОЙ МОЖНО ДОВЕРЯТЬ",
+      ar: "أداء طريق يمكنك الوثوق به"
+    },
+    description: {
+      en: "High durability tires for all road conditions.",
+      az: "Bütün yol şəraitləri üçün yüksək dayanıqlı şinlər.",
+      ru: "Прочные шины для любых дорожных условий.",
+      ar: "إطارات عالية المتانة لجميع ظروف الطريق."
+    }
+  },
 
+])
 const currentSlide = ref(0)
 
 setInterval(() => {
@@ -159,7 +341,7 @@ const closeMap = () => {
 <template>
 
   <div v-if="showMap" class="map-overlay" @click="closeMap">
-    <img src="/images/network.webp" class="map-image" />
+    <img src="/images/network.webp" class="map-image"  alt="network"/>
   </div>
 
   <div class="home">
@@ -171,15 +353,15 @@ const closeMap = () => {
     >
       <div class="hero-text">
         <div class="hero-tag">
-          {{ heroSlides[currentSlide].tag }}
+          {{ heroSlides[currentSlide].tag[currentLang] }}
         </div>
 
         <h1>
-          {{ heroSlides[currentSlide].title }}
+          {{ heroSlides[currentSlide].title[currentLang] }}
         </h1>
 
         <p>
-          {{ heroSlides[currentSlide].description }}
+          {{ heroSlides[currentSlide].description[currentLang] }}
         </p>
 
         <div class="hero-btns">
@@ -210,7 +392,7 @@ const closeMap = () => {
           </div>
 
           <div class="category-content">
-            <h3>{{ category.title }}</h3>
+            <h3>{{ category.title[currentLang] }}</h3>
 
             <a href="#" @click.prevent="viewCategory(category.slug)">
               View Products →
