@@ -18,6 +18,7 @@ export const delphixTranslations = {
                     panasonic: 'Panosonic Plus',
                     philips: 'Phillips XPro',
                     delphix: 'Delphix',
+                    kumho: 'Kumho',
                     denzo: 'Denzo',
                     platin: 'Platin',
                     westol: 'Westol',

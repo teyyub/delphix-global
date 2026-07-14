@@ -1,5 +1,181 @@
 export const products = [
     {
+        id: "K680A",
+        title: "12V 60Ah 680A Battery",
+        image: "/images/batteries/kumho_680A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 60Ah",
+        subHeadline: "680A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "60Ah",
+            "Cold Cranking Amps(CCA)": "680A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K750A",
+        title: "12V 70Ah 750A Battery",
+        image: "/images/batteries/kumho_750A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 70Ah",
+        subHeadline: "750A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "60Ah",
+            "Cold Cranking Amps(CCA)": "680A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K850A",
+        title: "12V 85Ah 850A Battery",
+        image: "/images/batteries/kumho_850A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 85Ah",
+        subHeadline: "850A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "850Ah",
+            "Cold Cranking Amps(CCA)": "680A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K950A",
+        title: "12V 95Ah 950A Battery",
+        image: "/images/batteries/kumho_950A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 95Ah",
+        subHeadline: "950A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "95Ah",
+            "Cold Cranking Amps(CCA)": "950A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K1050A",
+        title: "12V 105Ah 1050A Battery",
+        image: "/images/batteries/kumho_1050A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 105Ah",
+        subHeadline: "1050A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "105Ah",
+            "Cold Cranking Amps(CCA)": "1050A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K110A",
+        title: "12V 140Ah 1100A Battery",
+        image: "/images/batteries/kumho_1100A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 140Ah",
+        subHeadline: "1100A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "140Ah",
+            "Cold Cranking Amps(CCA)": "1100A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K1250A",
+        title: "12V 190Ah 1250A Battery",
+        image: "/images/batteries/kumho_1250A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 190Ah",
+        subHeadline: "1250A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "190Ah",
+            "Cold Cranking Amps(CCA)": "1250A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
+        id: "K1500A",
+        title: "12V 225Ah 1500A Battery",
+        image: "/images/batteries/kumho_1500A.jpeg",
+        categoryId: "batteries",
+        brandId: "kumho",
+        headline: "12V 225Ah",
+        subHeadline: "1500A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "225Ah",
+            "Cold Cranking Amps(CCA)": "1500A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        },
+
+    },
+
+    {
         id: "500A",
         title: "12V 45Ah 500A Battery",
         image: "/images/batteries/delphix_500.jpeg",
