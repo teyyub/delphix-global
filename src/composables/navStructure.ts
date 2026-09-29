@@ -18,10 +18,10 @@ export const navStructure = [
                 key: 'batteries',
                 route: '/categories/batteries',
             },
-            {
-                key: 'lubricants',
-                route: '/categories/lubricants',
-            },
+            // {
+            //     key: 'lubricants',
+            //     route: '/categories/lubricants',
+            // },
             {
                 key: 'filters',
                 route: '/categories/filters',
@@ -61,14 +61,14 @@ export const navStructure = [
                 key: 'denzo',
                 route: '/brands/denzo',
             },
-            {
-                key: 'platin',
-                route: '/brands/platin',
-            },
-            {
-                key: 'westol',
-                route: '/brands/westol',
-            }
+            // {
+            //     key: 'platin',
+            //     route: '/brands/platin',
+            // },
+            // {
+            //     key: 'westol',
+            //     route: '/brands/westol',
+            // }
         ]
     },
     {

@@ -29,7 +29,7 @@ const contactInfo = ref({
 // const navLinks = computed(() => t.value.nav)
 const categories = ref([
   { title: 'Batteries', icon: '🔋' },
-  { title: 'Lubricants', icon: '🛢️' },
+  // { title: 'Lubricants', icon: '🛢️' },
   { title: 'Filters', icon: '🌪️' },
   { title: 'Tires', icon: '🛞' }
 ])
@@ -77,7 +77,7 @@ const viewCategory = (categoryTitle) => { alert(`Viewing products for: ${categor
     <!-- Categories -->
     <section class="categories-section">
       <div class="section-tag">Our Products</div>
-      <div class="section-title">Product Categories</div>
+      <div class="section-title">Product Categories1</div>
 
       <div class="grid-categories">
         <div v-for="category in categories" :key="category.title" class="category-card">

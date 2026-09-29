@@ -25,7 +25,11 @@
   })
 
   const products = computed(() => {
-    let result = allProducts
+    let result = allProducts.filter(
+        p => p.categoryId !== 'lubricants'
+    )
+
+    // let result = allProducts
 
     // 🟢 CATEGORY PAGE
     if (route.params.slug) {

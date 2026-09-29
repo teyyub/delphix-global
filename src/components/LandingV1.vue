@@ -29,7 +29,7 @@ const contactInfo = ref({
 // const navLinks = computed(() => t.value.nav)
 const categories = ref([
   { title: 'Batteries', icon: '🔋' },
-  { title: 'Lubricants', icon: '🛢️' },
+  // { title: 'Lubricants', icon: '🛢️' },
   { title: 'Filters', icon: '🌪️' },
   { title: 'Tires', icon: '🛞' }
 ])

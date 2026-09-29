@@ -125,24 +125,24 @@ const categories = ref([
     }
   },
 
-  {
-    slug: "lubricants",
-    image: "/images/lubricants.webp",
-
-    tag: {
-      en: "Engine Care",
-      az: "Mühərrik Qorunması",
-      ru: "Уход за двигателем",
-      ar: "حماية المحرك"
-    },
-
-    title: {
-      en: "Lubricants",
-      az: "Yağlar",
-      ru: "Смазочные материалы",
-      ar: "مواد التشحيم"
-    }
-  },
+  // {
+  //   slug: "lubricants",
+  //   image: "/images/lubricants.webp",
+  //
+  //   tag: {
+  //     en: "Engine Care",
+  //     az: "Mühərrik Qorunması",
+  //     ru: "Уход за двигателем",
+  //     ar: "حماية المحرك"
+  //   },
+  //
+  //   title: {
+  //     en: "Lubricants",
+  //     az: "Yağlar",
+  //     ru: "Смазочные материалы",
+  //     ar: "مواد التشحيم"
+  //   }
+  // },
 
   {
     slug: "filters",

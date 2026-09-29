@@ -48,22 +48,22 @@ export const categories = {
         }
     },
 
-    lubricants: {
-        id: "lubricants",
-        icon: "🛢️",
-        title: {
-            en: "Lubricants",
-            az: "Yağlar",
-            ru: "Смазочные материалы",
-            ar: "مواد التشحيم"
-        },
-        description: {
-            en: "High quality engine oils",
-            az: "Yüksək keyfiyyətli mühərrik yağları",
-            ru: "Высококачественные моторные масла",
-            ar: "زيوت محركات عالية الجودة"
-        }
-    },
+    // lubricants: {
+    //     id: "lubricants",
+    //     icon: "🛢️",
+    //     title: {
+    //         en: "Lubricants",
+    //         az: "Yağlar",
+    //         ru: "Смазочные материалы",
+    //         ar: "مواد التشحيم"
+    //     },
+    //     description: {
+    //         en: "High quality engine oils",
+    //         az: "Yüksək keyfiyyətli mühərrik yağları",
+    //         ru: "Высококачественные моторные масла",
+    //         ar: "زيوت محركات عالية الجودة"
+    //     }
+    // },
 
     filters: {
         id: "filters",

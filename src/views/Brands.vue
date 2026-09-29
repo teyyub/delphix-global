@@ -17,14 +17,7 @@ for (const category of Object.values(categories)) {
     }
   }
 }
-// const brands = ref([
-//   { name: "Delphix", logo: "🏷️", desc: "Premium industrial solutions" },
-//   { name: "TurboLube", logo: "🛢️", desc: "High-performance lubricants" },
-//   { name: "PowerCell", logo: "🔋", desc: "Advanced battery technology" },
-//   { name: "FilterPro", logo: "🌪️", desc: "Filtration systems" },
-//   { name: "RoadGrip", logo: "🛞", desc: "Tire & traction solutions" },
-//   { name: "AutoMax", logo: "🚗", desc: "Automotive excellence" }
-// ]);
+
 </script>
 
 <template>

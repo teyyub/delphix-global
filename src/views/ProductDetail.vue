@@ -66,6 +66,9 @@ const advantages = reactive([
   'Longer life compared to conventional batteries',
   'Stable power for modern automotive electronics'
 ])
+//bu istek uzerine bele edildi 29 sentyabr 26
+
+
 </script>
 
 <template>
