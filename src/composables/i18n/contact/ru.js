@@ -15,28 +15,34 @@ export default {
 
     offices: [
         {
-            title: "Delphix Global Ltd. (Главный офис Великобритания)",
-            address: "One Canada Square, Canary Wharf, London E14, United Kingdom",
-            phone: "+994 77 177 95 77",
-            email: "info@delphixglobal.com"
-        },
-        {
-            title: "Delphix Global FZE (Ближний Восток и Африка)",
-            address: "Cluster X, JLT, Dubai, UAE",
-            phone: "+994 55 240 93 40",
+            title: "Jinjhou Economic Development Zone",
+            address: "Address Jinjhou Economic Development Zone,Hebei Province, CHENGGUANG international marketing centre Room 509 Building D Tangxia Zhihui Park,No 6 Bohui St,Guangyuan East Rd,Tianhe DIST.Guangzhou,China",
+            phone: " +862037665100",
             email: "motec.group@gmail.com"
-        },
-        {
-            title: "Delphix Global СНГ региональный офис",
-            address: "Nurly Tau Business Center, Almaty, Kazakhstan",
-            phone: "+994705138450",
-            email: "cis@delphixglobal.com"
-        },
-        {
-            title: "Delphix Global Кавказский офис",
-            address: "White City Business District, Baku, Azerbaijan",
-            phone: "+994 12 6157565 / WhatsApp: +994 552409340",
-            email: "caucasus@delphixglobal.com"
         }
+        // {
+        //     title: "Delphix Global Ltd. (Главный офис Великобритания)",
+        //     address: "One Canada Square, Canary Wharf, London E14, United Kingdom",
+        //     phone: "+994 77 177 95 77",
+        //     email: "info@delphixglobal.com"
+        // },
+        // {
+        //     title: "Delphix Global FZE (Ближний Восток и Африка)",
+        //     address: "Cluster X, JLT, Dubai, UAE",
+        //     phone: "+994 55 240 93 40",
+        //     email: "motec.group@gmail.com"
+        // },
+        // {
+        //     title: "Delphix Global СНГ региональный офис",
+        //     address: "Nurly Tau Business Center, Almaty, Kazakhstan",
+        //     phone: "+994705138450",
+        //     email: "cis@delphixglobal.com"
+        // },
+        // {
+        //     title: "Delphix Global Кавказский офис",
+        //     address: "White City Business District, Baku, Azerbaijan",
+        //     phone: "+994 12 6157565 / WhatsApp: +994 552409340",
+        //     email: "caucasus@delphixglobal.com"
+        // }
     ]
 }

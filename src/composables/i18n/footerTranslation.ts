@@ -22,12 +22,14 @@ export const footerTranslation = {
 
 
 
-
+    //Factory Jinjhou Chengguang Power Supply Co.LTD Tel +862037665100
         contact: {
             title: 'Contact Us',
             email: 'motec.group@gmail.com',
-            phone: '+994 55 240 93 40',
-            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
+            // phone: '+994 55 240 93 40',
+            // address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
+            phone: '+862037665100',
+            address: 'Factory Jinjhou Chengguang Power Supply Co.LTD',
         },
 
         rights: 'All Rights Reserved',
@@ -58,8 +60,10 @@ export const footerTranslation = {
         contact: {
             title: 'Əlaqə',
             email: 'motec.group@gmail.com',
-            phone: '+994 55 240 93 40',
-            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
+            phone: '+862037665100',
+            address: 'Factory Jinjhou Chengguang Power Supply Co.LTD',
+            // phone: '+994 55 240 93 40',
+            // address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'Bütün hüquqlar qorunur',
@@ -90,8 +94,10 @@ export const footerTranslation = {
         contact: {
             title: 'Контакты',
             email: 'motec.group@gmail.com',
-            phone: '+994 55 240 93 40',
-            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
+            phone: '+862037665100',
+            address: 'Factory Jinjhou Chengguang Power Supply Co.LTD',
+            // phone: '+994 55 240 93 40',
+            // address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'Все права защищены',
@@ -122,8 +128,10 @@ export const footerTranslation = {
         contact: {
             title: 'اتصل بنا',
             email: 'motec.group@gmail.com',
-            phone: '+994 55 240 93 40',
-            address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
+            phone: '+862037665100',
+            address: 'Factory Jinjhou Chengguang Power Supply Co.LTD',
+            // phone: '+994 55 240 93 40',
+            // address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
         },
 
         rights: 'جميع الحقوق محفوظة',

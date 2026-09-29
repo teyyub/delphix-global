@@ -62,7 +62,7 @@ const submitForm = () => {
       <div class="contact-info">
         <h2>{{  t.contact.sectionTitle }}</h2>
 
-        <div  v-if="false" v-for="(office, index) in t.contact.offices" :key="index" class="office-card">
+        <div  v-for="(office, index) in t.contact.offices" :key="index" class="office-card">
           <h3>{{ office.title }}</h3>
 
           <div class="info-item">
@@ -73,9 +73,9 @@ const submitForm = () => {
             📞 <span>{{ office.phone }}</span>
           </div>
 
-          <div class="info-item">
-            📧 <span>{{ office.email }}</span>
-          </div>
+<!--          <div class="info-item">-->
+<!--            📧 <span>{{ office.email }}</span>-->
+<!--          </div>-->
         </div>
       </div>
 

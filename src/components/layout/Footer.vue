@@ -60,12 +60,12 @@ const categories = computed(() => [
         </ul>
       </div>
 
-      <div v-if="false" class="footer-col">
+      <div class="footer-col">
         <h4> {{ footer.contact.title }}</h4>
         <p class="footer-contact-details">
           📍 {{ footer.contact.address }}<br>
           📞 {{ footer.contact.phone }}<br>
-          📧 {{ footer.contact.email }}
+<!--          📧 {{ footer.contact.email }}-->
         </p>
       </div>
 
