@@ -25,11 +25,11 @@
   })
 
   const products = computed(() => {
-    let result = allProducts.filter(
-        p => p.categoryId !== 'lubricants'
-    )
+    // let result = allProducts.filter(
+    //     p => p.categoryId !== 'lubricants'
+    // )
 
-    // let result = allProducts
+    let result = allProducts
 
     // 🟢 CATEGORY PAGE
     if (route.params.slug) {
@@ -52,6 +52,13 @@
       )
     }
 
+    result = result.filter(
+        p => p.categoryId !== 'lubricants'
+    )
+
+    result = result.filter(
+        p => p.brandId !== 'kumho'
+    )
     return result
   })
   // const products = computed(() => {
@@ -78,6 +85,7 @@
     ]
 
     return brandIds.map(id => allBrands[id])
+        .filter(Boolean)
   })
 
   // const brands = computed(() => {
