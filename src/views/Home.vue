@@ -417,66 +417,66 @@ const closeMap = () => {
       </div>
     </section>
     <section class="global-network-section">
-      <div class="network-wrapper">
-        <img
-            src="/images/network.jpeg"
-            alt="Global Manufacturing Network and Statistics"
-            class="global-network-image"
-        />
+<!--      <div class="network-wrapper">-->
+<!--        <img-->
+<!--            src="/images/network.jpeg"-->
+<!--            alt="Global Manufacturing Network and Statistics"-->
+<!--            class="global-network-image"-->
+<!--        />-->
 
-<!--        <div class="network-overlay-top">-->
-<!--          <div class="network-info-left">-->
-<!--            <span class="net-tag">GLOBAL MANUFACTURING NETWORK</span>-->
-<!--            <h2>BUILT IN STRATEGIC<br>LOCATIONS</h2>-->
-<!--            <p>-->
-<!--              Our state-of-the-art manufacturing facilities in China, Dubai, and Kazakhstan-->
-<!--              enable us to deliver premium quality products to global markets with efficiency and reliability.-->
-<!--            </p>-->
-<!--            <a href="#" class="net-btn-dark" @click.prevent="">LEARN MORE →</a>-->
+<!--&lt;!&ndash;        <div class="network-overlay-top">&ndash;&gt;-->
+<!--&lt;!&ndash;          <div class="network-info-left">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="net-tag">GLOBAL MANUFACTURING NETWORK</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <h2>BUILT IN STRATEGIC<br>LOCATIONS</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;            <p>&ndash;&gt;-->
+<!--&lt;!&ndash;              Our state-of-the-art manufacturing facilities in China, Dubai, and Kazakhstan&ndash;&gt;-->
+<!--&lt;!&ndash;              enable us to deliver premium quality products to global markets with efficiency and reliability.&ndash;&gt;-->
+<!--&lt;!&ndash;            </p>&ndash;&gt;-->
+<!--&lt;!&ndash;            <a href="#" class="net-btn-dark" @click.prevent="">LEARN MORE →</a>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <div class="card-china">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="card-title">CHINA</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="card-sub">Manufacturing<br>Excellence</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <div class="card-dubai">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="card-title">DUBAI</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="card-sub">Logistics<br>Hub</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <div class="card-kazakhstan">&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="card-title">KAZAKHSTAN</span>&ndash;&gt;-->
+<!--&lt;!&ndash;            <span class="card-sub">Production<br>Facility</span>&ndash;&gt;-->
+<!--&lt;!&ndash;          </div>&ndash;&gt;-->
+<!--&lt;!&ndash;        </div>&ndash;&gt;-->
+
+<!--        <div class="network-overlay-bottom">-->
+<!--          <div class="export-info-left">-->
+<!--            <span class="net-tag">GLOBAL EXPORT</span>-->
+<!--            <h2>DELIVERING TO MORE<br>THAN 80 COUNTRIES</h2>-->
+<!--            <p>Our products are trusted by customers <br/>in-->
+<!--              over 80 countries across 6 continents.</p>-->
+<!--            <a href="#" class="net-btn-light" @click.prevent="openMap">VIEW EXPORT MAP →</a>-->
 <!--          </div>-->
 
-<!--          <div class="card-china">-->
-<!--            <span class="card-title">CHINA</span>-->
-<!--            <span class="card-sub">Manufacturing<br>Excellence</span>-->
-<!--          </div>-->
-
-<!--          <div class="card-dubai">-->
-<!--            <span class="card-title">DUBAI</span>-->
-<!--            <span class="card-sub">Logistics<br>Hub</span>-->
-<!--          </div>-->
-
-<!--          <div class="card-kazakhstan">-->
-<!--            <span class="card-title">KAZAKHSTAN</span>-->
-<!--            <span class="card-sub">Production<br>Facility</span>-->
+<!--          <div class="stats-grid"-->
+<!--               @mouseleave="resetAll"-->
+<!--               @mouseenter="animateAll">-->
+<!--            <div class="stat-box"-->
+<!--                 v-for="(stat, index) in stats"-->
+<!--                 :key="index"-->
+<!--                 @mouseenter="animateCount(index)"-->
+<!--            >-->
+<!--          <span class="stat-number">-->
+<!--            {{ stat.current }}-->
+<!--          </span>-->
+<!--              <span class="stat-label">{{ stat.label }}</span>-->
+<!--            </div>-->
 <!--          </div>-->
 <!--        </div>-->
 
-        <div class="network-overlay-bottom">
-          <div class="export-info-left">
-            <span class="net-tag">GLOBAL EXPORT</span>
-            <h2>DELIVERING TO MORE<br>THAN 80 COUNTRIES</h2>
-            <p>Our products are trusted by customers <br/>in
-              over 80 countries across 6 continents.</p>
-            <a href="#" class="net-btn-light" @click.prevent="openMap">VIEW EXPORT MAP →</a>
-          </div>
-
-          <div class="stats-grid"
-               @mouseleave="resetAll"
-               @mouseenter="animateAll">
-            <div class="stat-box"
-                 v-for="(stat, index) in stats"
-                 :key="index"
-                 @mouseenter="animateCount(index)"
-            >
-          <span class="stat-number">
-            {{ stat.current }}
-          </span>
-              <span class="stat-label">{{ stat.label }}</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
+<!--      </div>-->
     </section>
 
   </div>

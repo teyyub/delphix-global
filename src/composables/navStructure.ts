@@ -4,11 +4,11 @@ export const navStructure = [
         type: 'link',
         route: '/'
     },
-    {
-        key: 'about',
-        type: 'link',
-        route: '/about'
-    },
+    // {
+    //     key: 'about',
+    //     type: 'link',
+    //     route: '/about'
+    // },
 
     {
         key: 'products',
@@ -60,6 +60,10 @@ export const navStructure = [
             {
                 key: 'denzo',
                 route: '/brands/denzo',
+            },
+            {
+                key: 'chengguang',
+                route: '/brands/chengguang',
             },
             // {
             //     key: 'platin',

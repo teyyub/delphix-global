@@ -878,6 +878,87 @@ export const products = [
     },
 
     {
+        id: "500A",
+        categoryId: "batteries",
+        brandId: "chengguang",
+        title: "12V 105Ah 1050A Battery",
+        image: "/images/batteries/chengguang_500_A.jpeg",
+        headline: "12V 105Ah",
+        subHeadline: "500A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "225Ah",
+            "Cold Cranking Amps(CCA)": "1500A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        }
+    },
+    {
+        id: "501A",
+        categoryId: "batteries",
+        brandId: "chengguang",
+        title: "12V 105Ah 1050A Battery",
+        image: "/images/batteries/chengguang_501_A.jpeg",
+        headline: "12V 105Ah",
+        subHeadline: "500A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "225Ah",
+            "Cold Cranking Amps(CCA)": "1500A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        }
+    },
+    {
+        id: "502A",
+        categoryId: "batteries",
+        brandId: "chengguang",
+        title: "12V 105Ah 1050A Battery",
+        image: "/images/batteries/chengguang_502_A.jpeg",
+        headline: "12V 105Ah",
+        subHeadline: "500A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "225Ah",
+            "Cold Cranking Amps(CCA)": "1500A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        }
+    },
+    {
+        id: "503A",
+        categoryId: "batteries",
+        brandId: "chengguang",
+        title: "12V 105Ah 1050A Battery",
+        image: "/images/batteries/chengguang_503_A.jpeg",
+        headline: "12V 105Ah",
+        subHeadline: "500A",
+        specs: {
+            Voltage: "12V",
+            Capacity: "225Ah",
+            "Cold Cranking Amps(CCA)": "1500A (EN)",
+            Technology: "AGM (Absorbent Glass Mat)",
+            Warranty: "24 months",
+            "Battery Type": "Maintenance Free",
+            Polarity: "Right positive (R+)",
+            "Dimensions (mm)": "207 (L)x175(W)x 190(H)",
+            "Weight (kg)" : "Approx. 12.5 kg"
+        }
+    },
+
+    {
         id:"d5W30SN_CF_4L",
         categoryId: "lubricants",
         brandId: "delphix",

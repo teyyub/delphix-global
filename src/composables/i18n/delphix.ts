@@ -21,7 +21,8 @@ export const delphixTranslations = {
                     kumho: 'Kumho',
                     denzo: 'Denzo',
                     platin: 'Platin',
-                    westol: 'Westol'
+                    westol: 'Westol',
+                    chengguang: 'Chengguang'
                 }
             },
             oem: 'OEM & PRIVATE LABEL',

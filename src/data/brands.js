@@ -12,6 +12,21 @@ export const brands = {
     //         originSubtitle: "Engineered in Europe"
     //     },
     // },
+
+    chengguang:{
+        id: 'chengguang',
+        title: "Chengguang",
+        label: "chengguang",
+        hero:{
+            brand:"chengguang",
+            technology:"AGM",
+            tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+            description: "Advanced AGM Technology for Modern Vehicles",
+            originTitle: "MADE IN CHINA TECHNOLOGY",
+            originSubtitle: "Engineered in China"
+        },
+    },
+
     delphix:{
         id: 'delphix',
         title: "DELPHIX",
