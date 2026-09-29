@@ -76,9 +76,9 @@ export const navStructure = [
         type: 'link',
         route: '/oem'
     },
-    { key: 'manufacturing', type: 'link', route: '/manufacturing'  },
+    // { key: 'manufacturing', type: 'link', route: '/manufacturing'  },
     { key: 'news', type: 'link' , route: '/news'  },
-    { key: 'certificates', type: 'link' , route: '/certificates'  },
+    // { key: 'certificates', type: 'link' , route: '/certificates'  },
     {
         key: 'contact',
         type: 'link' ,

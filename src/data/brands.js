@@ -1,17 +1,17 @@
 export const brands = {
-    kumho:{
-        id: 'kumho',
-        title: "KUMHO",
-        label: "Kumho",
-        hero:{
-            brand:"KUMHO",
-            technology:"AGM",
-            tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
-            description: "Calcium Technology for Modern Vehicles",
-            originTitle: "MADE IN KOREAN TECHNOLOGY",
-            originSubtitle: "Engineered in Europe"
-        },
-    },
+    // kumho:{
+    //     id: 'kumho',
+    //     title: "KUMHO",
+    //     label: "Kumho",
+    //     hero:{
+    //         brand:"KUMHO",
+    //         technology:"AGM",
+    //         tagline:"PREMIUM POWER. MAXIMUM RELIABILITY.",
+    //         description: "Calcium Technology for Modern Vehicles",
+    //         originTitle: "MADE IN KOREAN TECHNOLOGY",
+    //         originSubtitle: "Engineered in Europe"
+    //     },
+    // },
     delphix:{
         id: 'delphix',
         title: "DELPHIX",
