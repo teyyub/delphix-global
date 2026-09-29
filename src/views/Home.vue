@@ -221,27 +221,27 @@ const categories = ref([
 
 
 const heroSlides = ref([
-  {
-    image: "/images/hero/batteries.webp",
-    tag: {
-      en: "Delphix Global",
-      az: "Delphix Qlobal",
-      ru: "Delphix Глобал",
-      ar: "دلفيكس العالمية"
-    },
-    title: {
-      en: "ENGINEERED FOR GLOBAL PERFORMANCE",
-      az: "QLOBAL PERFORMANS ÜÇÜN İNŞA EDİLMİŞ",
-      ru: "СОЗДАНО ДЛЯ МИРОВОЙ ПРОИЗВОДИТЕЛЬНОСТИ",
-      ar: "مصمم للأداء العالمي"
-    },
-    description: {
-      en: "Premium Lubricants, Batteries, Filters & Tires – Built to Power Your World.",
-      az: "Premium yağlar, akkumulyatorlar, filtrlər və şinlər – dünyanı gücləndirmək üçün.",
-      ru: "Премиальные масла, аккумуляторы, фильтры и шины – для мощности вашего мира.",
-      ar: "زيوت وبطاريات وفلاتر وإطارات عالية الجودة – لتشغيل عالمك."
-    }
-  },
+  // {
+  //   image: "/images/hero/batteries.webp",
+  //   tag: {
+  //     en: "Delphix Global",
+  //     az: "Delphix Qlobal",
+  //     ru: "Delphix Глобал",
+  //     ar: "دلفيكس العالمية"
+  //   },
+  //   title: {
+  //     en: "ENGINEERED FOR GLOBAL PERFORMANCE",
+  //     az: "QLOBAL PERFORMANS ÜÇÜN İNŞA EDİLMİŞ",
+  //     ru: "СОЗДАНО ДЛЯ МИРОВОЙ ПРОИЗВОДИТЕЛЬНОСТИ",
+  //     ar: "مصمم للأداء العالمي"
+  //   },
+  //   description: {
+  //     en: "Premium Lubricants, Batteries, Filters & Tires – Built to Power Your World.",
+  //     az: "Premium yağlar, akkumulyatorlar, filtrlər və şinlər – dünyanı gücləndirmək üçün.",
+  //     ru: "Премиальные масла, аккумуляторы, фильтры и шины – для мощности вашего мира.",
+  //     ar: "زيوت وبطاريات وفلاتر وإطارات عالية الجودة – لتشغيل عالمك."
+  //   }
+  // },
 
   {
     image: "/images/hero/filters.webp",

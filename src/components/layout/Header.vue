@@ -126,7 +126,7 @@ const handleQuote = () => {
       <!-- LOGO -->
 
       <router-link to="/" class="logo">
-        <img src="/logo_new.svg" alt="Delphix Global Logo" class="navbar-logo" />
+        <img src="/jinzhou_chengguang_power_supply.svg" alt="Delphix Global Logo" class="navbar-logo" />
       </router-link>
       <!-- LINKS -->
       <ul class="nav-links">
@@ -323,5 +323,11 @@ const handleQuote = () => {
 .dropdown-menu li:hover {
   background: #f5f7fa;
   color: #e53e3e;
+}
+.company-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: #0f172a;
+  white-space: nowrap;
 }
 </style>

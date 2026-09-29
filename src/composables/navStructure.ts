@@ -47,20 +47,20 @@ export const navStructure = [
                 route: '/brands/phillips',
 
             } ,
-            {
-                key: 'delphix',
-                route: '/brands/delphix',
-            },
+            // {
+            //     key: 'delphix',
+            //     route: '/brands/delphix',
+            // },
 
             // {
             //     key: 'kumho',
             //     route: '/brands/kumho',
             // },
 
-            {
-                key: 'denzo',
-                route: '/brands/denzo',
-            },
+            // {
+            //     key: 'denzo',
+            //     route: '/brands/denzo',
+            // },
             {
                 key: 'chengguang',
                 route: '/brands/chengguang',

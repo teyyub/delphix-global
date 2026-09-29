@@ -40,7 +40,9 @@ const handleQuote = () => {
   <nav class="navbar">
 
     <div class="logo">
-      <span>D</span> DELPHIX GLOBAL
+      <!--      <span>D</span> DELPHIX GLOBAL-->
+<!--      <span>D</span> Jinzhou Chengguang Power Supply-->
+
     </div>
 
 

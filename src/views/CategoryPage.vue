@@ -23,7 +23,7 @@
   const category = computed(() => {
     return categories[route.params.slug]
   })
-
+  const excludedBrands = ['kumho', 'denzo', 'delphix']
   const products = computed(() => {
     // let result = allProducts.filter(
     //     p => p.categoryId !== 'lubricants'
@@ -57,7 +57,8 @@
     )
 
     result = result.filter(
-        p => p.brandId !== 'kumho'
+        // p => p.brandId !== 'kumho'
+        p => !excludedBrands.includes(p.brandId)
     )
     return result
   })

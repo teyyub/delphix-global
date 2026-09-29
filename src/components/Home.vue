@@ -58,8 +58,11 @@ const viewCategory = (category) => {
     <!-- HERO -->
     <section class="hero">
       <div class="hero-text">
-        <div class="hero-tag">Delphix Global</div>
+<!--        <div class="hero-tag">Delphix Global</div>-->
 
+        <div class="hero-tag">
+          Jinzhou Chengguang Power Supply yaz
+        </div>
         <h1>
           ENGINEERED FOR<br />
           GLOBAL PERFORMANCE
