@@ -24,7 +24,7 @@ export default {
         {
             title: "Jinjhou Economic Development Zone",
             address: "Trade office :Baoding Adico Import and Export Co LTD.",
-            phone: " +862037665100",
+            phone: "+862037665100",
             email: "motec.group@gmail.com"
         }
         // {

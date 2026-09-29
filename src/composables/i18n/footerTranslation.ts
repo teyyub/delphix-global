@@ -29,7 +29,7 @@ export const footerTranslation = {
             // phone: '+994 55 240 93 40',
             // address: 'Cluster X, Jumeirah Lake Towers (JLT), Dubai, UAE'
             phone: '+862037665100',
-            address: 'Factory Jinjhou Chengguang Power Supply Co.LTD',
+            address: 'Factory Jinjhou Chengguang Power Supply Co.LTD , Trade office :Baoding Adico Import and Export Co LTD.',
         },
 
         rights: 'All Rights Reserved',
