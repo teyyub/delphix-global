@@ -52,10 +52,10 @@ export const navStructure = [
                 route: '/brands/delphix',
             },
 
-            {
-                key: 'kumho',
-                route: '/brands/kumho',
-            },
+            // {
+            //     key: 'kumho',
+            //     route: '/brands/kumho',
+            // },
 
             {
                 key: 'denzo',

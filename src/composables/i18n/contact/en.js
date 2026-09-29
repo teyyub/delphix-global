@@ -19,6 +19,13 @@ export default {
                 address: "Address Jinjhou Economic Development Zone,Hebei Province, CHENGGUANG international marketing centre Room 509 Building D Tangxia Zhihui Park,No 6 Bohui St,Guangyuan East Rd,Tianhe DIST.Guangzhou,China",
                 phone: " +862037665100",
                 email: "motec.group@gmail.com"
+        },
+
+        {
+            title: "Jinjhou Economic Development Zone",
+            address: "Trade office :Baoding Adico Import and Export Co LTD.",
+            phone: " +862037665100",
+            email: "motec.group@gmail.com"
         }
         // {
         //     title: "Delphix Global Ltd. (UK Headquarters)",
