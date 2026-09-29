@@ -265,27 +265,27 @@ const heroSlides = ref([
     }
   },
 
-  {
-    image: "/images/hero/lubricants.webp",
-    tag: {
-      en: "Delphix Lubricants",
-      az: "Delphix Yağlar",
-      ru: "Delphix Смазочные материалы",
-      ar: "زيوت دلفيكس"
-    },
-    title: {
-      en: "ADVANCED ENGINE PROTECTION",
-      az: "QABAQLI MÜHƏRRİK QORUNMASI",
-      ru: "ПЕРЕДОВАЯ ЗАЩИТА ДВИГАТЕЛЯ",
-      ar: "حماية متقدمة للمحرك"
-    },
-    description: {
-      en: "Designed for extreme performance and durability.",
-      az: "Ekstrem performans və davamlılıq üçün hazırlanmışdır.",
-      ru: "Создано для экстремальной производительности и долговечности.",
-      ar: "مصمم لأداء عالي التحمل والمتانة."
-    }
-  },
+  // {
+  //   image: "/images/hero/lubricants.webp",
+  //   tag: {
+  //     en: "Delphix Lubricants",
+  //     az: "Delphix Yağlar",
+  //     ru: "Delphix Смазочные материалы",
+  //     ar: "زيوت دلفيكس"
+  //   },
+  //   title: {
+  //     en: "ADVANCED ENGINE PROTECTION",
+  //     az: "QABAQLI MÜHƏRRİK QORUNMASI",
+  //     ru: "ПЕРЕДОВАЯ ЗАЩИТА ДВИГАТЕЛЯ",
+  //     ar: "حماية متقدمة للمحرك"
+  //   },
+  //   description: {
+  //     en: "Designed for extreme performance and durability.",
+  //     az: "Ekstrem performans və davamlılıq üçün hazırlanmışdır.",
+  //     ru: "Создано для экстремальной производительности и долговечности.",
+  //     ar: "مصمم لأداء عالي التحمل والمتانة."
+  //   }
+  // },
 
   {
     image: "/images/hero/tires.webp",
