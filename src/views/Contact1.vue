@@ -54,7 +54,7 @@ const submitForm = () => {
     </section>
 
     <!-- CONTENT -->
-    <section class="contact-content">
+    <section   class="contact-content">
 
       <!-- LEFT INFO -->
       <div class="contact-info">

@@ -23,20 +23,7 @@ const categories = computed(() => [
   { title: footer.value.products.tires }
 ])
 
-// const quickLinks = ref(['Home', 'About Us', 'Products', 'Contact Us'])
 
-// const categories = ref([
-//   { title: 'Batteries' },
-//   { title: 'Lubricants' },
-//   { title: 'Filters' },
-//   { title: 'Tires' }
-// ])
-
-// const contactInfo = ref({
-//   email: 'info@delphixglobal.com',
-//   phone: '+971 50 123 4567',
-//   address: 'Jumeirah Lakes Towers, Dubai, UAE'
-// })
 
 
 </script>
@@ -73,7 +60,7 @@ const categories = computed(() => [
         </ul>
       </div>
 
-      <div class="footer-col">
+      <div v-if="false" class="footer-col">
         <h4> {{ footer.contact.title }}</h4>
         <p class="footer-contact-details">
           📍 {{ footer.contact.address }}<br>
